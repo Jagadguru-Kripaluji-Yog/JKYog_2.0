@@ -1,8 +1,11 @@
+import Courses from "@/components/homePage/Courses"
+import Subscription from "@/components/homePage/Subscription/subscription"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        
+    <main className="">
+      <Courses />
+      <Subscription />
     </main>
   )
 }
