@@ -9,7 +9,6 @@ const UpcommingEvents = () => {
       const response = await axios.get(
         "http://localhost:1337/api/upcoming-events?populate=image"
       )
-      console.log(response)
 
       setUpcomingEvents(response.data.data)
     }
@@ -27,13 +26,12 @@ const UpcommingEvents = () => {
             return (
               <div key={index}>
                 <div className="flex items-center gap-5 self-stretch px-4 py-3">
-                  <div className="flex w-20 h-20 justify-center items-center border rounded-[14.118px]">
-                    <img
-                      className="object-cover"
-                      src={`http://localhost:1337${i.attributes.image.data.attributes.url}`}
-                      alt="img"
-                    />
-                  </div>
+                  <div
+                    className="flex w-20 h-20 justify-center items-center border rounded-[14.118px] bg-cover bg-no-repeat"
+                    style={{
+                      backgroundImage: `url("http://localhost:1337${i.attributes.image.data.attributes.url}")`,
+                    }}
+                  ></div>
                   <div className="flex w-[661px] flex-col justify-center items-start">
                     <div>{i.attributes.tags}</div>
                     <p className="text-[#291900] text-[32px] not-italic font-bold leading-10">

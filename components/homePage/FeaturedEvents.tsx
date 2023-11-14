@@ -44,17 +44,13 @@ const FeaturedEvents = () => {
                 key={index}
               >
                 {/* picture */}
-                <div className="w-[539px] h-[245px]">
-                  <img
-                    className="w-[539px] object-cover no-repeat h-[245px] shrink-0 border rounded-[16px]"
-                    src={`http://localhost:1337${i.attributes.image.data.attributes.url}`}
-                    alt="img"
-                    // width={500}
-                    // height={300}
-                  />
-
-                  {/* tag */}
-                  <div className="inline-flex items-center gap-1 px-2 py-1 rounded-3xl bg-[#fffbf2]">
+                <div
+                  className="w-[539px] h-[245px] bg-cover bg-no-repeat rounded-2xl"
+                  style={{
+                    backgroundImage: `url('http://localhost:1337${i.attributes.image.data.attributes.url}`,
+                  }}
+                >
+                  <div className="inline-flex items-center gap-1 px-2 py-1 rounded-3xl bg-[#fffbf2] mt-[12px] ml-[12px]">
                     <p className="text-[#EF6F1F] text-center text-xs not-italic font-bold leading-4">
                       tags
                     </p>

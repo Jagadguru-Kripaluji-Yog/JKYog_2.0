@@ -20,7 +20,7 @@ const Form = () => {
           />
         </div>
       </div>
-      <button className="flex justify-center items-center gap-1.5 px-8 py-3.5 rounded-[100px] bg-[#ef6f1f]">
+      <button className="flex justify-center items-center gap-1.5 px-8 py-3.5 rounded-[100px] bg-[#ef6f1f] text-white">
         Subscribe
       </button>
     </div>

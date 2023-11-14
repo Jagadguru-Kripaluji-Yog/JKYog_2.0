@@ -1,41 +1,534 @@
-// components/NavBar.tsx
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client"
 
-const NavBar: React.FC = () => {
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import Logo from "@/public/logo.png"
+import { Fragment, useState } from "react"
+import { Listbox, Transition } from "@headlessui/react"
+
+const NavBar = () => {
+  const people = [{ name: "Lorem ipsum 1" }, { name: "Lorem ipsum 2" }]
+
+  const [selected, setSelected] = useState<any>(people[0])
+
   return (
-    <nav className="bg-white shadow-md py-4 px-6 flex items-center justify-between">
-      {/* Logo - replace with your logo image */}
-      <div className="flex items-center">
-        <Image src="/path-to-your-logo.png" alt="JKYog Logo" width={100} height={30} />
+    <nav className="w-full gap-3 py-[13px] px-[40px]   bg-[#fff] flex justify-between items-center">
+      <div className="flex gap-8 items-center">
+        <Image src={Logo} alt="JKYog Logo" width={100} height={30} />
+
+        <div className="hidden lg:flex space-x-4 items-center">
+          {/* Dropdown menus for 'Yoga & Meditation' and 'Kids corner' would require additional implementation */}
+
+          <div className="flex gap-3 justify-start items-center ">
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left  text-base">
+                  <span className="block truncate">Yoga & Meditation</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2  ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-base">
+                  <span className="block truncate">Events</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2  ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-base">
+                  <span className="block truncate">Online Offering</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2 ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-base">
+                  <span className="block truncate">Resources</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2   ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-base">
+                  <span className="block truncate ">About us</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2  ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+            <Listbox value={selected} onChange={setSelected}>
+              <div className="relative mt-1">
+                <Listbox.Button className="relative text-[#645743] font-medium cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left text-base">
+                  <span className="block truncate ">Kids corner</span>
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.9292 7L8.9292 11L12.9292 7"
+                        stroke="#645743"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                    {people.map((person, personIdx) => (
+                      <Listbox.Option
+                        key={personIdx}
+                        className={({ active }) =>
+                          `relative cursor-default select-none p-2  ${
+                            active
+                              ? "bg-amber-100 text-amber-900"
+                              : "text-gray-900"
+                          }`
+                        }
+                        value={person}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <span
+                              className={`block truncate ${
+                                selected ? "font-medium" : "font-normal"
+                              }`}
+                            >
+                              {person.name}
+                            </span>
+                            {selected ? (
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4 6.5L8 10.5L12 6.5"
+                                    stroke="white"
+                                    stroke-width="1.2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            ) : null}
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+          </div>
+        </div>
       </div>
-      
-      {/* Navigation Links */}
-      <div className="hidden md:flex space-x-4 items-center">
-        <Link legacyBehavior href="/yoga-meditation" passHref><a className="text-gray-700 hover:text-orange-500">Yoga & Meditation</a></Link>
-        <Link legacyBehavior href="/events" passHref><a className="text-gray-700 hover:text-orange-500">Events</a></Link>
-        <Link legacyBehavior href="/online-offering" passHref><a className="text-gray-700 hover:text-orange-500">Online Offering</a></Link>
-        <Link legacyBehavior href="/resources" passHref><a className="text-gray-700 hover:text-orange-500">Resources</a></Link>
-        <Link legacyBehavior href="/about-us" passHref><a className="text-gray-700 hover:text-orange-500">About us</a></Link>
-        {/* Dropdown menus for 'Yoga & Meditation' and 'Kids corner' would require additional implementation */}
-      </div>
-      
-      {/* Search and Authentication Links */}
+
       <div className="flex items-center space-x-4">
-        {/* Search Icon */}
-        <button aria-label="Search" className="text-gray-700 hover:text-orange-500">
-          <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M8 6a6 6 0 1012 0 6 6 0 10-12 0zM18 18l-5.5-5.5"></path>
+        <button
+          aria-label="Search"
+          className="text-gray-700 hover:text-orange-500"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M15.7138 7.3382C18.1647 9.78913 18.1647 13.7629 15.7138 16.2138C13.2629 18.6647 9.28913 18.6647 6.8382 16.2138C4.38727 13.7629 4.38727 9.78913 6.8382 7.3382C9.28913 4.88727 13.2629 4.88727 15.7138 7.3382"
+              stroke="#645743"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19 19.5L15.71 16.21"
+              stroke="#645743"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </button>
-        
-        {/* Log In / Sign Up */}
-        <Link legacyBehavior href="/login" passHref><a className="text-gray-700 hover:text-orange-500">Log in</a></Link>
-        <Link legacyBehavior href="/signup" passHref><a className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Sign up</a></Link>
+
+        <Link legacyBehavior href="/login" passHref>
+          <a className="text-gray-700 border flex justify-center border-[#dad3c8] gap-[2px] rounded-3xl px-[16px] py-[10px]  hover:text-orange-500">
+            Log in
+          </a>
+        </Link>
+        <Link legacyBehavior href="/signup" passHref>
+          <a className="bg-[#EF6F1F] flex justify-center border-[#dad3c8] gap-[2px] rounded-3xl px-[16px] py-[10px]  text-white  ">
+            Sign up
+          </a>
+        </Link>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
