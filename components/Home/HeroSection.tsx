@@ -5,8 +5,8 @@ import Community from "../../app/images/community.png";
 import SawamiJi from "../../app/images/sawamiji.png";
 import Image from 'next/image';
 
-const HeroSection: React.FC = () => {
-    const [selectedImage, setSelectedImage] = useState(0);
+const HeroSection = () => {
+    const [selectedImage, setSelectedImage] = useState(2);
     const handleClick = (index: number) => {
         console.log(index)
         setSelectedImage(index);
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
 
     return (
         <>
-            <div className="w-full gap-0 bg-[#fff] flex   justify-stretch items-center">
+            <div className="w-full gap-0 bg-[#fff] flex md:flex-row flex-col  justify-stretch items-center">
                 {section.map((item, i) => {
                     const isSelected = selectedImage === i;
                     const imageWidth = isSelected ? 100 : 30;
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
 
                             />
 
-                            <div className='absolute bottom-5 p-8 flex flex-col items-start gap-[15px]'>
+                            <div className='absolute bottom-5 p-8 flex text-left flex-col items-start gap-[15px]'>
                                 <h1 className={`text-white font-bold   ${isSelected ? 'text-[52px]' : 'text-[32px]'}`}>{item.title}</h1>
                                 {isSelected && <div className='delay-500 flex flex-col gap-[15px] transition-all duration-500'>
                                     <p className='text-white text-lg '>{item.description}</p>
@@ -71,10 +71,10 @@ const HeroSection: React.FC = () => {
             </div>
             <div className='flex flex-col justify-center items-center text-center w-full h-[436px]  border border-gray-200 '>
                 
-                 <div className=' w-[1100px] flex flex-col items-center   flex-shrink-0 gap-8 bg-gradient-to-r from-transparent via-opacity-10 to-opacity-0 via-opacity-90 to-white text-[#291900]'>
+                 <div className='  flex flex-col items-center   flex-shrink-0 gap-8 bg-gradient-to-r from-transparent via-opacity-10 to-opacity-0 via-opacity-90 to-white text-[#291900]'>
                     
                     <h2 className='text-center font-semibold leading-6 text-[40px] '>Jagadguru Kripaluji Yog</h2>
-                    <p className='self-stretch text-[#645743] text-center font-SatoshiVariable text-[18px] font-normal' >JKYog (Jagadguru Kripaluji Yog) is a non-profit charitable organization established for the physical, mental, and spiritual well-being of all humankind. It disseminates authentic knowledge of Yoga for the body, mind, and soul. It serves the needy, promotes education for the rural youth and provides healthcare for the underprivileged.</p>
+                    <p className='self-stretch text-[#645743] text-center font-SatoshiVariable text-[18px] font-normal break-words' >JKYog (Jagadguru Kripaluji Yog) is a non-profit charitable organization established for the physical, mental, and spiritual well-being of all humankind. It disseminates authentic knowledge of Yoga for the body, mind, and soul. It serves the needy, promotes education for the rural youth and provides healthcare for the underprivileged.</p>
                     <button className='bg-[#EF6F1F]  font-semibold mt-2 flex justify-center border-[#dad3c8] text-lg gap-[2px] rounded-3xl px-[32px] py-[14px]  text-white  '>About us</button>
 
                 </div>
