@@ -66,22 +66,7 @@ const UpcommingEvents = () => {
                   </div>
                 </div>
                 {index < upcomingEvents.length - 1 && (
-                  <div className="min-w-full">
-                    <svg
-                      className="stroke-[1.25px] stroke-[#F0EBE1]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1312"
-                      height="2"
-                      viewBox="0 0 1312 2"
-                      fill="none"
-                    >
-                      <path
-                        d="M0 1H1312"
-                        stroke="#F0EBE1"
-                        stroke-width="1.25"
-                      />
-                    </svg>
-                  </div>
+                  <div className="w-full h-[1.25px] bg-[#f0ebe1]"></div>
                 )}
               </div>
             )
