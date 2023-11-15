@@ -528,16 +528,18 @@ const NavBar = () => {
           </div>
         )}
         {status === "authenticated" && (
-          <div className="mobile:hidden" onClick={() => signOut()}>
-            signout
-            {data.user && (
+          <div className="mobile:hidden flex justify-center items-center gap-2" onClick={() => signOut()}>
+           
+            {data&&data.user && (
               <img
                 src={data.user.image}
                 // width={50}
                 // height={50}
                 alt={"no"}
+                className="rounded-full w-[50px] h-[50px]"
               />
             )}
+            {data&&data.user&&data.user.name}
           </div>
         )}
 

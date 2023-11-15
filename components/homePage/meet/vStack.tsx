@@ -78,10 +78,10 @@ const VStack = () => {
             places.map((i: any, index) => {
               return (
                 <div
-                  className="flex items-center gap-3 flex-[1_0_0] self-stretch"
+                  className="flex items-start flex-col gap-3 flex-[1_0_0] self-stretch"
                   key={index}
                 >
-                  <div className="flex justify-between items-center flex-[1_0_0]">
+                  <div className="flex justify-between items-center flex-[1_0_0] w-full">
                     <div className="flex flex-col justify-center items-start gap-1.5 flex-[1_0_0]">
                       {/* tags */}
                       <div className="flex items-center gap-2 self-stretch">
@@ -108,6 +108,7 @@ const VStack = () => {
                       <UpRightArrow />
                     </button>
                   </div>
+                  {index<places.length-1&&<div className="h-[1.5px] w-full bg-[#f0ebe1]"></div>}
                 </div>
               )
             })}

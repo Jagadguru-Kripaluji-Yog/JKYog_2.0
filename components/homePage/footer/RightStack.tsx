@@ -44,7 +44,7 @@ const RightStack = () => {
   return (
     <div>
       <div className="flex flex-1 flex-col gap-8">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+        <div className="grid grid-cols-3 grid-cols-1 gap-5">
           <div>
             <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
               Yoga & Meditation
@@ -98,7 +98,7 @@ const RightStack = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3  grid-cols-1 gap-5">
+        <div className="grid grid-cols-3  grid-cols-1 gap-5">
           <div>
             <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
               Resources
