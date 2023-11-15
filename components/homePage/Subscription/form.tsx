@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-10 flex-[1_0_0] self-stretch px-12 py-16 rounded-[20px] bg-[#fff3dd]">
       <div className="flex flex-col justify-center items-center gap-8 self-stretch">
-        <p className="text-[#291900] text-center text-[32px] not-italic font-bold leading-10">
+        <p className="text-[#291900] text-center mobile:text-[24px] text-[32px] not-italic font-bold leading-10">
           Receive Swamiji’s quote every day in your inbox
         </p>
         <div className="flex flex-col items-center gap-4 self-stretch">

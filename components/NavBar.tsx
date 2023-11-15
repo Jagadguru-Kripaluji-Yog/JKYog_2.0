@@ -6,12 +6,18 @@ import Link from "next/link"
 import Logo from "@/public/logo.png"
 import { Fragment, useState } from "react"
 import { Listbox, Transition } from "@headlessui/react"
+import Login from "@/components/homePage/login"
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const NavBar = () => {
   const people = [{ name: "Lorem ipsum 1" }, { name: "Lorem ipsum 2" }]
+  const { status, data } = useSession()
+  console.log(data)
 
   const [selected, setSelected] = useState<any>(people[0])
-
+  if (status === "loading") {
+    return <h1>loading...</h1>
+  }
   return (
     <nav className="w-full gap-3 py-[13px] px-[40px]   bg-[#fff] flex justify-between items-center">
       <div className="flex gap-8 items-center">
@@ -490,7 +496,7 @@ const NavBar = () => {
       <div className="flex items-center space-x-4">
         <button
           aria-label="Search"
-          className="text-gray-700 hover:text-orange-500"
+          className="text-gray-700 hover:text-orange-500 mobile:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -516,11 +522,25 @@ const NavBar = () => {
           </svg>
         </button>
 
-        <Link legacyBehavior href="/login" passHref>
-          <a className="text-gray-700 border flex justify-center border-[#dad3c8] gap-[2px] rounded-3xl px-[16px] py-[10px]  hover:text-orange-500">
-            Log in
-          </a>
-        </Link>
+        {status !== "authenticated" && (
+          <div className="mobile:hidden">
+            <Login />
+          </div>
+        )}
+        {status === "authenticated" && (
+          <div className="mobile:hidden" onClick={() => signOut()}>
+            signout
+            {data.user && (
+              <img
+                src={data.user.image}
+                // width={50}
+                // height={50}
+                alt={"no"}
+              />
+            )}
+          </div>
+        )}
+
         <Link legacyBehavior href="/signup" passHref>
           <a className="bg-[#EF6F1F] flex justify-center border-[#dad3c8] gap-[2px] rounded-3xl px-[16px] py-[10px]  text-white  ">
             Sign up

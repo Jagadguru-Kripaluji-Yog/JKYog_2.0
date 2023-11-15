@@ -2,9 +2,9 @@ import React from "react"
 
 const Mission = () => {
   return (
-    <div className="flex flex-col items-center gap-10 self-stretch px-10 py-[100px]">
+    <div className="flex flex-col items-center gap-10 self-stretch px-10 py-[100px] mobile:w-[375px]">
       {/* text */}
-      <div className="flex w-[894px] flex-col justify-center items-center gap-4">
+      <div className="flex w-full flex-col justify-center items-center gap-4">
         <p className="self-stretch text-[#291900] text-center text-[40px] not-italic font-bold leading-[48px]">
           Jagadguru Kripaluji Yog
         </p>

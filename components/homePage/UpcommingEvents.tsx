@@ -25,16 +25,16 @@ const UpcommingEvents = () => {
           upcomingEvents.map((i: any, index) => {
             return (
               <div key={index}>
-                <div className="flex items-center gap-5 self-stretch px-4 py-3">
+                <div className="flex items-center mobile:flex-col mobile:items-start  gap-5 self-stretch px-4 py-3 mobile:gap-0">
                   <div
-                    className="flex w-20 h-20 justify-center items-center border rounded-[14.118px] bg-cover bg-no-repeat"
+                    className="flex w-20 h-20 justify-center items-center border rounded-[14.118px] bg-cover bg-no-repeat mobile:hidden"
                     style={{
                       backgroundImage: `url("http://localhost:1337${i.attributes.image.data.attributes.url}")`,
                     }}
                   ></div>
-                  <div className="flex w-[661px] flex-col justify-center items-start">
-                    <div>{i.attributes.tags}</div>
-                    <p className="text-[#291900] text-[32px] not-italic font-bold leading-10">
+                  <div className="flex lg:w-[661px]   flex-col justify-center items-start">
+                    <div className="mobile:hidden">{i.attributes.tags}</div>
+                    <p className="text-[#291900] mobile:text-[20px] text-[32px] not-italic font-bold leading-10 mobile:leading-5">
                       {i.attributes.heading}
                     </p>
                   </div>
@@ -47,7 +47,7 @@ const UpcommingEvents = () => {
                     </p>
                   </div>
                   <div className="flex flex-col justify-center items-start flex-[1_0_0] self-stretch"></div>
-                  <div className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1]">
+                  <div className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1] mobile:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"

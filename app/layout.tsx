@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import TopNavBar from "../components/TopNavBar"
 import NavBar from "../components/NavBar"
-
+import { NextAuthProvider } from "./providers"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -19,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <TopNavBar /> */}
-        <NavBar />
-        {children}
+        <NextAuthProvider>
+          {/* <TopNavBar /> */}
+          <NavBar />
+          {children}
+        </NextAuthProvider>
       </body>
     </html>
   )
