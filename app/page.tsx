@@ -4,7 +4,8 @@ import HeroSection from '@/components/Home/HeroSection'
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col text-center items-center">   
+     
       <HeroSection />
       <Courses />
       <Subscription />

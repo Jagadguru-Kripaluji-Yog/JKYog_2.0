@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const TopNavBar: React.FC = () => {
+const TopNavBar = () => {
   return (
     <nav className="w-full gap-3 px-[40px]   bg-[#291900] flex justify-end items-center">
       <span className='white text-white flex gap-2 px-4 py-3 text-base cursor-pointer'>

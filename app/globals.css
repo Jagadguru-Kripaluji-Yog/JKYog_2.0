@@ -1,4 +1,27 @@
-@tailwind base;
+ @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif&display=swap');
+main{
+    max-width: 1720px;
+    margin:0 auto
+}
+ 
+/*font*/
+.serif{
+    font-family: 'PT Serif', serif;
+} 
+@media (max-width: 1920px) {
+   main{
+    max-width: 1720px;
+    margin:0 auto
+   }
+}
+   
+@media (max-width: 1600px) {
+    main{
+        max-width: 1440px;
+        margin:0 auto
+    }
+} 
 
