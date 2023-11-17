@@ -8,7 +8,7 @@ import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const people = [
     { name: 'Lorem ipsum 1' },
     { name: 'Lorem ipsum 2' }, 
