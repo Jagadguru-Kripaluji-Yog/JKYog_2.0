@@ -1,6 +1,6 @@
 import React from "react"
 import { signIn } from "next-auth/react"
-import { Apple, Google, ArrowRight, Close } from "@/components/icons"
+import { Apple, GoogleIcon, ArrowRight, CloseIcon } from "@/components/icons"
 import {
   Dialog,
   DialogContent,
@@ -31,7 +31,7 @@ const index = () => {
 
             <DialogClose asChild>
               <div className="flex items-center gap-2.5 absolute p-3.5 rounded-[100px] right-6 top-6 cursor-pointer bg-[#fbe5c4]">
-                <Close />
+                <CloseIcon />
               </div>
             </DialogClose>
           </DialogHeader>
@@ -39,7 +39,7 @@ const index = () => {
           <div className="flex w-[354px] flex-col items-start gap-4">
             <div className="flex hover:cursor-pointer items-center gap-3 self-stretch border pl-20 pr-10 py-2.5 rounded-[56px] border-solid border-[#DAD3C8]" onClick={()=>signIn("google")}>
               <div className="bg-white w-[32px] h-[32px] flex items-center justify-center rounded-full">
-                <Google />
+                <GoogleIcon />
               </div>
               <p>Sign In with Google</p>
             </div>
