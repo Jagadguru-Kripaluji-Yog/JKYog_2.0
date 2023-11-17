@@ -5,7 +5,7 @@ const Quote = () => {
     <div className="flex flex-col justify-center items-center gap-10 flex-[1_0_0] self-stretch px-12 py-16 rounded-[20px] border-[#F0EBE1] bg-[#FFFBF2]">
       {/* quote */}
 
-      <div className="flex w-[72px] h-[72px] flex-col justify-center items-center gap-2.5 p-2.5 rounded-[100px] bg-[rgba(227, 100, 20, 0.08)]">
+      <div className="flex w-full h-[72px] flex-col justify-center items-center gap-2.5 p-2.5 rounded-[100px] bg-[rgba(227, 100, 20, 0.08)]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="49"
@@ -19,11 +19,11 @@ const Quote = () => {
           />
         </svg>
       </div>
-      <p className="text-[#645743] text-center text-2xl not-italic font-normal leading-8">
+      <p className="text-[#645743] text-center text-2xl not-italic font-normal leading-8 mobile:text-[18px]">
         “If you carry yesterday with you, your today becomes very heavy - you
         can neither float nor fly.”
       </p>
-      <p className="text-[#291900] text-center text-2xl not-italic font-normal leading-8 self-stretch">
+      <p className="text-[#291900] text-center text-2xl not-italic font-normal leading-8 self-stretch mobile:text-[20px]">
         — Sadhguru 09 September, 2023
       </p>
     </div>

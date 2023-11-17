@@ -9,7 +9,6 @@ const UpcommingEvents = () => {
       const response = await axios.get(
         "http://localhost:1337/api/upcoming-events?populate=image"
       )
-      console.log(response)
 
       setUpcomingEvents(response.data.data)
     }
@@ -26,17 +25,16 @@ const UpcommingEvents = () => {
           upcomingEvents.map((i: any, index) => {
             return (
               <div key={index}>
-                <div className="flex items-center gap-5 self-stretch px-4 py-3">
-                  <div className="flex w-20 h-20 justify-center items-center border rounded-[14.118px]">
-                    <img
-                      className="object-cover"
-                      src={`http://localhost:1337${i.attributes.image.data.attributes.url}`}
-                      alt="img"
-                    />
-                  </div>
-                  <div className="flex w-[661px] flex-col justify-center items-start">
-                    <div>{i.attributes.tags}</div>
-                    <p className="text-[#291900] text-[32px] not-italic font-bold leading-10">
+                <div className="flex items-center mobile:flex-col mobile:items-start  gap-5 self-stretch px-4 py-3 mobile:gap-0">
+                  <div
+                    className="flex w-20 h-20 justify-center items-center border rounded-[14.118px] bg-cover bg-no-repeat mobile:hidden"
+                    style={{
+                      backgroundImage: `url("http://localhost:1337${i.attributes.image.data.attributes.url}")`,
+                    }}
+                  ></div>
+                  <div className="flex lg:w-[661px]   flex-col justify-center items-start">
+                    <div className="mobile:hidden">{i.attributes.tags}</div>
+                    <p className="text-[#291900] mobile:text-[20px] text-[32px] not-italic font-bold leading-10 mobile:leading-5">
                       {i.attributes.heading}
                     </p>
                   </div>
@@ -49,7 +47,7 @@ const UpcommingEvents = () => {
                     </p>
                   </div>
                   <div className="flex flex-col justify-center items-start flex-[1_0_0] self-stretch"></div>
-                  <div className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1]">
+                  <div className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1] mobile:hidden">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -68,22 +66,7 @@ const UpcommingEvents = () => {
                   </div>
                 </div>
                 {index < upcomingEvents.length - 1 && (
-                  <div className="min-w-full">
-                    <svg
-                      className="stroke-[1.25px] stroke-[#F0EBE1]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1312"
-                      height="2"
-                      viewBox="0 0 1312 2"
-                      fill="none"
-                    >
-                      <path
-                        d="M0 1H1312"
-                        stroke="#F0EBE1"
-                        stroke-width="1.25"
-                      />
-                    </svg>
-                  </div>
+                  <div className="w-full h-[1.25px] bg-[#f0ebe1]"></div>
                 )}
               </div>
             )

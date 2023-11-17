@@ -13,6 +13,9 @@ module.exports = {
          
       }
     },
+    screens:{
+      "mobile":"375px",
+    }
   },
   plugins: [],
 }

@@ -20,12 +20,12 @@ const FeaturedEvents = () => {
     <div className="flex flex-col items-center gap-10 self-stretch">
       <nav className="flex justify-between items-center self-stretch">
         <p
-          className="text-[44px] not-italic font-bold leading-[56px];
+          className="text-[44px] mobile:text-[32px] not-italic font-bold leading-[56px];
   font-family: PT Serif"
         >
           Featured Events
         </p>
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-4 mobile:hidden">
           <button className="rounded-[40px] border-[1.25px] border-solid border-[#DAD3C8] flex items-start gap-2.5 p-4">
             <ArrowLeft />
           </button>
@@ -40,21 +40,17 @@ const FeaturedEvents = () => {
           featuredEvents.map((i: any, index) => {
             return (
               <div
-                className="flex w-[555px] flex-col items-start p-2 border rounded-[20px] border-solid border-[#F0EBE1] bg-white"
+                className="flex w-[555px] mobile:w-[375px]  flex-col items-start p-2 border rounded-[20px] border-solid border-[#F0EBE1] bg-white"
                 key={index}
               >
                 {/* picture */}
-                <div className="w-[539px] h-[245px]">
-                  <img
-                    className="w-[539px] object-cover no-repeat h-[245px] shrink-0 border rounded-[16px]"
-                    src={`http://localhost:1337${i.attributes.image.data.attributes.url}`}
-                    alt="img"
-                    // width={500}
-                    // height={300}
-                  />
-
-                  {/* tag */}
-                  <div className="inline-flex items-center gap-1 px-2 py-1 rounded-3xl bg-[#fffbf2]">
+                <div
+                  className="w-[539px] h-[245px] bg-cover bg-no-repeat rounded-2xl"
+                  style={{
+                    backgroundImage: `url('http://localhost:1337${i.attributes.image.data.attributes.url}`,
+                  }}
+                >
+                  <div className="inline-flex items-center gap-1 px-2 py-1 rounded-3xl bg-[#fffbf2] mt-[12px] ml-[12px]">
                     <p className="text-[#EF6F1F] text-center text-xs not-italic font-bold leading-4">
                       tags
                     </p>
