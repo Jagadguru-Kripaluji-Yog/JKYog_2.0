@@ -9,7 +9,7 @@ const FeaturedEvents = () => {
   useEffect(() => {
     const getEvents = async () => {
       const response = await axios.get(
-        "http://localhost:1337/api/featured-events?populate=image"
+        "https://prod-strapi.jkyog.org/api/webapp-featured-events?populate=image"
       )
 
       setFeaturedEvents(response.data.data)
@@ -47,7 +47,7 @@ const FeaturedEvents = () => {
                 <div
                   className="w-[539px] h-[245px] bg-cover bg-no-repeat rounded-2xl"
                   style={{
-                    backgroundImage: `url('http://localhost:1337${i.attributes.image.data.attributes.url}`,
+                    backgroundImage: `url('${i.attributes.image.data[0].attributes.url}`,
                   }}
                 >
                   <div className="inline-flex items-center gap-1 px-2 py-1 rounded-3xl bg-[#fffbf2] mt-[12px] ml-[12px]">

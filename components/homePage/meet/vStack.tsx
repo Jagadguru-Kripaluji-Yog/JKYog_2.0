@@ -9,13 +9,13 @@ const VStack = () => {
   useEffect(() => {
     const getEvents = async () => {
       const response = await axios.get(
-        "http://localhost:1337/api/home-meet-posters?populate=poster"
+        "https://prod-strapi.jkyog.org/api/web-app-home-meet-posters?populate=poster"
       )
       setPoster(response.data.data)
     }
     const getPlaces = async () => {
       const response = await axios.get(
-        "http://localhost:1337/api/home-meet-places"
+        "https://prod-strapi.jkyog.org/api/webapp-home-meet-places"
       )
       setPlaces(response.data.data)
     }
@@ -33,7 +33,7 @@ const VStack = () => {
                 <div
                   className="flex w-[769px] h-[410px] justify-center items-center rounded-2xl bg-no-repeat bg-cover"
                   style={{
-                    backgroundImage: `url("http://localhost:1337${i.attributes.poster.data.attributes.url}")`,
+                     backgroundImage: `url('${i.attributes.poster.data[0].attributes.url}`,
                   }}
                 ></div>
                 <div className="flex items-end gap-2.5 self-stretch p-4">

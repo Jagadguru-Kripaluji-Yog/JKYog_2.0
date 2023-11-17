@@ -7,7 +7,7 @@ const UpcommingEvents = () => {
   useEffect(() => {
     const getEvents = async () => {
       const response = await axios.get(
-        "http://localhost:1337/api/upcoming-events?populate=image"
+        "https://prod-strapi.jkyog.org/api/web-app-upcoming-events?populate=image"
       )
 
       setUpcomingEvents(response.data.data)
@@ -29,7 +29,7 @@ const UpcommingEvents = () => {
                   <div
                     className="flex w-20 h-20 justify-center items-center border rounded-[14.118px] bg-cover bg-no-repeat mobile:hidden"
                     style={{
-                      backgroundImage: `url("http://localhost:1337${i.attributes.image.data.attributes.url}")`,
+                      backgroundImage: `url('${i.attributes.image.data[0].attributes.url}`,
                     }}
                   ></div>
                   <div className="flex lg:w-[661px]   flex-col justify-center items-start">

@@ -9,7 +9,7 @@ const Cards = () => {
   useEffect(() => {
     const getEvents = async () => {
       const response = await axios.get(
-        "http://localhost:1337/api/home-recent-blogs?populate=poster"
+        "https://prod-strapi.jkyog.org/api/web-app-blogs?populate=poster"
       )
       setBlogs(response.data.data)
     }
@@ -70,7 +70,7 @@ const Cards = () => {
                 <div
                   className="flex w-[160px] h-[160px] items-center self-stretch pl-2.5 pr-[78px] pt-2.5 pb-[126px] rounded-2xl bg-cover bg-no-repeat"
                   style={{
-                    backgroundImage: `url("http://localhost:1337${i.attributes.poster.data.attributes.url}")`,
+                    backgroundImage: `url('${i.attributes.poster.data[0].attributes.url}`,
                   }}
                 >
                   <div className="flex items-center gap-1 px-2 py-1.5 rounded-3xl bg-[#fef4ed]">
