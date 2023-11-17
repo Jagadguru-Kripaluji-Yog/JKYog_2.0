@@ -11,7 +11,7 @@ import HeroSection from "@/components/Home/HeroSection"
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Mission />
       <Courses />
       <Subscription />
