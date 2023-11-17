@@ -6,10 +6,12 @@ import Book from "@/components/homePage/book/Book"
 import Blog from "@/components/homePage/blog/Blog"
 import Footer from "@/components/homePage/footer/Footer"
 import Mission from "@/components/homePage/mission/mission"
+import HeroSection from "@/components/Home/HeroSection"
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
+      <HeroSection />
       <Mission />
       <Courses />
       <Subscription />
