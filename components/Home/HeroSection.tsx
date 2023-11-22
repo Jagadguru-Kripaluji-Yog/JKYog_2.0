@@ -36,7 +36,7 @@ const HeroSection = () => {
 
     return (
         <>
-            <div className="w-full gap-0 bg-[#fff] flex md:flex-row flex-col  justify-stretch items-center">
+            <div className="w-full gap-0 bg-[#fff] flex flex-row justify-stretch items-center">
                 {section.map((item, i) => {
                     const isSelected = selectedImage === i;
                     const imageWidth = isSelected ? 100 : 30;
