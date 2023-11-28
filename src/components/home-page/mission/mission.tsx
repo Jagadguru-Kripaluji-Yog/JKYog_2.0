@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const Mission = () => {
   return (
@@ -9,11 +9,9 @@ const Mission = () => {
           Jagadguru Kripaluji Yog
         </p>
         <p className="text-[#645743] text-center self-stretch text-lg not-italic font-normal leading-6">
-          JKYog (Jagadguru Kripaluji Yog) is a non-profit charitable
-          organization established for the physical, mental, and spiritual
-          well-being of all humankind. It disseminates authentic knowledge of
-          Yoga for the body, mind, and soul. It serves the needy, promotes
-          education for the rural youth and provides healthcare for the
+          JKYog (Jagadguru Kripaluji Yog) is a non-profit charitable organization established for the physical, mental,
+          and spiritual well-being of all humankind. It disseminates authentic knowledge of Yoga for the body, mind, and
+          soul. It serves the needy, promotes education for the rural youth and provides healthcare for the
           underprivileged.
         </p>
       </div>
@@ -21,7 +19,7 @@ const Mission = () => {
         About Us
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Mission
+export default Mission;

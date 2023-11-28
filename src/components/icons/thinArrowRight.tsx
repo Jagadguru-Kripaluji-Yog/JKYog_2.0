@@ -1,27 +1,24 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
-export const ThinArrowRight = ({
-    className,
-    ...props
-}: React.SVGProps<SVGSVGElement>) => {
-    return (
-        <svg
-            className={cn("h-5 w-5", className)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="17"
-            viewBox="0 0 16 17"
-            fill="none"
-        >
-            <path
-                d="M12.992 8.48183L3 8.48183M8.98987 12.4885L13 8.48853L8.98987 4.48853"
-                stroke="white"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
+export const ThinArrowRight = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      className={cn('h-5 w-5', className)}
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="17"
+      viewBox="0 0 16 17"
+      fill="none"
+    >
+      <path
+        d="M12.992 8.48183L3 8.48183M8.98987 12.4885L13 8.48853L8.98987 4.48853"
+        stroke="white"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 };
 
 // dropcaret:

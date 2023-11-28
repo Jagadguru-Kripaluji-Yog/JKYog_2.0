@@ -1,6 +1,6 @@
-import React from "react"
-import FeaturedEvents from "./FeaturedEvents"
-import UpcommingEvents from "./UpcommingEvents"
+import React from 'react';
+import FeaturedEvents from './FeaturedEvents';
+import UpcommingEvents from './UpcommingEvents';
 
 const Courses = () => {
   return (
@@ -11,7 +11,7 @@ const Courses = () => {
         All Events
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Courses
+export default Courses;

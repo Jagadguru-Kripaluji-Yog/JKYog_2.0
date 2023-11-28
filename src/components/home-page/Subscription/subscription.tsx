@@ -1,6 +1,6 @@
-import React from "react"
-import Form from "./form"
-import Quote from "./quote"
+import React from 'react';
+import Form from './form';
+import Quote from './quote';
 
 const Subscription = () => {
   return (
@@ -8,7 +8,7 @@ const Subscription = () => {
       <Quote />
       <Form />
     </div>
-  )
-}
+  );
+};
 
-export default Subscription
+export default Subscription;

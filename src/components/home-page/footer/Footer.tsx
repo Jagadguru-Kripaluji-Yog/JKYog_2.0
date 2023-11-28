@@ -1,6 +1,6 @@
-import React from "react"
-import LeftStack from "./LeftStack"
-import RightStack from "./RightStack"
+import React from 'react';
+import LeftStack from './LeftStack';
+import RightStack from './RightStack';
 
 const Footer = () => {
   return (
@@ -18,16 +18,12 @@ const Footer = () => {
           © Copyright 2020 JKYog. All Rights Reserved.
         </p>
         <div className="flex items-start gap-12">
-          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">
-            Privacy Policy
-          </p>
-          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">
-            Terms of Service
-          </p>
+          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">Privacy Policy</p>
+          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">Terms of Service</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

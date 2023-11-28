@@ -1,50 +1,50 @@
-"use client"
-import React from "react"
-import Logo from "@/public/logo.png"
-import Image from "next/image"
-import { ArrowRight } from "../icons"
+'use client';
+import React from 'react';
+import Logo from '@/public/logo.png';
+import Image from 'next/image';
+import { ArrowRight } from '../icons';
 // import { ThinArrowRight } from "../icons/thinArrowRight"
 
 const Footer = () => {
   const Yoga = [
-    { name: "Prem Yoga - FREE Yoga & Mediation", url: "/" },
-    { name: "Radhey Krishna Yogasan", url: "/" },
-    { name: "Radhey Krishna Pranayam", url: "/" },
-    { name: "Subtle Body Relaxation", url: "/" },
-    { name: "Roop Dhyan Meditation", url: "/" },
-    { name: "Science Of Healthy Diet", url: "/" },
-    { name: "Yoga Teachers Training", url: "/" },
-  ]
+    { name: 'Prem Yoga - FREE Yoga & Mediation', url: '/' },
+    { name: 'Radhey Krishna Yogasan', url: '/' },
+    { name: 'Radhey Krishna Pranayam', url: '/' },
+    { name: 'Subtle Body Relaxation', url: '/' },
+    { name: 'Roop Dhyan Meditation', url: '/' },
+    { name: 'Science Of Healthy Diet', url: '/' },
+    { name: 'Yoga Teachers Training', url: '/' },
+  ];
 
   const Events = [
-    { name: "Programs", url: "/" },
-    { name: "Upcoming Events", url: "/" },
-    { name: "JKYog Center Events", url: "/" },
-    { name: "JKYog Retreats", url: "/" },
-  ]
+    { name: 'Programs', url: '/' },
+    { name: 'Upcoming Events', url: '/' },
+    { name: 'JKYog Center Events', url: '/' },
+    { name: 'JKYog Retreats', url: '/' },
+  ];
 
   const Resources = [
-    { name: "Blog", url: "/" },
-    { name: "E-Journal", url: "/" },
-    { name: "Press", url: "/" },
-  ]
+    { name: 'Blog', url: '/' },
+    { name: 'E-Journal', url: '/' },
+    { name: 'Press', url: '/' },
+  ];
 
   const About = [
-    { name: "Philosophy", url: "/" },
-    { name: "About JKYog", url: "/" },
-    { name: "Charitable works", url: "/" },
-  ]
+    { name: 'Philosophy', url: '/' },
+    { name: 'About JKYog', url: '/' },
+    { name: 'Charitable works', url: '/' },
+  ];
 
   const Offers = [
-    { name: "Classes", url: "/" },
-    { name: "Videos", url: "/" },
-    { name: "Audios", url: "/" },
-    { name: "Radio", url: "/" },
-    { name: "My Daily Sadhana", url: "/" },
-    { name: "Bhagvad Gita", url: "/" },
-  ]
+    { name: 'Classes', url: '/' },
+    { name: 'Videos', url: '/' },
+    { name: 'Audios', url: '/' },
+    { name: 'Radio', url: '/' },
+    { name: 'My Daily Sadhana', url: '/' },
+    { name: 'Bhagvad Gita', url: '/' },
+  ];
 
-  const contact = [{ name: "Social Media", url: "/" }]
+  const contact = [{ name: 'Social Media', url: '/' }];
 
   return (
     <div className="w-full gap-3 px-[40px] font-serif  bg-[#FFFBF2] flex justify-center items-center">
@@ -53,53 +53,38 @@ const Footer = () => {
           <div className="flex flex-1 flex-col gap-8">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  Yoga & Meditation
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Yoga & Meditation</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Yoga.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  Events
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Events</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Events.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  Online Offering
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Online Offering</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Offers.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -107,53 +92,38 @@ const Footer = () => {
 
             <div className="grid md:grid-cols-3  grid-cols-1 gap-5">
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  Resources
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Resources</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Resources.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  About us
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">About us</h1>
                 <div className="flex flex-col gap-[10px]">
                   {About.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">
-                  Contacts
-                </h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Contacts</h1>
                 <div className="flex flex-col gap-[10px]">
                   {contact.map((item, i) => {
                     return (
-                      <p
-                        key={i}
-                        className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]"
-                      >
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
                         {item.name}
                       </p>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -164,9 +134,7 @@ const Footer = () => {
         <div className="w-full border border-[#DAD3C8] my-6 "></div>
 
         <div className="flex md:flex-row flex-col justify-between text-sm gap-2  self-stretch text-[#655743]">
-          <div className="leading-6">
-            © Copyright 2020 JKYog. All Rights Reserved.
-          </div>
+          <div className="leading-6">© Copyright 2020 JKYog. All Rights Reserved.</div>
           <div className="flex items-left  md:flex-row flex-col md:gap-5 gap-2 leading-6">
             <span>Privacy Policy</span>
             <span>Terms of Services</span>
@@ -174,7 +142,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

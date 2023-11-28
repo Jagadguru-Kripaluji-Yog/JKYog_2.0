@@ -1,6 +1,6 @@
-import React from "react"
-import Heading from "./heading"
-import Stack from "./stack"
+import React from 'react';
+import Heading from './heading';
+import Stack from './stack';
 
 const Initiatives = () => {
   return (
@@ -8,7 +8,7 @@ const Initiatives = () => {
       <Heading />
       <Stack />
     </div>
-  )
-}
+  );
+};
 
-export default Initiatives
+export default Initiatives;

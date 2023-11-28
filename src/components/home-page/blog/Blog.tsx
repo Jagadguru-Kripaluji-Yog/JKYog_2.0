@@ -1,5 +1,5 @@
-import React from "react"
-import Cards from "./Cards"
+import React from 'react';
+import Cards from './Cards';
 
 const Blog = () => {
   return (
@@ -8,11 +8,9 @@ const Blog = () => {
         Recent blog posts
       </p>
       <Cards />
-      <button className="flex items-center gap-6 px-8 py-3.5 rounded-[100px] bg-[#ef6f1f] text-white">
-        View All
-      </button>
+      <button className="flex items-center gap-6 px-8 py-3.5 rounded-[100px] bg-[#ef6f1f] text-white">View All</button>
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

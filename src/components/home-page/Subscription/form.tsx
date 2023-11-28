@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const Form = () => {
   return (
@@ -24,7 +24,7 @@ const Form = () => {
         Subscribe
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { ReactNode } from 'react';
 
 export const metadata = {
-  title: "Sign In",
+  title: 'Sign In',
 };
 
 interface LayoutProps {
@@ -10,11 +10,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default Layout;

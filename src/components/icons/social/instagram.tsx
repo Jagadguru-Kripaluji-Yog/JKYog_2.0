@@ -1,12 +1,9 @@
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils';
 
-export const Instagram = ({
-  className,
-  ...props
-}: React.SVGProps<SVGSVGElement>) => {
+export const Instagram = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      className={cn("h-4 w-4", className)}
+      className={cn('h-4 w-4', className)}
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
@@ -27,5 +24,5 @@ export const Instagram = ({
         fill="#FFFBF2"
       />
     </svg>
-  )
-}
+  );
+};
