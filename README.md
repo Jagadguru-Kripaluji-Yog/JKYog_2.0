@@ -22,7 +22,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Run Storybook
 
+```bash
 npm run storybook
+```
 
 ## Learn More
 
