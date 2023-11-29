@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/lib/utils';
 
 export const UpRightArrow = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (

@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/src/lib/button/button';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
@@ -71,16 +72,10 @@ const SubSection: FC<SubSectionProps> = ({ id, src, alt, isActive, onHover, subT
             these principles.
           </p>
         </div>
-        <button className="px-8 py-3.5 bg-orange-500 rounded-[100px] justify-start items-center gap-1 inline-flex cursor-pointer">
-          <span className="text-center text-white text-base font-satoshi-bold leading-normal">Learn More</span>
-        </button>
+        <Button href="/" text="Learn More" variant="contained" color="primary" />
       </div>
-      {subTitle && (
-        <h3
-          className={`z-20 ${
-            isActive ? 'opacity-0' : 'opacity-1'
-          } w-[210px] text-center text-white text-[32px] font-bold font-ptserif leading-10`}
-        >
+      {subTitle && !isActive && (
+        <h3 className="z-20 w-[210px] text-center text-white text-[32px] font-bold font-ptserif leading-10">
           {subTitle}
         </h3>
       )}
