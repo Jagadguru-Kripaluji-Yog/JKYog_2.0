@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../src/styles/globals.css';
+import { PT_Serif } from 'next/font/google';
+import '../src/styles/globals.scss';
 import TopNavBar from '../src/components/home/top-nav-bar';
 import NavBar from '../src/components/home/nav-bar';
 import { NextAuthProvider } from './providers';
-const inter = Inter({ subsets: ['latin'] });
+
+const ptSerif = PT_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700'],
+  variable: '--font-ptserif',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${ptSerif.variable} font-sans`}>
+      <body>
         <NextAuthProvider>
           <TopNavBar />
           <NavBar />

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const TopNavBar = () => {
   return (
-    <nav className="w-full gap-3 px-[40px]   bg-[#291900] flex justify-end items-center">
+    <nav className="w-full gap-3 px-[40px] bg-[#291900] flex justify-end items-center">
       <span className="white text-white flex gap-2 px-4 py-3 text-base cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path

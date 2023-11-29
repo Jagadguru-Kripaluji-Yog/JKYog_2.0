@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        navbg: '#291900',
-        orange: '#EF6F1F',
-        white: '#fff',
+      fontFamily: {
+        // 👇 Add CSS variables
+        ptserif: ['var(--font-ptserif)'],
+        'satoshi-light': ['Satoshi-Light'], // 300
+        'satoshi-regular': ['Satoshi-Regular'], // 400
+        'satoshi-medium': ['Satoshi-Medium'], // 500
+        'satoshi-bold': ['Satoshi-Bold'], // 700
+        'satoshi-black': ['Satoshi-Black'], // 900
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
