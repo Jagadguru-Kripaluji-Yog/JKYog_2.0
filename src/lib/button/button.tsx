@@ -16,7 +16,7 @@ const variants = {
 
 export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color }) => {
   return (
-    <Link href={href}>
+    <Link href={href} className="z-10">
       <button
         className={`px-8 py-3.5 rounded-[100px]
                     justify-start items-center inline-flex

@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <HeroSection />
+      <Mission />
       <div className="w-[1440px] mx-auto ">
-        <Mission />
         <Courses />
         <Subscription />
         <Meet />
