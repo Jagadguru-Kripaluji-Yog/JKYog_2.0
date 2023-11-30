@@ -20,7 +20,6 @@ const Mission = () => {
         className="absolute right-0 top-0"
       />
       <Image src="/images/blur.png" alt="blur" width={1176} height={424} className="absolute left-132 top-0" />
-      {/* text */}
       <div className="z-10 w-[894px] h-[132px] flex-col justify-center items-center gap-3 inline-flex">
         <div className="self-stretch text-center text-lime-950 text-[40px] font-bold font-ptserif leading-[48px]">
           Jagadguru Kripaluji Yog

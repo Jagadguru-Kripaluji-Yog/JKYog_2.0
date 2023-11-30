@@ -1,4 +1,4 @@
-import Courses from '@/src/components/home-page/Courses';
+import Events from '@/src/components/home-page/events/events';
 import Subscription from '@/src/components/home-page/Subscription/subscription';
 import Meet from '@/src/components/home-page/meet/meet';
 import Initiatives from '@/src/components/home-page/initiatives/initiatives';
@@ -13,8 +13,8 @@ export default function Home() {
     <main className="flex flex-col items-center">
       <HeroSection />
       <Mission />
+      <Events />
       <div className="w-[1440px] mx-auto ">
-        <Courses />
         <Subscription />
         <Meet />
         <Initiatives />

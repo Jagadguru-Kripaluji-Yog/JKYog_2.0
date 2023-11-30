@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { PT_Serif } from 'next/font/google';
 import '../src/styles/globals.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import TopNavBar from '../src/components/home/top-nav-bar';
 import NavBar from '../src/components/home/nav-bar';
 import { NextAuthProvider } from './providers';
