@@ -1,4 +1,3 @@
-export * from './arrowLeft';
 export * from './arrowRight';
 export * from './meet';
 export * from './location';
