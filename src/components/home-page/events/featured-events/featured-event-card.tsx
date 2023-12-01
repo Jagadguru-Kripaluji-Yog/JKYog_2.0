@@ -2,6 +2,7 @@ import { formatDate } from '@/src/utils/format-date';
 import Image from 'next/image';
 import { FC } from 'react';
 import { FeaturedEventData } from './types';
+import { Arrow } from '@/src/lib/arrow/arrow';
 
 export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, heading, place, date }) => {
   return (
@@ -31,9 +32,7 @@ export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, 
                 {formatDate(date)}
               </span>
             </div>
-            <button className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1] bg-white hover:bg-gray-50">
-              <Image src="/icons/arrow-top-right.svg" alt="arrow" width={24} height={24} />
-            </button>
+            <Arrow direction="topLeft" />
           </div>
         </div>
       </div>

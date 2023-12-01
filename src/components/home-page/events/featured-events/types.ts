@@ -1,15 +1,8 @@
+import { MetaInfo } from '@/src/types/common';
+
 export type FeaturedEventResponse = {
   data: FeaturedEventData[];
   meta: MetaInfo;
-};
-
-export type MetaInfo = {
-  pagination: {
-    page: number;
-    pageSize: number;
-    pageCount: number;
-    total: number;
-  };
 };
 
 export type FeaturedEventData = {

@@ -1,5 +1,5 @@
 import Events from '@/src/components/home-page/events/events';
-import Subscription from '@/src/components/home-page/Subscription/subscription';
+import Subscription from '@/src/components/home-page/subscription/subscription';
 import Meet from '@/src/components/home-page/meet/meet';
 import Initiatives from '@/src/components/home-page/initiatives/initiatives';
 import Book from '@/src/components/home-page/book/Book';

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { UpcommingEventData } from './types';
 import { formatDate } from '@/src/utils/format-date';
+import { Arrow } from '@/src/lib/arrow/arrow';
 
 export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image, tags, heading, place, time }) => {
   return (
@@ -22,9 +23,7 @@ export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image
         </span>
       </div>
       <div className="flex flex-col justify-center items-start flex-[1_0_0] self-stretch"></div>
-      <div className="flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-[#F0EBE1] mobile:hidden cursor-pointer hover:bg-gray-50">
-        <Image src="/icons/arrow-top-right.svg" alt="arrow" width={24} height={24} />
-      </div>
+      <Arrow direction="topLeft" />
     </div>
   );
 };

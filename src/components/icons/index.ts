@@ -3,7 +3,6 @@ export * from './arrowRight';
 export * from './meet';
 export * from './location';
 export * from './calendar';
-export * from './upRightArrow';
 export * from './play';
 export * from './social/facebook';
 export * from './social/instagram';

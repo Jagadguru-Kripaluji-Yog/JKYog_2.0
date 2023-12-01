@@ -1,4 +1,4 @@
-import { MetaInfo } from '../featured-events/types';
+import { MetaInfo } from '@/src/types/common';
 
 export type UpcommingEventsResponse = {
   data: UpcommingEventData[];
