@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ptserif: ['var(--font-ptserif)'],
+        'olga-ctt': ['Olga-Ctt'],
         'satoshi-light': ['Satoshi-Light'], // 300
         'satoshi-regular': ['Satoshi-Regular'], // 400
         'satoshi-medium': ['Satoshi-Medium'], // 500

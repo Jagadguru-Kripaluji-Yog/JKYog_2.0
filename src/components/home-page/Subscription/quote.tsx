@@ -1,23 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Image from 'next/image';
 
-const Quote = () => {
+const Quote: FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 flex-[1_0_0] self-stretch px-12 py-16 rounded-[20px] border-[#F0EBE1] bg-[#FFFBF2]">
-      {/* quote */}
-
-      <div className="flex w-full h-[72px] flex-col justify-center items-center gap-2.5 p-2.5 rounded-[100px] bg-[rgba(227, 100, 20, 0.08)]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
-          <path
-            d="M14.0084 22.3405L17.1513 24.9419C18.6303 26.1379 19.6471 27.2442 20.2017 28.2608C20.7563 29.2176 21.0336 30.2641 21.0336 31.4003C21.0336 33.314 20.4482 34.809 19.2773 35.8854C18.1064 36.9618 16.6275 37.5 14.8403 37.5C12.1905 37.5 10.3725 36.7226 9.38655 35.1678C8.46218 33.613 8 31.4601 8 28.7093C8 26.9153 8.27731 25.1811 8.83193 23.5066C9.38655 21.8322 10.1569 20.2475 11.1429 18.7525C12.1289 17.2575 13.2381 15.8821 14.4706 14.6262C15.7647 13.3106 17.1204 12.1445 18.5378 11.1279C19.0308 10.7093 19.5546 10.5 20.1092 10.5C20.6639 10.5 21.0952 10.7392 21.4034 11.2176C21.958 12.1146 21.6807 13.0116 20.5714 13.9086C19.1541 15.1047 17.8908 16.3904 16.7815 17.7658C15.7339 19.0814 14.8095 20.6063 14.0084 22.3405ZM33.3277 22.3405L36.4706 24.9419C37.9496 26.1379 38.9664 27.2442 39.521 28.2608C40.0756 29.2176 40.3529 30.2641 40.3529 31.4003C40.3529 33.314 39.7675 34.809 38.5966 35.8854C37.4258 36.9618 35.9468 37.5 34.1597 37.5C31.5098 37.5 29.6919 36.7226 28.7059 35.1678C27.7815 33.613 27.3193 31.4601 27.3193 28.7093C27.3193 26.9153 27.5966 25.1811 28.1513 23.5066C28.7059 21.8322 29.4762 20.2475 30.4622 18.7525C31.4482 17.2575 32.5574 15.8821 33.7899 14.6262C35.084 13.3106 36.4398 12.1445 37.8571 11.1279C38.3501 10.7093 38.874 10.5 39.4286 10.5C39.9832 10.5 40.4146 10.7392 40.7227 11.2176C41.2773 12.1146 41 13.0116 39.8908 13.9086C38.4734 15.1047 37.2101 16.3904 36.1008 17.7658C35.0532 19.0814 34.1289 20.6063 33.3277 22.3405Z"
-            fill="#EF6F1F"
-          />
-        </svg>
+    <div className="flex flex-col justify-center items-center gap-10 flex-[1_0_0] px-8 py-10 rounded-[20px] border-[#F0EBE1] bg-[#FFFBF2]">
+      <div className="flex justify-center items-center w-[72px] h-[72px] gap-2.5 p-2.5 rounded-[100px] bg-orange-100">
+        <Image src="/icons/quotes.svg" alt="quotes" width={48} height={48} />
       </div>
-      <p className="text-[#645743] text-center text-2xl not-italic font-normal leading-8 mobile:text-[18px]">
-        “If you carry yesterday with you, your today becomes very heavy - you can neither float nor fly.”
+      <p className="text-stone-600 text-center text-xl not-italic font-normal leading-8 mobile:text-[18px]">
+        &ldquo;If you carry yesterday with you, your today <br /> becomes very <br /> heavy - you can neither float nor
+        fly.&rdquo;
       </p>
-      <p className="text-[#291900] text-center text-2xl not-italic font-normal leading-8 self-stretch mobile:text-[20px]">
-        — Sadhguru 09 September, 2023
+      <p className="text-[#291900] text-center text-[20px] font-olga-ctt  leading-7">
+        — Sadhguru 09 <br /> September, 2023
       </p>
     </div>
   );

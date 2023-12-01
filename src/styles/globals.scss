@@ -62,3 +62,13 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Olga-Ctt';
+  src:
+    url('/fonts/OlgaCTT.woff2') format('woff2'),
+    url('/fonts/OlgaCTT.woff') format('woff'),
+    url('/fonts/OlgaCTT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
