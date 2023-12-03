@@ -16,7 +16,9 @@ export default function Home() {
       <Events />
       <div className="w-[1440px] mx-auto ">
         <Subscription />
-        <Meet />
+      </div>
+      <Meet />
+      <div className="w-[1440px] mx-auto ">
         <Initiatives />
         <Book />
         <Blog />
