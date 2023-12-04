@@ -15,9 +15,9 @@ const Stack: FC = () => {
         />
         <div className="flex flex-col items-start gap-10 flex-[1_0_0] px-0 py-3">
           <div className="flex flex-col justify-center items-start gap-3 self-stretch">
-            <p className="text-[#291900] text-[32px] font-ptserif font-bold leading-10 self-stretch">
+            <h2 className="text-[#291900] text-[32px] font-ptserif font-bold leading-10 self-stretch">
               Welcome to Bhagavad Gita
-            </p>
+            </h2>
             <p className="text-[#645743] self-stretch text-lg font-satoshi-regular leading-6">
               Bhagavad Gita is one of the most revered scriptures! Grasp the wisdom embedded in this precious jewel.
               Watch verse by verse shloka and translation followed by full commentary written by Swami Mukundananda.
