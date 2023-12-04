@@ -1,27 +1,18 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { getMeetPosters } from '@/src/api/get-meet-posters';
-import { MeetPostersData } from '@/src/types/meet-posters';
 import { formatDate } from '@/src/utils/format-date';
 import { Arrow } from '@/src/lib/arrow/arrow';
 import { Badge } from '@/src/lib/badge/badge';
+import { useFetchData } from '@/src/hooks/use-fetch-data';
 
 export const Poster: FC = () => {
-  const [poster, setPoster] = useState<MeetPostersData[]>([]);
+  const { data, isLoading } = useFetchData(getMeetPosters);
 
-  useEffect(() => {
-    const getEvents = async () => {
-      const { data } = await getMeetPosters();
-      setPoster(data.data);
-    };
-
-    getEvents();
-  }, []);
-
-  return poster.length
-    ? poster.map(({ attributes: { poster, place, date, heading, venue } }, i) => {
+  return data.length
+    ? data.map(({ attributes: { poster, place, date, heading, venue } }, i) => {
         return (
           <div key={i}>
             <div className="flex w-[785px] flex-col justify-center items-start shrink-0 p-2 rounded-[20px] bg-white">

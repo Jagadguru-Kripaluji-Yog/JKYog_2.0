@@ -11,7 +11,7 @@ const Book: FC = () => {
             <h2 className="text-[#291900] text-[40px] font-ptserif font-bold leading-[48px] self-stretch">
               Sankeertan Sudha
             </h2>
-            <p className="text-[#645743] text-base not-italic font-normal leading-6 self-stretch">
+            <p className="text-[#645743] text-base font-satoshi-regular font-normal leading-6 self-stretch">
               In this companion book to Sankeertan Madhuri, there are over 100 bhajans to inspire contemplation and
               devotion.
             </p>

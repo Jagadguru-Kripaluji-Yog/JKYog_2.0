@@ -1,10 +1,11 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Slider, { Settings } from 'react-slick';
-import { FeaturedEventData } from './types';
 import { FeaturedEventCard } from './featured-event-card';
 import { getFeaturedEvents } from '@/src/api/get-featured-events';
+import { useFetchData } from '@/src/hooks/use-fetch-data';
 
 const arrows = [
   {
@@ -26,16 +27,7 @@ const settings: Settings = {
 
 const FeaturedEvents = () => {
   const sliderRef = useRef<Slider | null>(null);
-  const [featuredEvents, setFeaturedEvents] = useState<FeaturedEventData[]>([]);
-
-  useEffect(() => {
-    const getEvents = async () => {
-      const { data } = await getFeaturedEvents();
-      setFeaturedEvents(data.data);
-    };
-
-    getEvents();
-  }, []);
+  const { data, isLoading } = useFetchData(getFeaturedEvents);
 
   return (
     <div className="w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
@@ -56,9 +48,9 @@ const FeaturedEvents = () => {
         </div>
       </nav>
       <div className="w-full">
-        {featuredEvents.length ? (
+        {data.length ? (
           <Slider ref={sliderRef} {...settings}>
-            {featuredEvents.map(({ attributes }, index) => (
+            {data.map(({ attributes }, index) => (
               <FeaturedEventCard key={index} {...attributes} />
             ))}
           </Slider>

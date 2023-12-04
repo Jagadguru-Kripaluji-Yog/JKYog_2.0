@@ -1,20 +1,8 @@
-import { Extension, MetaInfo, MimeTypes } from './common';
+import { Extension, Format, MetaInfo, MimeTypes } from './common';
 
 export type GetMeetPostersResponse = {
   data: MeetPostersData[];
   meta: MetaInfo;
-};
-
-type Format = {
-  ext: Extension;
-  url: string;
-  hash: string;
-  mime: MimeTypes;
-  name: string;
-  path: null;
-  size: number;
-  width: number;
-  height: number;
 };
 
 export type MeetPostersData = {
