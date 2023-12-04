@@ -1,10 +1,10 @@
 import { Button } from '@/src/lib/button/button';
 import Image from 'next/image';
-import React from 'react';
+import React, { FC } from 'react';
 
-const Mission = () => {
+const Mission: FC = () => {
   return (
-    <div className="relative flex flex-col items-center gap-10 self-stretch px-10 py-[100px] mobile:w-[375px]">
+    <section className="relative flex flex-col items-center gap-10 self-stretch px-10 py-[100px] mobile:w-[375px]">
       <Image
         src="/images/background-flowers-left.png"
         alt="bg-left"
@@ -32,7 +32,7 @@ const Mission = () => {
         </div>
       </div>
       <Button href="/" text="About Us" variant="contained" color="primary" />
-    </div>
+    </section>
   );
 };
 

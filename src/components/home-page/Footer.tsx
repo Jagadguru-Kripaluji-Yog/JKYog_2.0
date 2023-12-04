@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Online Offering</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Online Offering</h2>
                 <div className="flex flex-col gap-[10px]">
                   {Offers.map((item, i) => {
                     return (
@@ -104,7 +104,7 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">About us</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">About us</h2>
                 <div className="flex flex-col gap-[10px]">
                   {About.map((item, i) => {
                     return (
@@ -116,7 +116,7 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Contacts</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Contacts</h2>
                 <div className="flex flex-col gap-[10px]">
                   {contact.map((item, i) => {
                     return (

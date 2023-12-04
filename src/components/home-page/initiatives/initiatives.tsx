@@ -23,12 +23,12 @@ const tabData: ComposedTabsProps['data'] = [
 
 const Initiatives: FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 self-stretch pt-[88px] pb-20 px-10">
+    <section className="flex flex-col justify-center items-center gap-10 self-stretch pt-[88px] pb-20 px-10">
       <h2 className="text-[#291900] text-center text-[44px] font-ptserif font-bold leading-[56px]">
         JKYog Initiatives
       </h2>
       <ComposedTabs data={tabData} />
-    </div>
+    </section>
   );
 };
 

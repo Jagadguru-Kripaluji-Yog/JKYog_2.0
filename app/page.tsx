@@ -7,6 +7,7 @@ import Footer from '@/src/components/home-page/footer/Footer';
 import Mission from '@/src/components/home-page/mission/mission';
 import Book from '@/src/components/home-page/book/book';
 import { HeroSection } from '@/src/components/home-page/hero-section/hero-section';
+import { Exclusive } from '@/src/components/home-page/exclusive/exclusive';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Book />
         <Blog />
       </div>
+      <Exclusive />
       <Footer />
     </main>
   );

@@ -12,7 +12,7 @@ const NavBar = () => {
   const [selected, setSelected] = useState(people[0]);
 
   return (
-    <nav className="w-full gap-3 py-[13px] px-[40px]   bg-[#fff] flex justify-between items-center">
+    <nav className="relative z-100 w-full gap-3 py-[13px] px-[40px]   bg-[#fff] flex justify-between items-center">
       <div className="flex gap-8 items-center">
         <Image src="/images/jkyoglogo.png" alt="JKYog Logo" width={100} height={30} />
 
