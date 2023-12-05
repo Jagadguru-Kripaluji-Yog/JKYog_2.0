@@ -3,10 +3,10 @@ import { PT_Serif } from 'next/font/google';
 import '../src/styles/globals.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import TopNavBar from '../src/components/home/top-nav-bar';
-import NavBar from '../src/components/home/nav-bar';
 import { NextAuthProvider } from './providers';
 import { Footer } from '@/src/components/layout/footer/footer';
+import { HeaderTop } from '@/src/components/layout/header/header-top';
+import { Header } from '@/src/components/layout/header/header';
 
 const ptSerif = PT_Serif({
   subsets: ['latin'],
@@ -25,8 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${ptSerif.variable} font-sans`}>
       <body>
         <NextAuthProvider>
-          <TopNavBar />
-          <NavBar />
+          <HeaderTop />
+          <Header />
           {children}
           <Footer />
         </NextAuthProvider>
