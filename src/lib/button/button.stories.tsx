@@ -14,3 +14,11 @@ export const Primary = {
     color: 'primary',
   },
 };
+
+export const Outlined = {
+  args: {
+    text: 'Click me!',
+    variant: 'outlined',
+    color: 'primary',
+  },
+};

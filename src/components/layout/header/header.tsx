@@ -6,11 +6,13 @@ import { Button } from '@/src/lib/button/button';
 
 export const Header: FC = () => (
   <header className="relative flex items-center gap-8 px-10 py-[13px] z-40">
-    <Image src="/images/logo.png" alt="logo" width={100} height={45} />
+    <Link href="/">
+      <Image src="/images/logo.png" alt="logo" width={100} height={45} />
+    </Link>
     <NavList />
     <div className="flex gap-2 ml-auto">
-      <Button text="Log in" href="/" variant="contained" color="primary" />
-      <Button text="Sign up" href="/" variant="contained" color="primary" />
+      <Button text="Log in" href="/" variant="outlined" color="primary" size="small" />
+      <Button text="Sign up" href="/" variant="contained" color="primary" size="small" />
     </div>
   </header>
 );
