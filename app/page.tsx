@@ -15,17 +15,16 @@ export default function Home() {
       <HeroSection />
       <Mission />
       <Events />
-      <div className="w-[1440px] mx-auto ">
+      <div className="max-w-[1440px] mx-auto ">
         <Subscription />
       </div>
       <Meet />
-      <div className="w-[1440px] mx-auto ">
+      <div className="max-w-[1440px] mx-auto ">
         <Initiatives />
         <Book />
         <Blog />
       </div>
       <Exclusive />
-      <Footer />
     </main>
   );
 }

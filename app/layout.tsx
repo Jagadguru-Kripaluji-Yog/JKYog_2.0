@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import TopNavBar from '../src/components/home/top-nav-bar';
 import NavBar from '../src/components/home/nav-bar';
 import { NextAuthProvider } from './providers';
+import { Footer } from '@/src/components/layout/footer/footer';
 
 const ptSerif = PT_Serif({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TopNavBar />
           <NavBar />
           {children}
+          <Footer />
         </NextAuthProvider>
       </body>
     </html>
