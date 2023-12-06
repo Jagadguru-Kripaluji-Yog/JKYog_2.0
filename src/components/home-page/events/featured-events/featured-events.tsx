@@ -40,7 +40,7 @@ const FeaturedEvents = () => {
             <button
               key={index}
               onClick={index === 0 ? sliderRef?.current?.slickPrev : sliderRef?.current?.slickNext}
-              className="rounded-[40px] border-[1.25px] border-solid border-[#DAD3C8] flex items-start gap-2.5 p-4 hover:bg-yellow-100 transition duration-300"
+              className="rounded-[40px] border-[1.25px] border-solid border-border-color flex items-start gap-2.5 p-4 hover:bg-yellow-100 transition duration-300"
             >
               <Image src={src} alt={alt} width={20} height={20} />
             </button>

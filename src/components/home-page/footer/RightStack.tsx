@@ -46,11 +46,11 @@ const RightStack = () => {
       <div className="flex flex-1 flex-col gap-8">
         <div className="grid grid-cols-3 grid-cols-1 gap-5">
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Yoga & Meditation</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Yoga & Meditation</h1>
             <div className="flex flex-col gap-[10px]">
               {Yoga.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );
@@ -58,11 +58,11 @@ const RightStack = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Events</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Events</h1>
             <div className="flex flex-col gap-[10px]">
               {Events.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );
@@ -70,11 +70,11 @@ const RightStack = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Online Offering</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Online Offering</h1>
             <div className="flex flex-col gap-[10px]">
               {Offers.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );
@@ -85,11 +85,11 @@ const RightStack = () => {
 
         <div className="grid grid-cols-3  grid-cols-1 gap-5">
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Resources</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Resources</h1>
             <div className="flex flex-col gap-[10px]">
               {Resources.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );
@@ -97,11 +97,11 @@ const RightStack = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">About us</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">About us</h1>
             <div className="flex flex-col gap-[10px]">
               {About.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );
@@ -109,11 +109,11 @@ const RightStack = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Contacts</h1>
+            <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Contacts</h1>
             <div className="flex flex-col gap-[10px]">
               {contact.map((item, i) => {
                 return (
-                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                  <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                     {item.name}
                   </p>
                 );

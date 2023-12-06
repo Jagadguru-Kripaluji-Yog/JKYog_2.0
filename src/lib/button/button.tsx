@@ -19,18 +19,19 @@ const variants = {
   },
   size: {
     small: 'px-4 py-2.5',
-    default: 'px-8 py-3.5',
+    default: 'px-8 py-3.5 w-full lg:w-[unset]',
   },
 };
 
-export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size = 'default', classes }) => {
+export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size = 'default', classes = '' }) => {
   return (
-    <Link href={href} className="z-10">
+    <Link href={href} className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
       <button
         className={`${variants.size[size]} 
                     rounded-[100px]
-                    justify-start items-center inline-flex
+                    justify-center items-center inline-flex
                     cursor-pointer
+                    
                     ${variants[variant][color]}
                     ${classes}
                 `}

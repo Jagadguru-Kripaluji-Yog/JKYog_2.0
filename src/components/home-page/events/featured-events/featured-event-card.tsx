@@ -22,7 +22,7 @@ export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, 
       </div>
       <div className="flex items-center gap-2.5 self-stretch p-4">
         <div className="flex flex-col justify-center items-start flex-[1_0_0]">
-          <h3 className="text-[#291900] text-[32px] font-ptserif not-italic font-bold leading-10">{heading}</h3>
+          <h3 className="text-heading text-[32px] font-ptserif not-italic font-bold leading-10">{heading}</h3>
           <div className="flex gap-2.5 self-stretch items-center justify-between">
             <div className="flex flex-col">
               <span className="text-[rgba(58,45,39,0.70)] text-base not-italic font-normal leading-6 tracking-[-0.16px]">

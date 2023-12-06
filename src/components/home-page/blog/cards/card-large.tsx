@@ -15,10 +15,10 @@ export const CardLarge: FC<{ blogs: any }> = ({ blogs }) => {
       <div className="flex flex-col justify-between items-start flex-[1_0_0] self-stretch px-0 py-3">
         <div className="flex w-[610px] h-[211.5px] flex-col items-start gap-3">
           <div className="flex flex-col justify-center items-start gap-2 self-stretch">
-            <h3 className="self-stretch text-[#291900] text-[32px] font-ptserif font-bold leading-10">
+            <h3 className="self-stretch text-heading text-[32px] font-ptserif font-bold leading-10">
               {blogs[0].attributes.heading}
             </h3>
-            <p className="self-stretch text-[#645743] text-base font-satoshi-regular leading-6 tracking-[-0.16px]">
+            <p className="self-stretch text-primary text-base font-satoshi-regular leading-6 tracking-[-0.16px]">
               {blogs[0].attributes.detail}
             </p>
           </div>

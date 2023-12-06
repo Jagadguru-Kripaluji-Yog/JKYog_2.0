@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <HeaderTop />
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </NextAuthProvider>
       </body>
     </html>

@@ -10,7 +10,7 @@ export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image
       <Image src={image.data[0].attributes.url} alt="" width={80} height={80} className="rounded-[14px]" />
       <div className="flex lg:w-[661px] flex-col justify-center items-start">
         <div className="px-2 py-1 rounded-3xl bg-yellow-50 font-ptserif text-xs text-orange-500">{tags}</div>
-        <h4 className="text-[#291900] mobile:text-[20px] text-[32px] not-italic font-ptserif font-bold leading-10 mobile:leading-5">
+        <h4 className="text-heading mobile:text-[20px] text-[32px] not-italic font-ptserif font-bold leading-10 mobile:leading-5">
           {heading}
         </h4>
       </div>

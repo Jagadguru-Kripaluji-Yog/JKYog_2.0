@@ -11,15 +11,15 @@ const Footer = () => {
         <RightStack />
       </div>
       {/* vector */}
-      <div className="h-[1.5px] bg-[#dad3c8] w-full"></div>
+      <div className="h-[1.5px] bg-border-color w-full"></div>
       {/* stack */}
       <div className="flex justify-between items-center self-stretch">
-        <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">
+        <p className="text-primary text-base not-italic font-normal leading-6 opacity-50">
           © Copyright 2020 JKYog. All Rights Reserved.
         </p>
         <div className="flex items-start gap-12">
-          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">Privacy Policy</p>
-          <p className="text-[#645743] text-base not-italic font-normal leading-6 opacity-50">Terms of Service</p>
+          <p className="text-primary text-base not-italic font-normal leading-6 opacity-50">Privacy Policy</p>
+          <p className="text-primary text-base not-italic font-normal leading-6 opacity-50">Terms of Service</p>
         </div>
       </div>
     </div>

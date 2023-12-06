@@ -29,8 +29,8 @@ export const Poster: FC = () => {
                     <Badge src="/icons/location.png" text={place} />
                     <Badge src="/icons/calendar.svg" text={formatDate(date)} />
                   </div>
-                  <h3 className="text-[#291900] text-[32px] font-ptserif font-bold leading-10">{heading}</h3>
-                  <span className="text-[#645743] text-base font-satoshi-regular font-normal leading-6 tracking-[-0.16px]">
+                  <h3 className="text-heading text-[32px] font-ptserif font-bold leading-10">{heading}</h3>
+                  <span className="text-primary text-base font-satoshi-regular font-normal leading-6 tracking-[-0.16px]">
                     {venue}
                   </span>
                 </div>

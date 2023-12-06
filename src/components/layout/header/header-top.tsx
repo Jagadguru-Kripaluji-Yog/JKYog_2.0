@@ -25,7 +25,7 @@ const navItems = [
 ];
 
 export const HeaderTop: FC = () => (
-  <header className="w-full bg-[#291900] px-4 xl:px-10">
+  <header className="w-full bg-heading px-4 xl:px-10">
     <NavList />
   </header>
 );

@@ -41,12 +41,12 @@ type NavListSubItem = {
 };
 
 const NavListItem: FC<NavListItemProps> = ({ title, links }) => (
-  <li className="group relative flex items-center gap-2 px-2 xl:px-4 py-1.5 xl:py-3 font-satoshi-medium text-base text-[#645743] cursor-pointer">
+  <li className="group relative flex items-center gap-2 px-2 xl:px-4 py-1.5 xl:py-3 font-satoshi-medium text-base text-primary cursor-pointer">
     <span>{title}</span>
     <div className="group-hover:rotate-180 transition">
       <ArrowDown />
     </div>
-    <ul className="flex-col absolute bottom-0 translate-y-[100%] bg-[#291900] rounded hidden group-hover:flex transition min-w-[130px] w-max">
+    <ul className="flex-col absolute bottom-0 translate-y-[100%] bg-heading rounded hidden group-hover:flex transition min-w-[130px] w-max">
       {links.map((link) => (
         <NavListItemSubMenu key={link.name} {...link} />
       ))}

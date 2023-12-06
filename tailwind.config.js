@@ -22,6 +22,12 @@ module.exports = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'meet-section-bg': 'url(/images/meet-section-bg.png)',
         'book-section-bg': 'url(/images/book-section-bg.png)',
+        'bg-flowers-mobile': 'url(/images/bg-flowers-mobile.png)',
+      },
+      colors: {
+        'primary': '#645743',
+        'heading': '#291900',
+        'border-color': '#dad3c8',
       },
     },
   },

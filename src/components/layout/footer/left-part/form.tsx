@@ -7,11 +7,11 @@ export const Form: FC = () => {
   const [checked, setChecked] = useState(false);
   return (
     <form className="flex flex-col gap-[14px] w-[346px]">
-      <label className="flex justify-between bg-white border border-[#DAD3C8] rounded-[56px] pl-5 py-2 pr-2">
+      <label className="flex justify-between bg-white border border-border-color rounded-[56px] pl-5 py-2 pr-2">
         <input
           type="email"
           placeholder="Enter your email address"
-          className="text-[#291900] text-opacity-30 font-satoshi-medium w-full outline-none"
+          className="text-heading text-opacity-30 font-satoshi-medium w-full outline-none"
         />
         <button type="submit" className="rounded-full bg-orange-500 hover:bg-orange-400 p-3">
           <Image src="/icons/arrow-right-white.svg" alt="arrow" width={16} height={16} />

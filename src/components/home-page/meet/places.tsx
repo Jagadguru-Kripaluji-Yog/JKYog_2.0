@@ -35,7 +35,7 @@ const PlaceListItem: FC<GetMeetPlacesData['attributes']> = ({ place, date, headi
             <Badge src="/icons/calendar.svg" text={formatDate(date)} />
           </div>
           <div className="">
-            <h3 className="text-[#291900] text-xl font-ptserif font-bold leading-7">{heading}</h3>
+            <h3 className="text-heading text-xl font-ptserif font-bold leading-7">{heading}</h3>
           </div>
         </div>
         <Arrow direction="topLeft" />

@@ -46,7 +46,7 @@ const socialLinks = [
 
 export const ConnectWithUs: FC = () => (
   <div className="flex flex-col gap-3 bottom-5 mt-auto">
-    <h2 className="text-[#291900] text-xl font-ptserif font-bold leading-7">Connect with us:</h2>
+    <h2 className="text-heading text-xl font-ptserif font-bold leading-7">Connect with us:</h2>
     <div className="flex gap-3">
       {socialLinks.map(({ icon, link }, i) => (
         <Link key={i} href={link}>

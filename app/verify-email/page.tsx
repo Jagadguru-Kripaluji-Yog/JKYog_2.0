@@ -13,9 +13,9 @@ const VerifyEmail = () => {
             <CloseIcon />
           </div>
           <div className="flex flex-col gap-3">
-            <div className="text-center text-[40px] font-bold leading-8 text-[#291900]">Verify your E-mail</div>
+            <div className="text-center text-[40px] font-bold leading-8 text-heading">Verify your E-mail</div>
 
-            <div className="text-[#645743] font-[18px]  leading-6 w-[500px] text-center">
+            <div className="text-primary font-[18px]  leading-6 w-[500px] text-center">
               {' '}
               Please, verify your E-mail address using the OTP (One Time Password) {'\n'} link sent to{' '}
               <span className="font-bold">melanie001brown@gmail.com</span>
@@ -23,12 +23,12 @@ const VerifyEmail = () => {
           </div>
 
           <div>
-            <button className="bg-[#EF6F1F] flex justify-center border-[#dad3c8] gap-[2px] rounded-3xl px-[16px] py-[10px]  text-white  ">
+            <button className="bg-[#EF6F1F] flex justify-center border-border-color gap-[2px] rounded-3xl px-[16px] py-[10px]  text-white  ">
               Change E-mail address{' '}
             </button>
           </div>
           <div>
-            <p className="text-[#645743] text-base font-semibold leading-6">
+            <p className="text-primary text-base font-semibold leading-6">
               Already have an account?{' '}
               <span className="text-[#ef6f1f] text-base font-semibold leading-6 underline">
                 <Link href={'/signin'}> Sign In </Link>
