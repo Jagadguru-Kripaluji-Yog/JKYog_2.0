@@ -25,14 +25,14 @@ const navItems = [
 ];
 
 export const HeaderTop: FC = () => (
-  <header className="w-full bg-[#291900] px-10">
+  <header className="w-full bg-[#291900] px-4 xl:px-10">
     <NavList />
   </header>
 );
 
 const NavList: FC = () => (
   <nav>
-    <ul className="flex justify-end">
+    <ul className="flex md:justify-end">
       {navItems.map((item) => (
         <NavListItem key={item.name} {...item} />
       ))}
@@ -46,7 +46,7 @@ type NavListItemProps = {
 };
 
 const NavListItem: FC<NavListItemProps> = ({ icon, name }) => (
-  <li className="flex gap-2 px-4 py-3 font-satoshi-medium text-base text-white cursor-pointer hover:bg-white/[.08]">
+  <li className="hidden md:flex last:flex gap-2 md:px-4 py-3 font-satoshi-medium text-base text-white cursor-pointer hover:bg-white/[.08]">
     <Image src={icon} alt={name} width={20} height={20} />
     <span>{name}</span>
   </li>

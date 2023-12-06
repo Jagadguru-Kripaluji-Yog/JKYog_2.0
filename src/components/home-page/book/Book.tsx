@@ -4,7 +4,7 @@ import { Button } from '@/src/lib/button/button';
 
 const Book: FC = () => {
   return (
-    <section className="flex w-[1440px] gap-10">
+    <section className="flex max-w-[1440px] gap-10">
       <div className="grid grid-cols-[500px_524px] items-stretch gap-10 px-14 mx-auto mt-[100px] mb-[88px] max-w-[1130px] rounded-[20px] bg-[#fbe5c4] bg-book-section-bg">
         <div className="flex flex-col justify-center items-start gap-10 py-20">
           <div className="flex flex-col justify-center items-start gap-3 self-stretch">

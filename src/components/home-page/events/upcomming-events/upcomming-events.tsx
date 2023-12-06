@@ -10,7 +10,7 @@ const UpcommingEvents = () => {
   const { data, isLoading } = useFetchData(getUpcommingEvents);
 
   return (
-    <div className="w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
+    <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
       <p className="text-[#291900] text-[44px] self-stretch not-italic font-ptserif font-bold leading-[56px]">
         Upcoming Events
       </p>

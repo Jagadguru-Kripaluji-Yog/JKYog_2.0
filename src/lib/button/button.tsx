@@ -7,6 +7,7 @@ export interface ButtonProps {
   variant: 'contained' | 'outlined';
   color: 'primary';
   size?: 'small' | 'default';
+  classes?: string;
 }
 
 const variants = {
@@ -22,7 +23,7 @@ const variants = {
   },
 };
 
-export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size = 'default' }) => {
+export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size = 'default', classes }) => {
   return (
     <Link href={href} className="z-10">
       <button
@@ -31,6 +32,7 @@ export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size
                     justify-start items-center inline-flex
                     cursor-pointer
                     ${variants[variant][color]}
+                    ${classes}
                 `}
       >
         <span className="text-center text-base font-satoshi-bold leading-normal">{text}</span>

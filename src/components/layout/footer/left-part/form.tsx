@@ -11,7 +11,7 @@ export const Form: FC = () => {
         <input
           type="email"
           placeholder="Enter your email address"
-          className="text-[#291900] text-opacity-30 font-satoshi-medium w-full"
+          className="text-[#291900] text-opacity-30 font-satoshi-medium w-full outline-none"
         />
         <button type="submit" className="rounded-full bg-orange-500 hover:bg-orange-400 p-3">
           <Image src="/icons/arrow-right-white.svg" alt="arrow" width={16} height={16} />
@@ -31,8 +31,8 @@ export const Form: FC = () => {
                            relative pl-9 
                            text-base font-satoshi-regular text-stone-600 text-opacity-80
                            before:absolute before:left-0 before:h-6 before:w-6 before:rounded-full
-                           before:border before:neutral-200 before:rounded-full
-                           after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full
+                           before:border before:border-neutral-200 before:bg-white  before:rounded-full
+                           after:absolute after:left-[4px] after:top-[4px] after:h-4 after:w-4 after:rounded-full
                            peer-checked:after:bg-orange-400"
         >
           Join me to WhatsApp group

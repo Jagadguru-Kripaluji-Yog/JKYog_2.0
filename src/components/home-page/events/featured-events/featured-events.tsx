@@ -30,7 +30,7 @@ const FeaturedEvents = () => {
   const { data, isLoading } = useFetchData(getFeaturedEvents);
 
   return (
-    <div className="w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
+    <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
       <nav className="flex justify-between items-center self-stretch">
         <h2 className="text-[44px] mobile:text-[32px] not-italic font-bold leading-[56px] font-ptserif">
           Featured Events

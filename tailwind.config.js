@@ -24,11 +24,6 @@ module.exports = {
         'book-section-bg': 'url(/images/book-section-bg.png)',
       },
     },
-    screens: {
-      mobile: { max: '375px' },
-      md: { min: '768px', max: '1023px' },
-      lg: { min: '1024px' },
-    },
   },
   plugins: [],
 };
