@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import FeaturedEvents from './featured-events/featured-events';
 import UpcommingEvents from './upcomming-events/upcomming-events';
 
-const Events = () => {
+const Events: FC = () => {
   return (
-    <section className="flex flex-col justify-center items-center gap-[100px] self-stretch pl-10 py-[88px] rounded-[40px] bg-yellow-50 ">
+    <section className="flex flex-col justify-center items-center gap-[100px] w-full pl-10 py-[88px] rounded-[40px] bg-[#FBE5C44D]/[.30]">
       <FeaturedEvents />
       <UpcommingEvents />
     </section>

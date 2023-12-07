@@ -1,55 +1,54 @@
 'use client';
 
-import React, { useRef } from 'react';
-import Image from 'next/image';
+import React, { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { FeaturedEventCard } from './featured-event-card';
 import { getFeaturedEvents } from '@/src/api/get-featured-events';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
-
-const arrows = [
-  {
-    src: '/icons/arrow-left.svg',
-    alt: 'arrow-left',
-  },
-  {
-    src: '/icons/arrow-right.svg',
-    alt: 'arrow-right',
-  },
-];
+import { SampleNextArrow, SamplePrevArrow } from './custom-slider-arrows';
 
 const settings: Settings = {
-  slidesToShow: 2.5,
+  slidesToShow: 2.9,
   slidesToScroll: 1,
   infinite: false,
-  arrows: false,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
-const FeaturedEvents = () => {
-  const sliderRef = useRef<Slider | null>(null);
+const FeaturedEvents: FC = () => {
   const { data, isLoading } = useFetchData(getFeaturedEvents);
 
   return (
-    <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-10 self-stretch">
-      <nav className="flex justify-between items-center self-stretch">
-        <h2 className="text-[44px] mobile:text-[32px] not-italic font-bold leading-[56px] font-ptserif">
-          Featured Events
-        </h2>
-        <div className="flex justify-center items-center gap-4 mobile:hidden mr-10">
-          {arrows.map(({ src, alt }, index) => (
-            <button
-              key={index}
-              onClick={index === 0 ? sliderRef?.current?.slickPrev : sliderRef?.current?.slickNext}
-              className="rounded-[40px] border-[1.25px] border-solid border-border-color flex items-start gap-2.5 p-4 hover:bg-yellow-100 transition duration-300"
-            >
-              <Image src={src} alt={alt} width={20} height={20} />
-            </button>
-          ))}
-        </div>
-      </nav>
+    <div className="relative flex flex-col items-center gap-10 w-full">
+      <h2 className="w-full text-center md:text-left  text-[32px] lg:text-[44px] font-bold leading-10 lg:leading-[56px] font-ptserif">
+        Featured Events
+      </h2>
       <div className="w-full">
         {data.length ? (
-          <Slider ref={sliderRef} {...settings}>
+          <Slider {...settings}>
             {data.map(({ attributes }, index) => (
               <FeaturedEventCard key={index} {...attributes} />
             ))}
