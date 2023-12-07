@@ -11,18 +11,19 @@ const settings: Settings = {
   slidesToShow: 2.9,
   slidesToScroll: 1,
   infinite: false,
+  draggable: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
   responsive: [
     {
-      breakpoint: 1400,
+      breakpoint: 1440,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 2.5,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1150,
       settings: {
         slidesToShow: 1.5,
         slidesToScroll: 1,
@@ -32,7 +33,7 @@ const settings: Settings = {
       breakpoint: 800,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1.3,
       },
     },
   ],
@@ -42,8 +43,8 @@ const FeaturedEvents: FC = () => {
   const { data, isLoading } = useFetchData(getFeaturedEvents);
 
   return (
-    <div className="relative flex flex-col items-center gap-10 w-full">
-      <h2 className="w-full text-center md:text-left  text-[32px] lg:text-[44px] font-bold leading-10 lg:leading-[56px] font-ptserif">
+    <div className="relative flex flex-col items-center pl-4 lg:pl-10 gap-10 w-full">
+      <h2 className="w-full text-center lg:text-left text-[32px] lg:text-[44px] font-bold leading-10 lg:leading-[56px] font-ptserif">
         Featured Events
       </h2>
       <div className="w-full">
