@@ -20,10 +20,10 @@ export default function Home() {
       <Meet />
       <div className="max-w-[1440px] mx-auto">
         <Initiatives />
-        <Book />
-        <Blog />
+        {/* <Book /> */}
+        {/* <Blog /> */}
       </div>
-      <Exclusive />
+      {/* <Exclusive /> */}
     </main>
   );
 }

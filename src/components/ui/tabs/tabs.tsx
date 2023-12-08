@@ -20,9 +20,5 @@ export const TabsContext = createContext<TabsContext>(initialContext);
 
 export const Tabs: FC<ComponentWithChildren> = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  return (
-    <TabsContext.Provider value={{ activeIndex, setActiveIndex }}>
-      <div className="w-full">{children}</div>
-    </TabsContext.Provider>
-  );
+  return <TabsContext.Provider value={{ activeIndex, setActiveIndex }}>{children}</TabsContext.Provider>;
 };
