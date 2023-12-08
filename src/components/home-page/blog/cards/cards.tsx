@@ -9,10 +9,10 @@ const Cards: FC = () => {
   const { data, isLoading } = useFetchData(getBlogs);
 
   return (
-    <div className="flex flex-col items-start gap-5 self-stretch">
+    <div className="flex flex-col gap-5">
       {data.length > 0 && <CardLarge blogs={data} />}
 
-      <div className="flex items-start gap-5 self-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {data.length > 0 &&
           data.map((i: any, index: number) => {
             if (index === 0) return;
