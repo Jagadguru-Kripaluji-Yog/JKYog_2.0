@@ -9,7 +9,7 @@ const SignUp = () => {
     <>
       <div className="absolute top-1/2 serif left-1/2 bg-[#FFFBF2] shadow z-50 rounded-lg transform -translate-x-1/2 -translate-y-1/2">
         <div className="flex w-[900px] p-[56px] h-[596px] flex-col items-center gap-8 shrink-0">
-          <div className="absolute right-6 top-6 border bg-[#fbe5c4] rounded-full p-3 items-center flex cursor-pointer">
+          <div className="absolute right-6 top-6 border bg-section-bg rounded-full p-3 items-center flex cursor-pointer">
             <CloseIcon />
           </div>
           <div className="flex flex-col gap-3">

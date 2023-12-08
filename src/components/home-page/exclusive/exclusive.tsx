@@ -19,7 +19,7 @@ const offers = [
 
 export const Exclusive: FC = () => {
   return (
-    <section className="flex flex-col items-center gap-10 w-full pt-[100px] bg-[#FBE5C4] rounded-t-[40px] bg-meet-section-bg">
+    <section className="flex flex-col items-center gap-10 w-full pt-[100px] bg-section-bg rounded-t-[40px] bg-meet-section-bg">
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col justify-start gap-3 items-center">
           <h2 className="text-center text-lime-950 text-[44px] font-bold font-ptserif leading-[56px]">

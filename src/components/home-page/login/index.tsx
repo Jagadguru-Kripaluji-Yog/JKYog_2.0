@@ -29,7 +29,7 @@ const index = () => {
             </DialogDescription>
 
             <DialogClose asChild>
-              <div className="flex items-center gap-2.5 absolute p-3.5 rounded-[100px] right-6 top-6 cursor-pointer bg-[#fbe5c4]">
+              <div className="flex items-center gap-2.5 absolute p-3.5 rounded-[100px] right-6 top-6 cursor-pointer bg-section-bg">
                 <CloseIcon />
               </div>
             </DialogClose>
