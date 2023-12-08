@@ -19,10 +19,10 @@ const offers = [
 
 export const Exclusive: FC = () => {
   return (
-    <section className="flex flex-col items-center gap-10 w-full pt-[100px] bg-section-bg rounded-t-[40px] bg-meet-section-bg">
+    <section className="flex flex-col items-center gap-10 w-full pt-8 px-4 lg:pt-[100px] bg-section-bg rounded-t-[40px] bg-meet-section-bg">
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col justify-start gap-3 items-center">
-          <h2 className="text-center text-lime-950 text-[44px] font-bold font-ptserif leading-[56px]">
+          <h2 className="text-center text-lime-950 text-[32px] leading-10 lg:text-[44px] lg:leading-[56px] font-bold font-ptserif">
             Swami Mukundananda Exclusive
           </h2>
           <p className="max-w-[810px] text-center text-stone-600 text-lg font-satoshi-regular leading-normal">
@@ -32,7 +32,7 @@ export const Exclusive: FC = () => {
         </div>
         <Button href="/" text="Join SMEx" variant="contained" color="primary" />
       </div>
-      <div className="flex justify-center items-center gap-5 w-full">
+      <div className="h-[360px] grid grid-cols-[320px_320px_320px] lg:flex lg:justify-center lg:items-center gap-5 w-full overflow-auto no-scrollbar">
         {offers.map((offer) => (
           <Offer key={offer.src} {...offer} />
         ))}
@@ -43,12 +43,12 @@ export const Exclusive: FC = () => {
 
 const Offer: FC<(typeof offers)[0]> = ({ src, text }) => {
   return (
-    <div className="relative h-[351.56px]">
+    <div className="relative h-[352px] mt-auto">
       <div className="relative top-[5px] max-w-[363px] p-8 bg-white rounded-t-[20px] flex flex-col justify-start items-center gap-8">
         <Image src={src} alt="offer" width={186} height={186} className="h-[186px]" />
         <span className="text-center text-neutral-900 text-2xl font-bold font-ptserif">{text}</span>
       </div>
-      <div className="w-[284px] h-[12px] left-10 -top-[7px] absolute opacity-50 bg-white rounded-t-3xl" />
+      <div className="w-[242px] lg:w-[284px] h-[12px] left-10 -top-[7px] absolute opacity-50 bg-white rounded-t-3xl" />
     </div>
   );
 };
