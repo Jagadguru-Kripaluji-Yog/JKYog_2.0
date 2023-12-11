@@ -13,8 +13,16 @@ export const Header: FC = () => (
     </Link>
     <NavList />
     <div className="flex gap-2 ml-auto">
-      <Button text="Log in" href="/" variant="outlined" color="primary" size="small" classes="hidden lg:block" />
-      <Button text="Sign up" href="/" variant="contained" color="primary" size="small" />
+      <Button
+        type="link"
+        text="Log in"
+        href="/"
+        variant="outlined"
+        color="primary"
+        size="small"
+        classes="hidden lg:block"
+      />
+      <Button type="link" text="Sign up" href="/" variant="contained" color="primary" size="small" />
     </div>
     <Burger />
   </header>

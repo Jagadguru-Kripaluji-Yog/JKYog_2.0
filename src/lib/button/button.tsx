@@ -1,14 +1,28 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-export interface ButtonProps {
-  href: string;
+export type ButtonType = 'button' | 'link';
+
+type CommonButtonProps<T> = {
+  type: T;
   text: string;
   variant: 'contained' | 'outlined';
   color: 'primary';
   size?: 'small' | 'default';
   classes?: string;
-}
+};
+
+type LinkButtonProps = {
+  href: string;
+};
+
+type NormalButtonProps = {
+  onClick: () => void;
+};
+
+export type ButtonProps<T extends ButtonType> = T extends 'link'
+  ? LinkButtonProps & CommonButtonProps<T>
+  : NormalButtonProps & CommonButtonProps<T>;
 
 const variants = {
   contained: {
@@ -23,21 +37,30 @@ const variants = {
   },
 };
 
-export const Button: FC<ButtonProps> = ({ href = '/', text, variant, color, size = 'default', classes = '' }) => {
-  return (
-    <Link href={href} className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
-      <button
-        className={`${variants.size[size]} 
-                    rounded-[100px]
-                    justify-center items-center inline-flex
-                    cursor-pointer
-                    
-                    ${variants[variant][color]}
-                    ${classes}
-                `}
-      >
-        <span className="text-center text-base font-satoshi-bold leading-normal">{text}</span>
-      </button>
-    </Link>
-  );
+const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size = 'default', classes = '' }) => (
+  <button
+    className={`${variants.size[size]} 
+                rounded-[100px]
+                justify-center items-center inline-flex
+                cursor-pointer z-10
+                ${variants[variant][color]}
+                ${classes}
+            `}
+  >
+    <span className="text-center text-base font-satoshi-bold leading-normal">{text}</span>
+  </button>
+);
+
+export const Button: FC<ButtonProps<ButtonType>> = (props) => {
+  const { type, size = 'default' } = props;
+
+  if (type === 'link') {
+    return (
+      <Link href={props.href} className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
+        <DefaultButton {...props} />
+      </Link>
+    );
+  }
+
+  return <DefaultButton {...props} />;
 };

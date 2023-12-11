@@ -16,7 +16,7 @@ const Book: FC = () => {
               devotion.
             </p>
           </div>
-          <Button href="/" text="Buy Now" variant="contained" color="primary" />
+          <Button type="link" href="/" text="Buy Now" variant="contained" color="primary" />
         </div>
         <Image src="/images/book-mobile.png" alt="book-mobile" width={375} height={267} className="lg:hidden mt-auto" />
         <div className="hidden lg:block relative w-full h-full">
