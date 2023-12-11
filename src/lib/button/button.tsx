@@ -6,9 +6,9 @@ export type ButtonType = 'button' | 'link';
 type CommonButtonProps<T> = {
   type: T;
   text: string;
-  variant: 'contained' | 'outlined';
+  variant: keyof typeof variants;
   color: 'primary';
-  size?: 'small' | 'default';
+  size?: keyof typeof sizes;
   classes?: string;
 };
 
@@ -31,15 +31,16 @@ const variants = {
   outlined: {
     primary: 'border hover:bg-gray-50 text-neutral-900',
   },
-  size: {
-    small: 'px-4 py-2.5',
-    default: 'px-8 py-3.5 w-full lg:w-[unset]',
-  },
+};
+
+const sizes = {
+  small: 'px-4 py-2.5',
+  default: 'px-8 py-3.5 w-full lg:w-[unset]',
 };
 
 const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size = 'default', classes = '' }) => (
   <button
-    className={`${variants.size[size]} 
+    className={`${sizes[size]} 
                 rounded-[100px]
                 justify-center items-center inline-flex
                 cursor-pointer z-10
