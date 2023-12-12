@@ -6,7 +6,7 @@ import { linkGroups } from './constants';
 
 export const Footer: FC = () => {
   return (
-    <footer className="flex flex-col items-center bg-[#FFFBF2] px-4 lg:px-10 pt-[48px] lg:pt-16 pb-8">
+    <footer className="flex flex-col items-center bg-modal-bg px-4 lg:px-10 pt-[48px] lg:pt-16 pb-8">
       <div className="flex flex-col xl:flex-row justify-between w-full gap-[46px] lg:gap-20 2xl:gap-[150px] border-b border-neutral-200 pb-6 mb-6">
         <LeftPart />
         <RightPart linkGroups={linkGroups} />

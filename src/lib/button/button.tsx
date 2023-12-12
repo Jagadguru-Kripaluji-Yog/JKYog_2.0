@@ -39,7 +39,7 @@ const sizes = {
 };
 
 const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size = 'default', classes = '' }) => (
-  <button
+  <div
     className={`${sizes[size]} 
                 rounded-[100px]
                 justify-center items-center inline-flex
@@ -49,7 +49,7 @@ const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size
             `}
   >
     <span className="text-center text-base font-satoshi-bold leading-normal">{text}</span>
-  </button>
+  </div>
 );
 
 export const Button: FC<ButtonProps<ButtonType>> = (props) => {
@@ -63,5 +63,9 @@ export const Button: FC<ButtonProps<ButtonType>> = (props) => {
     );
   }
 
-  return <DefaultButton {...props} />;
+  return (
+    <button onClick={props.onClick}>
+      <DefaultButton {...props} />
+    </button>
+  );
 };

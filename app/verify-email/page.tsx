@@ -7,7 +7,7 @@ import { CloseIcon } from '@/src/components/icons/close';
 const VerifyEmail = () => {
   return (
     <>
-      <div className="absolute top-1/2 serif left-1/2 bg-[#FFFBF2] shadow z-50 rounded-lg transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-1/2 serif left-1/2 bg-modal-bg shadow z-50 rounded-lg transform -translate-x-1/2 -translate-y-1/2">
         <div className="flex w-[900px] h-[596px] p-[56px] flex-col justify-center items-center gap-8 shrink-0">
           <div className="absolute right-6 top-6 border bg-section-bg rounded-full p-3 items-center flex cursor-pointer">
             <CloseIcon />

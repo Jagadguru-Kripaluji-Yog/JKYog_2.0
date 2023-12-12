@@ -1,32 +1,64 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, useContext } from 'react';
 import Image from 'next/image';
 import { linkGroups } from '../footer/constants';
 import Link from 'next/link';
 import { Button } from '@/src/lib/button/button';
 import { ArrowDown } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
+import { ModalContext } from '@/src/context/modal/modal-context';
+import { Modal } from '../../ui/modal/modal';
+import { AuthContext } from '@/src/context/auth/auth-context';
 
-export const Header: FC = () => (
-  <header className="relative flex items-center gap-3 xl:gap-8 px-4 xl:px-10 py-[13px] z-40">
-    <Link href="/">
-      <Image src="/images/logo.png" alt="logo" width={100} height={45} />
-    </Link>
-    <NavList />
-    <div className="flex gap-2 ml-auto">
-      <Button
-        type="link"
-        text="Log in"
-        href="/"
-        variant="outlined"
-        color="primary"
-        size="small"
-        classes="hidden lg:block"
-      />
-      <Button type="link" text="Sign up" href="/" variant="contained" color="primary" size="small" />
-    </div>
-    <Burger />
-  </header>
-);
+export const Header: FC = () => {
+  const { handleModalOpen } = useContext(ModalContext);
+  const { isAuth, signOut } = useContext(AuthContext);
+
+  return (
+    <header className="relative flex items-center gap-3 xl:gap-8 px-4 xl:px-10 py-[13px] z-40">
+      <Link href="/">
+        <Image src="/images/logo.png" alt="logo" width={100} height={45} />
+      </Link>
+      <NavList />
+      <div className="flex gap-2 ml-auto">
+        {isAuth ? (
+          <Button
+            type="button"
+            text="Sign out"
+            variant="outlined"
+            color="primary"
+            size="small"
+            classes="hidden lg:block"
+            onClick={signOut}
+          />
+        ) : (
+          <>
+            <Button
+              type="button"
+              text="Log in"
+              variant="outlined"
+              color="primary"
+              size="small"
+              classes="hidden lg:block"
+              onClick={() => handleModalOpen(true)}
+            />
+            <Button
+              type="button"
+              text="Sign up"
+              variant="contained"
+              color="primary"
+              size="small"
+              onClick={() => handleModalOpen(true)}
+            />
+          </>
+        )}
+      </div>
+      <Modal />
+      <Burger />
+    </header>
+  );
+};
 
 const NavList: FC = () => (
   <nav className="hidden lg:block">

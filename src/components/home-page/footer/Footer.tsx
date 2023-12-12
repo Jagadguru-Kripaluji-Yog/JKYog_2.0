@@ -4,7 +4,7 @@ import RightStack from './RightStack';
 
 const Footer = () => {
   return (
-    <div className="flex w-full flex-col items-start gap-6 pt-16 pb-8 px-10 bg-[#fffbf2]">
+    <div className="flex w-full flex-col items-start gap-6 pt-16 pb-8 px-10 bg-modal-bg">
       {/* content */}
       <div className="flex justify-between items-start self-stretch">
         <LeftStack />

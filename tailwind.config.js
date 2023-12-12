@@ -29,6 +29,7 @@ module.exports = {
         'heading': '#291900',
         'border-color': '#dad3c8',
         'section-bg': '#fbe5c4',
+        'modal-bg': '#FFFBF2',
       },
     },
   },
