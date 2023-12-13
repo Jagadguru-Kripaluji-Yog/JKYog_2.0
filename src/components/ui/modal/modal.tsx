@@ -6,6 +6,7 @@ import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import { SupabaseClient, createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useModalStore } from '@/src/zustand/modal-store';
+import Link from 'next/link';
 
 export const Modal: FC = () => {
   const supabase = createClientComponentClient();
@@ -51,19 +52,20 @@ const SignInView: FC<{ supabase: SupabaseClient }> = ({ supabase }) => (
     </div>
 
     <div>
-      <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">
+      <span className="text-stone-600 text-base font-satoshi-regular leading-normal">
         By clicking on Continue, you accept our
       </span>
-      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-      <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
+      <span className="text-stone-600 text-lg font-satoshi-regular leading-normal"> </span>
+      <Link href="/" className="text-orange-500 text-base font-satoshi-medium underline leading-normal">
         Terms of Service
-      </span>
-      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-      <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">and</span>
-      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-      <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
+      </Link>
+      <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal"> and </span>
+      <Link
+        href="/"
+        className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal"
+      >
         Privacy Policy
-      </span>
+      </Link>
     </div>
   </>
 );
