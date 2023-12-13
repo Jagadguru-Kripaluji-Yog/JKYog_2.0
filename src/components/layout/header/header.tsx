@@ -24,15 +24,7 @@ export const Header: FC = () => {
       <div className="flex gap-2 ml-auto">
         {!isLoading &&
           (isAuth ? (
-            <Button
-              type="button"
-              text="Sign out"
-              variant="outlined"
-              color="primary"
-              size="small"
-              classes="hidden lg:block"
-              onClick={signOut}
-            />
+            <Button type="button" text="Sign out" variant="outlined" color="primary" size="small" onClick={signOut} />
           ) : (
             <>
               <Button
