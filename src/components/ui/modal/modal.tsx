@@ -56,11 +56,12 @@ const SignInView: FC<{ supabase: SupabaseClient }> = ({ supabase }) => (
         By clicking on Continue, you accept our
       </span>
       <span className="text-stone-600 text-lg font-satoshi-regular leading-normal"> </span>
-      <Link href="/" className="text-orange-500 text-base font-satoshi-medium underline leading-normal">
+      <Link target="_blank" href="/" className="text-orange-500 text-base font-satoshi-medium underline leading-normal">
         Terms of Service
       </Link>
       <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal"> and </span>
       <Link
+        target="_blank"
         href="/"
         className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal"
       >
