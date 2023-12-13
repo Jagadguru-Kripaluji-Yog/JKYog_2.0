@@ -8,8 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Footer } from '@/src/components/layout/footer/footer';
 import { HeaderTop } from '@/src/components/layout/header/header-top';
 import { Header } from '@/src/components/layout/header/header';
-import { AuthProvider } from '@/src/context/auth/auth-context';
-import { ModalProvider } from '@/src/context/modal/modal-context';
+import { AuthLayout } from '@/src/components/layout/auth-layout/auth-layout';
 
 const ptSerif = PT_Serif({
   subsets: ['latin'],
@@ -33,14 +32,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" className={`${ptSerif.variable} font-sans`}>
       <body>
-        <AuthProvider accessToken={session?.access_token}>
-          <HeaderTop />
-          <ModalProvider>
-            <Header />
-          </ModalProvider>
-          {children}
-          <Footer />
-        </AuthProvider>
+        <HeaderTop />
+        <AuthLayout accessToken={session?.access_token}>
+          <Header />
+        </AuthLayout>
+        {children}
+        <Footer />
       </body>
     </html>
   );

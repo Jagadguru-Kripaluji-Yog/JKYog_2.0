@@ -1,19 +1,19 @@
 'use client';
 
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { linkGroups } from '../footer/constants';
 import Link from 'next/link';
 import { Button } from '@/src/lib/button/button';
 import { ArrowDown } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
-import { ModalContext } from '@/src/context/modal/modal-context';
 import { Modal } from '../../ui/modal/modal';
-import { AuthContext } from '@/src/context/auth/auth-context';
+import { useAuthStore } from '@/src/zustand/auth-store';
+import { useModalStore } from '@/src/zustand/modal-store';
 
 export const Header: FC = () => {
-  const { handleModalOpen } = useContext(ModalContext);
-  const { isAuth, signOut } = useContext(AuthContext);
+  const { handleModalOpen } = useModalStore();
+  const { isAuth, isLoading, signOut } = useAuthStore();
 
   return (
     <header className="relative flex items-center gap-3 xl:gap-8 px-4 xl:px-10 py-[13px] z-40">
@@ -22,37 +22,38 @@ export const Header: FC = () => {
       </Link>
       <NavList />
       <div className="flex gap-2 ml-auto">
-        {isAuth ? (
-          <Button
-            type="button"
-            text="Sign out"
-            variant="outlined"
-            color="primary"
-            size="small"
-            classes="hidden lg:block"
-            onClick={signOut}
-          />
-        ) : (
-          <>
+        {!isLoading &&
+          (isAuth ? (
             <Button
               type="button"
-              text="Log in"
+              text="Sign out"
               variant="outlined"
               color="primary"
               size="small"
               classes="hidden lg:block"
-              onClick={() => handleModalOpen(true)}
+              onClick={signOut}
             />
-            <Button
-              type="button"
-              text="Sign up"
-              variant="contained"
-              color="primary"
-              size="small"
-              onClick={() => handleModalOpen(true)}
-            />
-          </>
-        )}
+          ) : (
+            <>
+              <Button
+                type="button"
+                text="Log in"
+                variant="outlined"
+                color="primary"
+                size="small"
+                classes="hidden lg:block"
+                onClick={() => handleModalOpen(true)}
+              />
+              <Button
+                type="button"
+                text="Sign up"
+                variant="contained"
+                color="primary"
+                size="small"
+                onClick={() => handleModalOpen(true)}
+              />
+            </>
+          ))}
       </div>
       <Modal />
       <Burger />

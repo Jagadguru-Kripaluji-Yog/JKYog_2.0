@@ -1,15 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { FC, useContext, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { ModalContext } from '@/src/context/modal/modal-context';
+import { SupabaseClient, createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useModalStore } from '@/src/zustand/modal-store';
 
 export const Modal: FC = () => {
   const supabase = createClientComponentClient();
-  const { open, handleModalOpen } = useContext(ModalContext);
+  const { open, handleModalOpen } = useModalStore();
 
   useEffect(() => {
     if (open) {
@@ -32,32 +32,38 @@ export const Modal: FC = () => {
         >
           <Image src="/icons/close.svg" alt="close" width={20} height={20} />
         </div>
-        <div className="flex flex-col justify-start items-center gap-3 ">
-          <h2 className="text-center text-heading text-[40px] font-bold font-ptserif leading-[48px]">Sign Up</h2>
-          <span className="text-primary text-lg font-satoshi-regular leading-normal">
-            Create an account to keep track of JKYog Online classes and events.
-          </span>
-        </div>
-        <div className="w-[354px]">
-          <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} providers={['google', 'apple']} />
-        </div>
-
-        <div>
-          <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">
-            By clicking on Continue, you accept our
-          </span>
-          <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-          <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
-            Terms of Service
-          </span>
-          <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-          <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">and</span>
-          <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
-          <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
-            Privacy Policy
-          </span>
-        </div>
+        <SignInView supabase={supabase} />
       </div>
     </div>
   );
 };
+
+const SignInView: FC<{ supabase: SupabaseClient }> = ({ supabase }) => (
+  <>
+    <div className="flex flex-col justify-start items-center gap-3 ">
+      <h2 className="text-center text-heading text-[40px] font-bold font-ptserif leading-[48px]">Sign In</h2>
+      <span className="text-primary text-lg font-satoshi-regular leading-normal">
+        Create an account to keep track of JKYog Online classes and events.
+      </span>
+    </div>
+    <div className="w-[354px]">
+      <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} providers={['google', 'apple']} />
+    </div>
+
+    <div>
+      <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">
+        By clicking on Continue, you accept our
+      </span>
+      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
+      <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
+        Terms of Service
+      </span>
+      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
+      <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal">and</span>
+      <span className="text-stone-600 text-lg font-normal font-['Satoshi Variable'] leading-normal"> </span>
+      <span className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal">
+        Privacy Policy
+      </span>
+    </div>
+  </>
+);
