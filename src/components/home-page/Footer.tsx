@@ -47,7 +47,7 @@ const Footer = () => {
   const contact = [{ name: 'Social Media', url: '/' }];
 
   return (
-    <div className="w-full gap-3 px-[40px] font-serif  bg-[#FFFBF2] flex justify-center items-center">
+    <div className="w-full gap-3 px-[40px] font-serif  bg-bg-light flex justify-center items-center">
       <div className="flex flex-col items-start justify-between w-full  pt-16 px-[40px] pb-8 ">
         <div className="flex md:flex-row flex-col gap-8">
           <div className="flex flex-1 flex-col gap-8">
@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full border border-border-color my-6 "></div>
+        <div className="w-full border border-border-primary my-6 "></div>
 
         <div className="flex md:flex-row flex-col justify-between text-sm gap-2  self-stretch text-[#655743]">
           <div className="leading-6">© Copyright 2020 JKYog. All Rights Reserved.</div>

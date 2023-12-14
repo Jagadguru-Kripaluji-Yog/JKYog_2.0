@@ -11,13 +11,13 @@ const Form: FC = () => {
         <div className="flex flex-col items-center gap-4 self-stretch">
           <input
             type="text"
-            className="flex items-start self-stretch px-5 py-3.5 rounded-[56px] border-[1.25px] border-solid border-border-color bg-transparent focus-visible:outline-orange-500"
+            className="flex items-start self-stretch px-5 py-3.5 rounded-[56px] border-[1.25px] border-solid border-border-secondary bg-transparent focus-visible:outline-button-primary"
             placeholder="Full Name"
           />
           <input
             type="text"
             placeholder="Email Address"
-            className="flex items-start self-stretch px-5 py-3.5 rounded-[56px] border-[1.25px] border-solid border-border-color bg-transparent focus-visible:outline-orange-500"
+            className="flex items-start self-stretch px-5 py-3.5 rounded-[56px] border-[1.25px] border-solid border-border-secondary bg-transparent focus-visible:outline-button-primary"
           />
         </div>
       </div>

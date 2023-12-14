@@ -5,7 +5,7 @@ import { formatDate } from '@/src/utils/format-date';
 
 export const CardLarge: FC<{ blogs: any }> = ({ blogs }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] lg:gap-5 p-3 rounded-[20px] border border-[#F0EBE1] w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] lg:gap-5 p-3 rounded-[20px] border border-border-primary w-full">
       <div className="relative">
         <Image
           src={blogs[0].attributes.poster.data[0].attributes.url}
@@ -27,7 +27,7 @@ export const CardLarge: FC<{ blogs: any }> = ({ blogs }) => {
             {blogs[0].attributes.detail}
           </p>
         </div>
-        <span className="text-[#EF6F1F] opacity-50 text-base font-satoshi-bold leading-6 mt-2">
+        <span className="text-button-primary opacity-50 text-base font-satoshi-bold leading-6 mt-2">
           {formatDate(blogs[0].attributes.time)}
         </span>
       </div>

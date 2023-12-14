@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Quote: FC = () => {
   return (
-    <div className="order-first lg:order-1 flex flex-col justify-center items-center gap-6 lg:gap-10 px-8 py-10 rounded-[20px] border-[#F0EBE1] bg-[#FFFBF2]">
+    <div className="order-first lg:order-1 flex flex-col justify-center items-center gap-6 lg:gap-10 px-8 py-10 rounded-[20px] border-border-primary bg-bg-light">
       <div className="flex justify-center items-center w-[72px] h-[72px] gap-2.5 p-2.5 rounded-[100px] bg-orange-100">
         <Image src="/icons/quotes.svg" alt="quotes" width={48} height={48} />
       </div>

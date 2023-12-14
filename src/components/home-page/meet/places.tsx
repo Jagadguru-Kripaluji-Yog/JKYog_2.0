@@ -12,12 +12,12 @@ export const Places: FC = () => {
   const { data, isLoading } = useFetchData(getMeetPlaces);
 
   return (
-    <div className="flex flex-col items-start gap-6  self-stretch p-6 rounded-[20px] bg-[#fff] w-full">
+    <div className="flex flex-col items-start gap-6  self-stretch p-6 rounded-[20px] bg-white w-full">
       <div className="flex flex-col items-start gap-4 self-stretch">
         {data.map(({ id, attributes }, index) => (
           <Fragment key={id}>
             <PlaceListItem {...attributes} />
-            {index < data.length - 1 && <div className="h-[1.5px] w-full bg-[#f0ebe1]"></div>}
+            {index < data.length - 1 && <div className="h-[1.5px] w-full bg-border-primary"></div>}
           </Fragment>
         ))}
       </div>

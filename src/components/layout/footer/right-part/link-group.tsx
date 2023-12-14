@@ -16,7 +16,7 @@ export const LinkGroup: FC<LinkGroupProps> = ({ title, links }) => (
     <h3 className="text-xl font-ptserif text-neutral-900 font-bold leading-7 mb-1">{title}</h3>
     {links.map(({ name, url }) => {
       return (
-        <Link key={name} href={url} className="text-base font-satoshi-regular text-primary hover:text-[#EF6F1F]">
+        <Link key={name} href={url} className="text-base font-satoshi-regular text-primary hover:text-button-primary">
           {name}
         </Link>
       );

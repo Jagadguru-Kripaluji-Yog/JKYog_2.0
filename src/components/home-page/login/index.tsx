@@ -15,7 +15,7 @@ const index = () => {
     <div>
       <Dialog>
         <DialogTrigger asChild>
-          <div className="text-gray-700 border flex justify-center border-border-color gap-[2px] rounded-3xl px-[16px] py-[10px] hover:text-orange cursor-pointer">
+          <div className="text-gray-700 border flex justify-center border-border-primary gap-[2px] rounded-3xl px-[16px] py-[10px] hover:text-orange cursor-pointer">
             login
           </div>
         </DialogTrigger>
@@ -37,7 +37,7 @@ const index = () => {
           {/* social */}
           <div className="flex w-[354px] flex-col items-start gap-4">
             <div
-              className="flex hover:cursor-pointer items-center gap-3 self-stretch border pl-20 pr-10 py-2.5 rounded-[56px] border-solid border-border-color"
+              className="flex hover:cursor-pointer items-center gap-3 self-stretch border pl-20 pr-10 py-2.5 rounded-[56px] border-solid border-border-primary"
               onClick={() => signIn('google')}
             >
               <div className="bg-white w-[32px] h-[32px] flex items-center justify-center rounded-full">
@@ -46,7 +46,7 @@ const index = () => {
               <p>Sign In with Google</p>
             </div>
 
-            <div className="flex items-center gap-3 hover:cursor-pointer self-stretch border pl-20 pr-10 py-2.5 rounded-[56px] border-solid border-border-color">
+            <div className="flex items-center gap-3 hover:cursor-pointer self-stretch border pl-20 pr-10 py-2.5 rounded-[56px] border-solid border-border-primary">
               <div className="bg-black w-[32px] h-[32px] flex items-center justify-center rounded-full">
                 <Apple />
               </div>
@@ -54,24 +54,25 @@ const index = () => {
             </div>
 
             <div className="flex justify-center items-center gap-3 self-stretch">
-              <div className="w-[157px] h-[1px] bg-border-color"></div>
+              <div className="w-[157px] h-[1px] bg-border-primary"></div>
               <p>or</p>
-              <div className="w-[157px] h-[1px] bg-border-color"></div>
+              <div className="w-[157px] h-[1px] bg-border-primary"></div>
             </div>
             {/* content */}
-            <div className="flex w-[346px] justify-between items-center pl-5 pr-2 py-2 rounded-[56px] border-[1.25px] border-solid border-border-color bg-transparent">
+            <div className="flex w-[346px] justify-between items-center pl-5 pr-2 py-2 rounded-[56px] border-[1.25px] border-solid border-border-primary bg-transparent">
               <input type="text" placeholder="enter your email address" className="bg-transparent" />
-              <div className="flex flex-end items-center gap-2.5 p-3 rounded-[100px] bg-[#ef6f1f]">
+              <div className="flex flex-end items-center gap-2.5 p-3 rounded-[100px] bg-button-primary">
                 <ArrowRight className="h-4 w-4 fill-white" />
               </div>
             </div>
           </div>
           <p className="text-primary text-base not-italic font-normal leading-6">
-            By clicking on Continue, you accept our <span className="text-[#EF6F1F] underline">Terms of Service</span>{' '}
-            and <span className="text-[#EF6F1F] underline">Privacy Policy</span>
+            By clicking on Continue, you accept our{' '}
+            <span className="text-button-primary underline">Terms of Service</span> and{' '}
+            <span className="text-button-primary underline">Privacy Policy</span>
           </p>
           <p className="text-primary text-base not-italic font-normal leading-6">
-            Already have an account? <span className="text-[#EF6F1F] underline">Sign In</span>
+            Already have an account? <span className="text-button-primary underline">Sign In</span>
           </p>
         </DialogContent>
       </Dialog>

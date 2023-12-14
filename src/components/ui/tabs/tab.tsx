@@ -19,13 +19,13 @@ export const Tab: FC<TabProps> = ({ children, isDisabled, ...rest }) => {
         px-4 lg:px-6 py-2.5
         rounded-[29px]
         w-fit whitespace-nowrap
-        border border-stone-200
+        border border-border-primary
           ${
             isDisabled
               ? 'disabled cursor-not-allowed opacity-50'
               : isActive
-                ? `active text-white bg-[#EF6F1F]`
-                : 'bg-white hover:bg-[#EF6F1F]/[.7]'
+                ? `active text-white bg-button-primary`
+                : 'bg-white hover:bg-button-primary/[.7]'
           }`}
       onClick={isDisabled ? undefined : () => setActiveIndex(index)}
       key={index + 'tab'}
