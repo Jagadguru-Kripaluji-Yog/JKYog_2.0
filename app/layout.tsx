@@ -3,7 +3,6 @@ import { PT_Serif } from 'next/font/google';
 import '../src/styles/globals.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { NextAuthProvider } from './providers';
 import { Footer } from '@/src/components/layout/footer/footer';
 import { HeaderTop } from '@/src/components/layout/header/header-top';
 import { Header } from '@/src/components/layout/header/header';
@@ -24,12 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${ptSerif.variable} font-sans`}>
       <body>
-        <NextAuthProvider>
-          <HeaderTop />
-          <Header />
-          {children}
-          <Footer />
-        </NextAuthProvider>
+        <HeaderTop />
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
