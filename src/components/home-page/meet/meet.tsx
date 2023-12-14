@@ -8,7 +8,7 @@ const Meet: FC = () => {
       <h2 className="text-heading text-center text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px]">
         Meet Swamiji
       </h2>
-      <div className="flex flex-col xl:flex-row justify-end items-center gap-5">
+      <div className="flex flex-col xl:flex-row justify-between items-center gap-5 max-w-[1360px] w-full">
         <Poster />
         <Places />
       </div>

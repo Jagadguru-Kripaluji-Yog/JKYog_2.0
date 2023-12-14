@@ -27,13 +27,13 @@ const Book: FC = () => {
             height={424}
             className="absolute right-[69px] bottom-0 w-[438px] h-[424px]"
           />
-          <div className="absolute bottom-[83px] left-[31px] inline-flex justify-center items-center p-4 bg-white rounded-2xl">
+          <div className="absolute bottom-[83px] left-[31px] inline-flex justify-center items-center p-4 bg-white rounded-2xl shadow-[0px_5.89001px_15.70671px_0px_rgba(0,0,0,0.25)]">
             <p className="w-[208px] text-heading text-xs font-medium leading-[130%]">
               Dhritarashtra said: O Sanjay, after gathering on the holy field of Kurukshetra, and desiring to fight,
               what did my sons and the sons of Pandu do?
             </p>
           </div>
-          <div className="absolute bottom-[28px] right-[43px]  inline-flex justify-center items-center shadow-[0px_5.89001px_15.70671px_0px_rgba(0,0,0,0.25)] p-4 rounded-2xl bg-white">
+          <div className="absolute bottom-[28px] right-[43px]  inline-flex justify-center items-center p-4 rounded-2xl bg-white shadow-[0px_5.89001px_15.70671px_0px_rgba(0,0,0,0.25)]">
             <p className="w-[208px] text-heading text-xs font-medium leading-[130%]">
               Dhritarashtra said: O Sanjay, after gathering on the holy field of Kurukshetra, and desiring to fight,
               what did my sons and the sons of Pandu do?

@@ -51,9 +51,9 @@ const SubSection: FC<SubSectionProps> = ({ id, src, alt, isActive, onHover, subT
   return (
     <div
       id={id}
-      className={`relative px-4 xl:px-10 py-3 xl:py-16 overflow-hidden flex flex-col ${
+      className={`relative px-4 xl:px-10 pb-16 xl:py-16 overflow-hidden flex flex-col ${
         isActive ? 'flex-[1_1_73%] lg:flex-[1_1_50%]' : 'flex-[1]'
-      }  transition-all duration-500 `}
+      }  transition-all duration-500 cursor-pointer`}
       onMouseEnter={onHover}
     >
       {id === '3' ? (
@@ -69,16 +69,17 @@ const SubSection: FC<SubSectionProps> = ({ id, src, alt, isActive, onHover, subT
       ) : (
         <Image src={src} alt={alt} fill className="object-cover z-10" />
       )}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-10 z-10" />
       <div
         className={`relative z-20 mt-auto max-w-[542px] flex-col justify-end items-start gap-10 flex transition-all duration-600 ${
           isActive ? 'flex' : 'hidden'
         }`}
       >
         <div className="flex-col justify-start items-start gap-3 flex">
-          <h2 className="text-orange-50 text-[40px] lg:text-[56px] font-bold font-ptserif leading-[48px] lg:leading-[64px]">
+          <h2 className="z-20 text-orange-50 text-[40px] lg:text-[56px] font-bold font-ptserif leading-[48px] lg:leading-[64px]">
             Swami Mukundananda. Man with a Mission
           </h2>
-          <p className="text-orange-50 text-base lg:text-lg font-satoshi-regular leading-normal">
+          <p className="z-20 text-orange-50 text-base lg:text-lg font-satoshi-regular leading-normal">
             The powerful techniques of mind management revealed by Swamiji are the elaborations of eternal truths of the
             vedas that have helped thousands of people transform their minds and their lives by learning and applying
             these principles.

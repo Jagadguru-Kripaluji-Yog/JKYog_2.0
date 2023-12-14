@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { LeftPart } from './left-part/left-part';
 import { RightPart } from './right-part/right-part';
 import { linkGroups } from './constants';
+import moment from 'moment';
 
 export const Footer: FC = () => {
   return (
@@ -11,11 +12,17 @@ export const Footer: FC = () => {
         <LeftPart />
         <RightPart linkGroups={linkGroups} />
       </div>
-      <div className="flex flex-col md:flex-row justify-between text-sm gap-5 md:gap-2 text-neutral-700 text-opacity-50 w-full">
-        <div className="leading-6">© Copyright 2020 JKYog. All Rights Reserved.</div>
+      <div className="flex flex-col md:flex-row justify-between text-sm gap-5 md:gap-2  w-full">
+        <div className="text-primary text-opacity-50 leading-6">
+          © Copyright {moment().year()} JKYog. All Rights Reserved.
+        </div>
         <div className="flex flex-col md:flex-row gap-5 md:gap-12 leading-6">
-          <Link href="/">Privacy Policy</Link>
-          <Link href="/">Terms of Services</Link>
+          <Link href="/" className="text-primary text-opacity-50 hover:text-opacity-80">
+            Privacy Policy
+          </Link>
+          <Link href="/" className="text-primary text-opacity-50 hover:text-opacity-80">
+            Terms of Services
+          </Link>
         </div>
       </div>
     </footer>

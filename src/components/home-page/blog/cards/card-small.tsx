@@ -13,9 +13,11 @@ export const CardSmall: FC<{ i: any }> = ({ i }) => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-between items-start ">
-        <h4 className="self-stretch text-heading text-2xl font-ptserif font-bold leading-8">{i.attributes.heading}</h4>
-        <p className="h-6 self-stretch text-orange-500 opacity-50 text-base font-satoshi-bold leading-6">
+      <div className="flex flex-col justify-between items-start py-2 gap-2 lg:py-0 lg:gap-0">
+        <h4 className="self-stretch text-heading text-xl leading-6 lg:text-2xl lg:leading-8 font-ptserif font-bold ">
+          {i.attributes.heading}
+        </h4>
+        <p className="h-6 self-stretch text-[#EF6F1F] opacity-50 text-base font-satoshi-bold leading-6">
           {formatDate(i.attributes.time)}
         </p>
       </div>

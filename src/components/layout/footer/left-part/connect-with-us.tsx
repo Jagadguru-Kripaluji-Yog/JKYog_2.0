@@ -23,7 +23,7 @@ const socialLinks = [
     link: '/',
   },
   {
-    icon: <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-[#EF6F1F] rounded-full p-2" />,
+    icon: <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-[#EF6F1F] hover:bg-[#EF6F1F]/[.8]  rounded-full p-2" />,
     link: '/',
   },
   {

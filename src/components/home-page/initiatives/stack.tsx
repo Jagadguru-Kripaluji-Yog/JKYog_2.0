@@ -23,7 +23,7 @@ const Stack: FC = () => {
               Watch verse by verse shloka and translation followed by full commentary written by Swami Mukundananda.
             </p>
           </div>
-          <button className="absolute lg:static top-[10%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f]">
+          <button className="absolute lg:static top-[10%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f] hover:bg-[#ef6f1f]/[.8]">
             <Play />
           </button>
         </div>
@@ -42,7 +42,7 @@ const Stack: FC = () => {
             className="w-[327px] lg:w-[160px] h-[208px] lg:h-[160px] rounded-2xl"
           />
           <div className="h-full flex items-end lg:pl-5 pr-0 pt-0 pb-3">
-            <button className="absolute lg:static top-[28%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f]">
+            <button className="absolute lg:static top-[28%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f] hover:bg-[#ef6f1f]/[.8]">
               <Play />
             </button>
           </div>

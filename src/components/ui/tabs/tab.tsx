@@ -15,7 +15,7 @@ export const Tab: FC<TabProps> = ({ children, isDisabled, ...rest }) => {
   return (
     <li
       className={`block cursor-pointer 
-        font-satoshi-medium text-stone-600 text-base lg:text-xl hover:text-white
+        font-satoshi-regular text-stone-600 text-base lg:text-xl hover:text-white
         px-4 lg:px-6 py-2.5
         rounded-[29px]
         w-fit whitespace-nowrap
@@ -24,8 +24,8 @@ export const Tab: FC<TabProps> = ({ children, isDisabled, ...rest }) => {
             isDisabled
               ? 'disabled cursor-not-allowed opacity-50'
               : isActive
-                ? `active text-white bg-orange-400`
-                : 'bg-white hover:bg-orange-300'
+                ? `active text-white bg-[#EF6F1F]`
+                : 'bg-white hover:bg-[#EF6F1F]/[.7]'
           }`}
       onClick={isDisabled ? undefined : () => setActiveIndex(index)}
       key={index + 'tab'}

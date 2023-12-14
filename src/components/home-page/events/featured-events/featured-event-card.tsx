@@ -7,15 +7,14 @@ import { Badge } from '@/src/lib/badge/badge';
 
 export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, heading, place, date }) => {
   return (
-    <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-[#F0EBE1] bg-white mr-5">
+    <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-[#F0EBE1] bg-white mr-3 lg:mr-5">
       <div className="relative bg-cover bg-no-repeat rounded-2xl overflow-hidden">
         <Image
           src={image.data[0].attributes.url}
           alt="event"
           width={639}
           height={245}
-          className="h-[245px]"
-          objectFit="cover"
+          className="h-[245px] object-cover lg:object-fill"
         />
         <div className="absolute top-3 left-3">
           <Badge text="Tags" />
