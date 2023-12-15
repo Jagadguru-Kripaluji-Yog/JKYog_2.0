@@ -20,7 +20,7 @@ const UpcommingEvents = () => {
             return (
               <Fragment key={index}>
                 <UpcommingEventCard {...attributes} />
-                {index < data.length - 1 && <div className="w-full h-px bg-[#f0ebe1] xl:mt-3.5"></div>}
+                {index < data.length - 1 && <div className="w-full h-px bg-border-primary xl:mt-3.5"></div>}
               </Fragment>
             );
           })}

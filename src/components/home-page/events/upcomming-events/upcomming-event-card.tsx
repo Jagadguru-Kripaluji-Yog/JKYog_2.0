@@ -16,8 +16,10 @@ export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image
           className="hidden xl:block rounded-[14px]"
         />
         <div className="flex flex-col justify-center items-start gap-2 xl:gap-0 pt-1 xl:pt-0">
-          <div className="px-2 py-1 rounded-3xl bg-yellow-50 font-ptserif text-xs text-orange-500">{tags}</div>
-          <h4 className="max-w-[511px] text-heading text-[20px] md:text-[32px] font-ptserif font-bold leading-10 mobile:leading-5">
+          <div className="px-2 py-1 rounded-3xl bg-badge-dark font-bold font-ptserif text-xs text-button-primary">
+            {tags}
+          </div>
+          <h4 className="max-w-[511px] text-heading text-[20px] md:text-[32px] font-ptserif font-bold leading-6 md:leading-10 mobile:leading-5">
             {heading}
           </h4>
         </div>

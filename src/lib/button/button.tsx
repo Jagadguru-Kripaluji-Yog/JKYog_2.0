@@ -26,7 +26,7 @@ export type ButtonProps<T extends ButtonType> = T extends 'link'
 
 const variants = {
   contained: {
-    primary: 'bg-orange-500 hover:bg-orange-400 text-white',
+    primary: 'bg-button-primary hover:bg-orange-400 text-white',
   },
   outlined: {
     primary: 'border hover:bg-gray-50 text-neutral-900',

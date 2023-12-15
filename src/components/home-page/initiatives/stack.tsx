@@ -5,7 +5,7 @@ import { Play } from '@/src/components/icons';
 const Stack: FC = () => {
   return (
     <div className="relative grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]  gap-5 ">
-      <div className="flex flex-col lg:flex-row items-start lg:gap-5 p-2 lg:pl-3 lg:pr-6 py-3 rounded-[20px] border-[1.25px] border-solid border-[#F0EBE1]">
+      <div className="flex flex-col lg:flex-row items-start lg:gap-5 p-2 lg:pl-3 lg:pr-6 py-3 rounded-[20px] border-[1.25px] border-solid border-border-primary">
         <Image
           src="/vid.jpeg"
           alt="video"
@@ -23,13 +23,13 @@ const Stack: FC = () => {
               Watch verse by verse shloka and translation followed by full commentary written by Swami Mukundananda.
             </p>
           </div>
-          <button className="absolute lg:static top-[10%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f]">
+          <button className="absolute lg:static top-[10%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-button-primary/[.8]">
             <Play />
           </button>
         </div>
       </div>
 
-      <div className="relative flex flex-col-reverse lg:flex-col justify-between items-start gap-3 p-2 lg:pl-6 lg:pr-3 lg:pt-6 lg:pb-3 rounded-[20px] border-[1.25px] border-solid border-[#F0EBE1]">
+      <div className="relative flex flex-col-reverse lg:flex-col justify-between items-start gap-3 p-2 lg:pl-6 lg:pr-3 lg:pt-6 lg:pb-3 rounded-[20px] border-[1.25px] border-solid border-border-primary">
         <h2 className="text-heading text-2xl lg:text-[32px] font-ptserif font-bold lg:leading-10 pb-2 lg:pb-0 px-2 lg:px-0">
           Welcome to A Daily Sadhana
         </h2>
@@ -42,7 +42,7 @@ const Stack: FC = () => {
             className="w-[327px] lg:w-[160px] h-[208px] lg:h-[160px] rounded-2xl"
           />
           <div className="h-full flex items-end lg:pl-5 pr-0 pt-0 pb-3">
-            <button className="absolute lg:static top-[28%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-[#ef6f1f]">
+            <button className="absolute lg:static top-[28%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-button-primary/[.8]">
               <Play />
             </button>
           </div>

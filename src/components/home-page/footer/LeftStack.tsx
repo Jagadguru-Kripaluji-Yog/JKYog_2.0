@@ -11,9 +11,9 @@ const LeftStack = () => {
             Subscribe to Our Newsletter
           </h1>
           <div className="flex w-[346px] flex-col  gap-3.5">
-            <div className="flex w-[346px] justify-between items-center pl-5 pr-2 py-2 rounded-[56px] border-[1.25px] border-solid border-border-color bg-transparent">
+            <div className="flex w-[346px] justify-between items-center pl-5 pr-2 py-2 rounded-[56px] border-[1.25px] border-solid border-border-primary bg-transparent">
               <input type="text" placeholder="enter your email address" className="bg-transparent" />
-              <div className="flex flex-end items-center gap-2.5 p-3 rounded-[100px] bg-[#ef6f1f]">
+              <div className="flex flex-end items-center gap-2.5 p-3 rounded-[100px] bg-button-primary">
                 <ArrowRight className="h-4 w-4 fill-white" />
               </div>
             </div>

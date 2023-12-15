@@ -16,6 +16,20 @@ const settings: Settings = {
   prevArrow: <SamplePrevArrow />,
   responsive: [
     {
+      breakpoint: 4000,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 2000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
       breakpoint: 1440,
       settings: {
         slidesToShow: 2.5,
@@ -32,7 +46,7 @@ const settings: Settings = {
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1.1,
         slidesToScroll: 1,
       },
     },

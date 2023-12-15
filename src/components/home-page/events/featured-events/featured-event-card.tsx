@@ -7,15 +7,14 @@ import { Badge } from '@/src/lib/badge/badge';
 
 export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, heading, place, date }) => {
   return (
-    <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-[#F0EBE1] bg-white mr-5">
+    <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white mr-3 lg:mr-5">
       <div className="relative bg-cover bg-no-repeat rounded-2xl overflow-hidden">
         <Image
           src={image.data[0].attributes.url}
           alt="event"
           width={639}
           height={245}
-          className="h-[245px]"
-          objectFit="cover"
+          className="h-[245px] object-cover lg:object-fill"
         />
         <div className="absolute top-3 left-3">
           <Badge text="Tags" />
@@ -28,8 +27,8 @@ export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, 
           </h3>
           <div className="flex gap-2.5 self-stretch items-center justify-between">
             <div className="flex flex-col">
-              <span className="text-[#3A2D27B2]/[.7] text-base font-normal leading-6 tracking-[-0.16px]">{place}</span>
-              <span className="text-[#3A2D27B2]/[.7] text-base font-normal leading-6 tracking-[-0.16px]">
+              <span className="text-light-text/[.7] text-base font-normal leading-6 tracking-[-0.16px]">{place}</span>
+              <span className="text-light-text/[.7] text-base font-normal leading-6 tracking-[-0.16px]">
                 {formatDate(date)}
               </span>
             </div>

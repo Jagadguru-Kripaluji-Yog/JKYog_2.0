@@ -1,7 +1,6 @@
 'use client';
 
 import { FC, useState } from 'react';
-import Image from 'next/image';
 import { Input } from '@/src/lib/input/input';
 
 export const Form: FC = () => {
