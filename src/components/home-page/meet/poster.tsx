@@ -4,8 +4,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { getMeetPosters } from '@/src/api/get-meet-posters';
 import { formatDate } from '@/src/utils/format-date';
-import { Arrow } from '@/src/lib/arrow/arrow';
-import { Badge } from '@/src/lib/badge/badge';
+import { Arrow } from '@/src/components/arrow/arrow';
+import { Badge } from '@/src/components/badge/badge';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 
 export const Poster: FC = () => {

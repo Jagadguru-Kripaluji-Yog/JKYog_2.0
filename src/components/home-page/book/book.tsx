@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 
 const Book: FC = () => {
   return (

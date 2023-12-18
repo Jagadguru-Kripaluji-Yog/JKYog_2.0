@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { UpcommingEventData } from './types';
 import { formatDate } from '@/src/utils/format-date';
-import { Arrow } from '@/src/lib/arrow/arrow';
+import { Arrow } from '@/src/components/arrow/arrow';
 
 export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image, tags, heading, place, time }) => {
   return (

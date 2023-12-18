@@ -4,6 +4,10 @@ import { Badge, BadgeProps } from './badge';
 const Story: Meta<BadgeProps> = {
   component: Badge,
   title: 'Badge',
+  argTypes: {
+    src: { control: 'text' },
+    text: { control: 'text' },
+  },
 };
 export default Story;
 

@@ -3,7 +3,7 @@
 import React, { Fragment } from 'react';
 import { getUpcommingEvents } from '@/src/api/get-upcomming-events';
 import { UpcommingEventCard } from './upcomming-event-card';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 
 const UpcommingEvents = () => {

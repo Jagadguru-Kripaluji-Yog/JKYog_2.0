@@ -1,4 +1,4 @@
-import { cn } from '@/src/lib/utils';
+import { cn } from '@/src/utils/tailwind';
 
 export const TwitterIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (

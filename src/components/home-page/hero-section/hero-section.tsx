@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
