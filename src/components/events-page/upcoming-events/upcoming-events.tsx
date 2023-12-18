@@ -46,7 +46,7 @@ const tabData: ComposedTabsProps['data'] = [
 
 export const UpcomingEvents: FC = () => {
   return (
-    <section className="max-w-[1440px] mx-auto mx-10 mt-[120px] mb-20">
+    <section className="max-w-[1440px] mx-auto px-10 mt-[120px] mb-20">
       <div className="flex justify-start mb-10">
         <h2 className="text-center lg:text-left text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px]">
           The Upcoming Events

@@ -18,7 +18,7 @@ export const EventCard: FC<EventCardProps> = ({ image, heading, place, date, tim
   return (
     <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white">
       <div className="relative bg-cover bg-no-repeat rounded-2xl overflow-hidden">
-        <Image src={image} alt="event" width={639} height={245} className="h-[245px] object-cover lg:object-fill" />
+        <Image src={image} alt="event" width={639} height={245} className="h-[248px] object-cover lg:object-fill" />
         <div className="absolute top-3 left-3 flex gap-2">
           {tags.map(({ text, variant }) => (
             <Badge key={text} text={text} variant={variant} />
