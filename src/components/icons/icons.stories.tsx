@@ -1,5 +1,4 @@
 import * as icons from '.';
-// eslint-disable-next-line storybook/story-exports
 export default {
   title: 'Icons',
   subcomponents: icons,
