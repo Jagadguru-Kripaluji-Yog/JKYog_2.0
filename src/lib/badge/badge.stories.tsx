@@ -11,11 +11,21 @@ export const Primary = {
   args: {
     src: '/icons/calendar.svg',
     text: 'November 9, 2023',
+    variant: 'primary',
+  },
+};
+
+export const Secondary = {
+  args: {
+    src: '/icons/calendar.svg',
+    text: 'November 9, 2023',
+    variant: 'secondary',
   },
 };
 
 export const NoIcon = {
   args: {
     text: 'November 9, 2023',
+    variant: 'secondary',
   },
 };

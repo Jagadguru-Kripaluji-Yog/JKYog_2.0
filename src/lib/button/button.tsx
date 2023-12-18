@@ -48,7 +48,7 @@ const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size
                 ${classes}
             `}
   >
-    <span className="text-center text-base font-satoshi-bold leading-normal">{text}</span>
+    <span className="text-center text-base font-satoshi-bold">{text}</span>
   </div>
 );
 
