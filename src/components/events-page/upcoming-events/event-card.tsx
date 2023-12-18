@@ -41,7 +41,7 @@ export const EventCard: FC<EventCardProps> = ({ image, heading, place, date, tim
   );
 };
 
-const CardInfoBlock: FC<{ title: string; info: string }> = ({ title, info }) => (
+export const CardInfoBlock: FC<{ title: string; info: string }> = ({ title, info }) => (
   <div className="flex flex-col text-base tracking-[-0.16px]">
     <span className="text-heading font-satoshi-medium">{title}</span>
     <span className="text-light-text/[.7] font-satoshi-regular leading-6">{info}</span>
