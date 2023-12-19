@@ -9,14 +9,14 @@ import {
   DialogClose,
   DialogDescription,
   DialogHeader,
-} from '@/src/components/ui/Dialog';
+} from '@/src/components/dialog/dialog';
 const index = () => {
   return (
     <div>
       <Dialog>
         <DialogTrigger asChild>
           <div className="text-gray-700 border flex justify-center border-border-primary gap-[2px] rounded-3xl px-[16px] py-[10px] hover:text-orange cursor-pointer">
-            login
+            Login
           </div>
         </DialogTrigger>
         <DialogContent className="flex min-w-[900px] flex-col items-center gap-10 shrink-0 p-14 rounded-[20px]">

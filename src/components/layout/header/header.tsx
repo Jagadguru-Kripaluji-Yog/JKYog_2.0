@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { linkGroups } from '../footer/constants';
 import Link from 'next/link';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import { ArrowDown } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
 import { Modal } from '../../ui/modal/modal';

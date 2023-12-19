@@ -26,7 +26,7 @@ export const Modal: FC = () => {
 
   return (
     <div className="flex absolute top-0 left-0 z-50 w-full h-screen bg-black bg-opacity-40">
-      <div className="relative flex flex-col justify-start items-center m-auto w-[900px] p-14 bg-modal-bg rounded-[20px] gap-10">
+      <div className="relative flex flex-col justify-start items-center m-auto max-w-[900px] px-4 py-8 lg:p-14 bg-bg-light rounded-[20px] gap-10">
         <div
           onClick={() => handleModalOpen(false)}
           className="absolute top-6 right-6 w-12 h-12 p-3.5 bg-[#FBE5C4]/[.4] hover:bg-[#FBE5C4]/[.5] rounded-[100px] cursor-pointer"
@@ -56,11 +56,12 @@ const SignInView: FC<{ supabase: SupabaseClient }> = ({ supabase }) => (
         By clicking on Continue, you accept our
       </span>
       <span className="text-stone-600 text-lg font-satoshi-regular leading-normal"> </span>
-      <Link href="/" className="text-orange-500 text-base font-satoshi-medium underline leading-normal">
+      <Link target="_blank" href="/" className="text-orange-500 text-base font-satoshi-medium underline leading-normal">
         Terms of Service
       </Link>
       <span className="text-stone-600 text-base font-normal font-['Satoshi Variable'] leading-normal"> and </span>
       <Link
+        target="_blank"
         href="/"
         className="text-orange-500 text-base font-medium font-['Satoshi Variable'] underline leading-normal"
       >

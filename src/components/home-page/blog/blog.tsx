@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import Cards from './cards/cards';
 
 const Blog: FC = () => {

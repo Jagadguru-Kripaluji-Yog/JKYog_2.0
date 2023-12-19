@@ -1,4 +1,4 @@
-import { cn } from '@/src/lib/utils';
+import { cn } from '@/src/utils/tailwind';
 
 export const GoogleIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (

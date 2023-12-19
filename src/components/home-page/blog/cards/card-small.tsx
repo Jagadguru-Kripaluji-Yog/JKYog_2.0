@@ -1,4 +1,4 @@
-import { Badge } from '@/src/lib/badge/badge';
+import { Badge } from '@/src/components/badge/badge';
 import Image from 'next/image';
 import { formatDate } from '@/src/utils/format-date';
 import { FC } from 'react';

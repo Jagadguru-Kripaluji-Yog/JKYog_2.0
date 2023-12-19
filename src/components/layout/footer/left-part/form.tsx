@@ -21,7 +21,7 @@ export const Form: FC = () => {
           className="cursor-pointer
                            relative pl-9 
                            text-base font-satoshi-regular text-stone-600 text-opacity-80
-                           before:absolute before:left-0 before:h-6 before:w-6 before:rounded-full
+                           before:absolute before:left-0 before:h-6 before:w-6
                            before:border before:border-neutral-200 before:bg-white  before:rounded-full
                            after:absolute after:left-[4px] after:top-[4px] after:h-4 after:w-4 after:rounded-full
                            peer-checked:after:bg-orange-400"

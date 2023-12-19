@@ -2,8 +2,8 @@ import { formatDate } from '@/src/utils/format-date';
 import Image from 'next/image';
 import { FC } from 'react';
 import { FeaturedEventData } from './types';
-import { Arrow } from '@/src/lib/arrow/arrow';
-import { Badge } from '@/src/lib/badge/badge';
+import { Arrow } from '@/src/components/arrow/arrow';
+import { Badge } from '@/src/components/badge/badge';
 
 export const FeaturedEventCard: FC<FeaturedEventData['attributes']> = ({ image, heading, place, date }) => {
   return (

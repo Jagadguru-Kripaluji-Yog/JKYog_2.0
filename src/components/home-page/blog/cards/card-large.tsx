@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Badge } from '@/src/lib/badge/badge';
+import { Badge } from '@/src/components/badge/badge';
 import { formatDate } from '@/src/utils/format-date';
 
 export const CardLarge: FC<{ blogs: any }> = ({ blogs }) => {
