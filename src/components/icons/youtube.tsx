@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/utils/tailwind';
 
 export const YoutubeIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
@@ -8,9 +8,9 @@ export const YoutubeIcon = ({ className, ...props }: React.SVGProps<SVGSVGElemen
       height="32"
       viewBox="0 0 32 32"
       fill="none"
-      className={cn('h-5 w-5', className)}
+      className={cn('h-5 w-5 group', className)}
     >
-      <rect width="32" height="32" rx="16" fill="#EF6F1F" />
+      <rect width="32" height="32" rx="16" fill="#EF6F1F" className="group-hover:fill-button-primary/[.8]" />
       <path
         fillRule="evenodd"
         clipRule="evenodd"

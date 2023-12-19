@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/utils/tailwind';
 
 export const ThinArrowRight = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (

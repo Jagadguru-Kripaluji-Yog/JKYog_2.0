@@ -1,26 +1,19 @@
-import React from 'react';
-import VStack from './vStack';
-import { Meet } from '@/src/components/icons';
-const meet = () => {
+import React, { FC } from 'react';
+import { Poster } from './poster';
+import { Places } from './places';
+
+const Meet: FC = () => {
   return (
-    <div className="flex items-center justify-center bg-[#edf3e5] w-full flex-col  gap-10 self-stretch pt-[100px] pb-[120px] px-10 rounded-[40px]">
-      {/* <div
-        className="absolute h-auto w-full "
-        style={{
-          background: "#EDF3E5 ",
-          opacity: "0.5",
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-        }}
-      >
-        <Meet />
-      </div> */}
-      <div className="z-50">
-        <p className="text-[#291900] text-center text-[44px] not-italic font-bold leading-[56px] ">Meet Swamiji</p>
-        <VStack />
+    <section className="relative flex items-center justify-center bg-bg-green w-full flex-col gap-6 lg:gap-10 py-8 lg:pt-[100px] lg:pb-[120px] px-4 lg:px-10 rounded-[40px] bg-meet-section-bg">
+      <h2 className="text-heading text-center text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px]">
+        Meet Swamiji
+      </h2>
+      <div className="flex flex-col xl:flex-row justify-between items-center gap-5 max-w-[1360px] w-full">
+        <Poster />
+        <Places />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default meet;
+export default Meet;

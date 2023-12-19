@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/utils/tailwind';
 
 export const GoogleIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
@@ -10,7 +10,7 @@ export const GoogleIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement
       viewBox="0 0 14 14"
       fill="none"
     >
-      <g clip-path="url(#clip0_3143_27021)">
+      <g clipPath="url(#clip0_3143_27021)">
         <path
           d="M13.8336 7.13102C13.8336 6.55744 13.7871 6.13889 13.6864 5.70483H7.13672V8.29366H10.9812C10.9037 8.93702 10.4852 9.9059 9.55503 10.557L9.54199 10.6436L11.6129 12.2479L11.7563 12.2622C13.074 11.0453 13.8336 9.2548 13.8336 7.13102Z"
           fill="#4285F4"

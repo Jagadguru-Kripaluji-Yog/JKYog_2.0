@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Logo from '@/public/logo.png';
 import Image from 'next/image';
 import { ArrowRight } from '../icons';
 // import { ThinArrowRight } from "../icons/thinArrowRight"
@@ -47,17 +46,17 @@ const Footer = () => {
   const contact = [{ name: 'Social Media', url: '/' }];
 
   return (
-    <div className="w-full gap-3 px-[40px] font-serif  bg-[#FFFBF2] flex justify-center items-center">
+    <div className="w-full gap-3 px-[40px] font-serif  bg-bg-light flex justify-center items-center">
       <div className="flex flex-col items-start justify-between w-full  pt-16 px-[40px] pb-8 ">
         <div className="flex md:flex-row flex-col gap-8">
           <div className="flex flex-1 flex-col gap-8">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Yoga & Meditation</h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Yoga & Meditation</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Yoga.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -65,11 +64,11 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Events</h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Events</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Events.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -77,11 +76,11 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Online Offering</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Online Offering</h2>
                 <div className="flex flex-col gap-[10px]">
                   {Offers.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -92,11 +91,11 @@ const Footer = () => {
 
             <div className="grid md:grid-cols-3  grid-cols-1 gap-5">
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Resources</h1>
+                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Resources</h1>
                 <div className="flex flex-col gap-[10px]">
                   {Resources.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -104,11 +103,11 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">About us</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">About us</h2>
                 <div className="flex flex-col gap-[10px]">
                   {About.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -116,11 +115,11 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-left text-[20px] mb-5 font-bold leading-6 text-[#291900] ">Contacts</h1>
+                <h2 className="text-left text-[20px] mb-5 font-bold leading-6 text-heading ">Contacts</h2>
                 <div className="flex flex-col gap-[10px]">
                   {contact.map((item, i) => {
                     return (
-                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-[#291900]">
+                      <p key={i} className="text-left text-[16px] mb-1 font-normal leading-6 text-heading">
                         {item.name}
                       </p>
                     );
@@ -131,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full border border-[#DAD3C8] my-6 "></div>
+        <div className="w-full border border-border-primary my-6 "></div>
 
         <div className="flex md:flex-row flex-col justify-between text-sm gap-2  self-stretch text-[#655743]">
           <div className="leading-6">© Copyright 2020 JKYog. All Rights Reserved.</div>
