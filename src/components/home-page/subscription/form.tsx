@@ -21,7 +21,7 @@ const Form: FC = () => {
           />
         </div>
       </div>
-      <Button href="/" text="Subscribe" variant="contained" color="primary" />
+      <Button type="link" href="/" text="Subscribe" variant="contained" color="primary" />
     </div>
   );
 };

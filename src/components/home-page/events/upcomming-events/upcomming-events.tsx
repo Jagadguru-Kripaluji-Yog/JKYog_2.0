@@ -26,7 +26,7 @@ const UpcommingEvents = () => {
           })}
         </div>
       ) : null}
-      <Button href="/" text="All Events" variant="contained" color="primary" />
+      <Button type="link" href="/" text="All Events" variant="contained" color="primary" />
     </div>
   );
 };

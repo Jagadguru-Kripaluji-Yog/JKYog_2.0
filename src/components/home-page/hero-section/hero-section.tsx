@@ -85,7 +85,7 @@ const SubSection: FC<SubSectionProps> = ({ id, src, alt, isActive, onHover, subT
             these principles.
           </p>
         </div>
-        <Button href="/" text="Learn More" variant="contained" color="primary" />
+        <Button type="link" href="/" text="Learn More" variant="contained" color="primary" />
       </div>
       {subTitle && !isActive && (
         <h3 className="mt-auto z-20 text-left md:text-center text-white text-2xl md:text-[32px] font-bold font-ptserif leading-10">

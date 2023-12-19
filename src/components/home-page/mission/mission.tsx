@@ -37,7 +37,7 @@ const Mission: FC = () => {
           underprivileged.
         </div>
       </div>
-      <Button href="/" text="About Us" variant="contained" color="primary" />
+      <Button type="link" href="/" text="About Us" variant="contained" color="primary" />
     </section>
   );
 };

@@ -30,7 +30,7 @@ export const Exclusive: FC = () => {
             entire landscape of your life under 5 key themes.
           </p>
         </div>
-        <Button href="/" text="Join SMEx" variant="contained" color="primary" />
+        <Button type="link" href="/" text="Join SMEx" variant="contained" color="primary" />
       </div>
       <div className="px-4 h-[360px] grid grid-cols-[320px_320px_320px] lg:flex lg:justify-center lg:items-center gap-5 w-full overflow-auto no-scrollbar">
         {offers.map((offer) => (

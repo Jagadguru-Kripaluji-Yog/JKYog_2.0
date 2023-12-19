@@ -9,7 +9,7 @@ const Blog: FC = () => {
         Recent blog posts
       </h2>
       <Cards />
-      <Button href="/" text="View All" variant="contained" color="primary" />
+      <Button type="link" href="/" text="View All" variant="contained" color="primary" />
     </section>
   );
 };
