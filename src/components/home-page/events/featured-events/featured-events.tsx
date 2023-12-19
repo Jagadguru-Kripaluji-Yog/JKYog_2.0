@@ -12,8 +12,8 @@ const settings: Settings = {
   slidesToScroll: 1,
   infinite: false,
   draggable: true,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
+  nextArrow: <SampleNextArrow position="-top-24 right-10" />,
+  prevArrow: <SamplePrevArrow position="-top-24 right-[108px]" />,
   responsive: [
     {
       breakpoint: 4000,
