@@ -9,7 +9,7 @@ import Slider, { Settings } from 'react-slick';
 const settings: Settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
-  infinite: false,
+  infinite: true,
   draggable: true,
   variableWidth: true,
   adaptiveHeight: true,
@@ -33,28 +33,37 @@ const settings: Settings = {
     {
       breakpoint: 1440,
       settings: {
-        slidesToShow: 4.5,
+        slidesToShow: 5,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 1150,
       settings: {
-        slidesToShow: 3.5,
+        slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 800,
       settings: {
-        slidesToShow: 2.5,
+        slidesToShow: 2,
         slidesToScroll: 1,
+        variableWidth: false,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: false,
       },
     },
   ],
 };
 
-const cards = [
+const cardsMock = [
   {
     src: '/images/events-page/video-card.png',
   },
@@ -81,10 +90,37 @@ const cards = [
   },
 ];
 
+const cardsMockMobile = [
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+  {
+    src: '/images/events-page/video-card-mobile.png',
+  },
+];
+
 export const PreviousEvents: FC = () => {
   return (
-    <section className="pt-[100px] pb-[172px] bg-bg-secondary bg-meet-section-bg rounded-t-[40px]">
-      <div className="max-w-[1440px] mx-auto px-10">
+    <section className="py-8 lg:pt-[100px] lg:pb-[172px] bg-bg-secondary bg-meet-section-bg rounded-t-[40px]">
+      <div className="max-w-[1440px] mx-auto px-4 lg:px-10">
         <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] mb-4">
           Previous Events
         </h2>
@@ -94,11 +130,18 @@ export const PreviousEvents: FC = () => {
           Beyond the Surface and Discover the Deeper Layers of Our Collective Experiences.
         </p>
         <VideoCard />
-        <Slider {...settings}>
-          {cards.map((card, i) => (
+        <div className="hidden lg:block">
+          <Slider {...settings}>
+            {cardsMock.map((card, i) => (
+              <VideoCardSmall key={i} {...card} forSlider />
+            ))}
+          </Slider>
+        </div>
+        <div className="flex flex-nowrap overflow-auto no-scrollbar gap-5 lg:hidden">
+          {cardsMockMobile.map((card, i) => (
             <VideoCardSmall key={i} {...card} />
           ))}
-        </Slider>
+        </div>
       </div>
     </section>
   );
@@ -106,12 +149,19 @@ export const PreviousEvents: FC = () => {
 
 type VideoCardSmallProps = {
   src: string;
+  forSlider?: boolean;
 };
 
-const VideoCardSmall: FC<VideoCardSmallProps> = ({ src }) => {
+const VideoCardSmall: FC<VideoCardSmallProps> = ({ src, forSlider }) => {
+  const imageSize = forSlider ? 240 : 343;
   return (
-    <div className="bg-white rounded-[20px] p-2 mr-5">
-      <Image src={src} alt="" width={240} height={240} className="rounded-2xl" />
+    <div
+      className={`
+        bg-white rounded-[20px] p-2 
+        ${forSlider ? 'mr-5' : 'min-w-[343px] '}
+    `}
+    >
+      <Image src={src} alt="" width={imageSize} height={imageSize} className="rounded-2xl" />
     </div>
   );
 };

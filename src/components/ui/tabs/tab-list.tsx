@@ -11,7 +11,7 @@ export const TabList: FC<ComponentWithChildren & { centered?: boolean }> = ({ ch
   ));
   return (
     <ul
-      className={`flex flex-nowrap lg:flex-wrap lg:justify-start items-center gap-4 lg:mb-8 ${
+      className={`flex flex-nowrap lg:flex-wrap lg:justify-start items-center gap-4 mb-6 lg:mb-8 pr-4 lg:pr-0 -mr-4 ${
         centered ? 'lg:mx-auto' : ''
       } overflow-auto lg:overflow-visible no-scrollbar`}
     >

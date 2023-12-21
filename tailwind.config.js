@@ -23,6 +23,8 @@ module.exports = {
         'meet-section-bg': 'url(/images/meet-section-bg.png)',
         'book-section-bg': 'url(/images/book-section-bg.png)',
         'bg-flowers-mobile': 'url(/images/bg-flowers-mobile.png)',
+        'events-banner': 'url(/images/events-page/events-banner.png)',
+        'events-banner-mobile': 'url(/images/events-page/events-banner-mobile.png)',
       },
       colors: {
         'primary': '#645743',

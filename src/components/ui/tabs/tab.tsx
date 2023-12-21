@@ -15,7 +15,7 @@ export const Tab: FC<TabProps> = ({ children, isDisabled, ...rest }) => {
   return (
     <li
       className={`block cursor-pointer 
-        font-satoshi-regular text-stone-600 text-base lg:text-xl hover:text-white
+        font-satoshi-regular text-primary text-base lg:text-xl hover:text-white
         px-4 lg:px-6 py-2.5
         rounded-[29px]
         w-fit whitespace-nowrap

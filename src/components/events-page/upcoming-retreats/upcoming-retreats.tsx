@@ -17,11 +17,11 @@ const cards = [retreats, retreats, retreats];
 
 export const UpcomingRetreats: FC = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-10 mt-[120px] mb-20">
+    <section className="max-w-[1440px] mx-auto px-4 lg:px-10 pt-[72px] lg:pt-[120px] mb-20">
       <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] mb-10">
         Upcoming Retreats
       </h2>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="flex flex-nowrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 overflow-auto no-scrollbar -mr-4 pr-4">
         {cards.map((card, i) => (
           <EventCard key={i} {...card} />
         ))}

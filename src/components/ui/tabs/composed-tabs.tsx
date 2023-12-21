@@ -75,19 +75,21 @@ const TabListWithFilters: FC<{
       {extraTabs ? (
         <span
           onClick={onShow}
-          className="text-base font-satoshi-bold text-button-primary hover:text-button-primary/[.8] cursor-pointer text-center w-20"
+          className="text-base font-satoshi-bold text-button-primary hover:text-button-primary/[.8] cursor-pointer text-center w-20 whitespace-nowrap"
         >
           + {extraTabs} cities
         </span>
       ) : (
         <span
           onClick={onHide}
-          className="text-base font-satoshi-bold text-button-primary hover:text-button-primary/[.8] cursor-pointer text-center w-20"
+          className="text-base font-satoshi-bold text-button-primary hover:text-button-primary/[.8] cursor-pointer text-center w-20 whitespace-nowrap"
         >
           Hide
         </span>
       )}
     </TabList>
-    <FilterSelect />
+    <div className="hidden lg:block">
+      <FilterSelect />
+    </div>
   </div>
 );
