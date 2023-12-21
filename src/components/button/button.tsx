@@ -64,7 +64,7 @@ export const Button: FC<ButtonProps<ButtonType>> = (props) => {
   }
 
   return (
-    <button onClick={props.onClick}>
+    <button onClick={props.onClick} className="p-3">
       <DefaultButton {...props} />
     </button>
   );
