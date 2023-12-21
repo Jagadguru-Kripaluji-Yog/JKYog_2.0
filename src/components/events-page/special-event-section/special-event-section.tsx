@@ -19,7 +19,7 @@ export const SpecialEventSection: FC = () => {
       <div className="grid grid-cols-1 xl:grid-cols-[662px_682px] bg-white p-2 rounded-[20px]">
         <div className="relative flex rounded-2xl">
           <Image src="/images/events-page/special.png" alt="special" width={662} height={384} />
-          <div className="absolute top-4 left-4 flex gap-2">
+          <div className="absolute top-3 left-3 lg:top-4 lg:left-4 flex gap-2">
             {tags.map(({ text, variant }) => (
               <Badge key={text} text={text} variant={variant} />
             ))}
