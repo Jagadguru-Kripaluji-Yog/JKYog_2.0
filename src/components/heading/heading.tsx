@@ -4,4 +4,4 @@ type HeadingProps = {
   title: string;
 };
 
-export const Heading: FC<HeadingProps> = ({ title }) => <h2>{title}</h2>;
+export const Heading: FC<HeadingProps> = ({ title }) => <h1>{title}</h1>;
