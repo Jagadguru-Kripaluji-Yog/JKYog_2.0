@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { Button } from '@/src/components/button/button';
 import { ArrowDown } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
-// import { Modal } from '../../ui/modal/modal';
 import { useAuthStore } from '@/src/zustand/auth-store';
 import { useModalStore } from '@/src/zustand/modal-store';
 import { Modal } from '../../modal/modal';
