@@ -57,14 +57,14 @@ export const Button: FC<ButtonProps<ButtonType>> = (props) => {
 
   if (type === 'link') {
     return (
-      <Link href={props.href} className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
+      <Link href={props.href} className={`z-10 p-3 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
         <DefaultButton {...props} />
       </Link>
     );
   }
 
   return (
-    <button onClick={props.onClick} className="p-3">
+    <button onClick={props.onClick}>
       <DefaultButton {...props} />
     </button>
   );
