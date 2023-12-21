@@ -39,6 +39,7 @@ module.exports = {
         'badge-dark': '#FDF3E4',
         'light-text': '#3A2D27B2',
         'events-section-bg': '#FBE5C44D',
+        'modal-bg': '#FFFBF2',
       },
     },
   },

@@ -5,7 +5,7 @@ import { Tabs } from './tabs';
 import { TabList } from './tab-list';
 import { Tab } from './tab';
 import { TabPanel, TabPanels } from './tab-panels';
-import { FilterSelect } from '../../events-page/upcoming-events/filter-select';
+import { FilterSelect } from '../events-page/upcoming-events/filter-select';
 
 export interface ComposedTabsProps {
   data: { label: string; content: ReactNode; disabled?: boolean }[];

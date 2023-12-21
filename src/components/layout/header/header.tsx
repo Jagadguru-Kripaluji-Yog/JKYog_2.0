@@ -4,12 +4,13 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { linkGroups } from '../footer/constants';
 import Link from 'next/link';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import { ArrowDown } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
-import { Modal } from '../../ui/modal/modal';
+// import { Modal } from '../../ui/modal/modal';
 import { useAuthStore } from '@/src/zustand/auth-store';
 import { useModalStore } from '@/src/zustand/modal-store';
+import { Modal } from '../../modal/modal';
 
 export const Header: FC = () => {
   const { handleModalOpen } = useModalStore();

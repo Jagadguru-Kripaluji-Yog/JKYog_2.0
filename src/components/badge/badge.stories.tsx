@@ -4,6 +4,10 @@ import { Badge, BadgeProps } from './badge';
 const Story: Meta<BadgeProps> = {
   component: Badge,
   title: 'Badge',
+  argTypes: {
+    src: { control: 'text' },
+    text: { control: 'text' },
+  },
 };
 export default Story;
 
@@ -11,21 +15,11 @@ export const Primary = {
   args: {
     src: '/icons/calendar.svg',
     text: 'November 9, 2023',
-    variant: 'primary',
-  },
-};
-
-export const Secondary = {
-  args: {
-    src: '/icons/calendar.svg',
-    text: 'November 9, 2023',
-    variant: 'secondary',
   },
 };
 
 export const NoIcon = {
   args: {
     text: 'November 9, 2023',
-    variant: 'secondary',
   },
 };

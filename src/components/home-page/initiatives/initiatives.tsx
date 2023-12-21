@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ComposedTabs, ComposedTabsProps } from '../../ui/tabs/composed-tabs';
+import { ComposedTabs, ComposedTabsProps } from '../../tabs/composed-tabs';
 import Stack from './stack';
 
 const tabData: ComposedTabsProps['data'] = [

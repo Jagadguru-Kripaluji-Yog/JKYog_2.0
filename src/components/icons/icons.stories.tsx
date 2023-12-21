@@ -1,3 +1,8 @@
+import * as icons from '.';
+export default {
+  title: 'Icons',
+  subcomponents: icons,
+};
 export { ArrowRight } from './arrowRight';
 export { Meet } from './meet';
 export { Location } from './location';

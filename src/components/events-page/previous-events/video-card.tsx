@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Arrow } from '@/src/lib/arrow/arrow';
 import { Play } from '../../icons/play';
+import { Arrow } from '../../arrow/arrow';
 
 export const VideoCard: FC = () => {
   return (

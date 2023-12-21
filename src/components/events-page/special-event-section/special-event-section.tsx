@@ -1,9 +1,9 @@
-import { Badge } from '@/src/lib/badge/badge';
+import { Badge } from '@/src/components/badge/badge';
 import Image from 'next/image';
 import { FC } from 'react';
 import { CardInfoBlock } from '../upcoming-events/event-card';
-import { Button } from '@/src/lib/button/button';
-import { Arrow } from '@/src/lib/arrow/arrow';
+import { Button } from '@/src/components/button/button';
+import { Arrow } from '../../arrow/arrow';
 
 const tags = [
   { text: '1 December', variant: 'primary' },

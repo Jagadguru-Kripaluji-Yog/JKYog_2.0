@@ -3,9 +3,9 @@
 import { FC, Fragment } from 'react';
 import { getMeetPlaces } from '@/src/api/get-meet-places';
 import { GetMeetPlacesData } from '@/src/types/meet-places';
-import { Arrow } from '@/src/lib/arrow/arrow';
+import { Arrow } from '@/src/components/arrow/arrow';
 import { formatDate } from '@/src/utils/format-date';
-import { Badge } from '@/src/lib/badge/badge';
+import { Badge } from '@/src/components/badge/badge';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 
 export const Places: FC = () => {

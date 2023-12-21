@@ -1,4 +1,4 @@
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import { FC } from 'react';
 
 export const HeroSection: FC = () => {

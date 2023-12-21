@@ -1,9 +1,9 @@
-import { Arrow } from '@/src/lib/arrow/arrow';
-import { Badge } from '@/src/lib/badge/badge';
-import { Button } from '@/src/lib/button/button';
+import { Badge } from '@/src/components/badge/badge';
+import { Button } from '@/src/components/button/button';
 import { formatDate } from '@/src/utils/format-date';
 import Image from 'next/image';
 import { FC } from 'react';
+import { Arrow } from '../../arrow/arrow';
 
 type EventCardProps = {
   image: string;

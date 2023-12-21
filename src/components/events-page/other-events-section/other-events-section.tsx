@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { FeaturedEventCard } from '../../home-page/events/featured-events/featured-event-card';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 import { getFeaturedEvents } from '@/src/api/get-featured-events';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 
 export const OtherEventsSection: FC = () => {
   const { data, isLoading } = useFetchData(getFeaturedEvents);

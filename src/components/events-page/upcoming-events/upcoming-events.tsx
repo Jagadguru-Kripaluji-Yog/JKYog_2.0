@@ -1,11 +1,11 @@
 'use client';
 
 import { ComponentProps, FC } from 'react';
-import { ComposedTabs, ComposedTabsProps } from '../../ui/tabs/composed-tabs';
 import { CountrySelect } from './country-select';
 import { EventCard } from './event-card';
-import { Button } from '@/src/lib/button/button';
+import { Button } from '@/src/components/button/button';
 import { FilterSelect } from './filter-select';
+import { ComposedTabs, ComposedTabsProps } from '../../tabs/composed-tabs';
 
 const props: ComponentProps<typeof EventCard> = {
   image: '/images/events-page/event-card.png',
