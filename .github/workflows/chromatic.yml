@@ -14,8 +14,8 @@ jobs:
           fetch-depth: 0
 
       - name: Install pnpm
-      - uses: pnpm/action-setup@v2
-      
+        uses: pnpm/action-setup@v2
+
       - name: Install dependencies
         # ⚠️ Pick one of these, matching the package manager for your project
         run: pnpm install
