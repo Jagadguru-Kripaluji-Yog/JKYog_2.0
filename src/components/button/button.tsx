@@ -10,6 +10,7 @@ type CommonButtonProps<T> = {
   color: 'primary';
   size?: keyof typeof sizes;
   classes?: string;
+  centered?: boolean;
 };
 
 type LinkButtonProps = {
@@ -53,18 +54,21 @@ const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size
 );
 
 export const Button: FC<ButtonProps<ButtonType>> = (props) => {
-  const { type, size = 'default' } = props;
+  const { type, size = 'default', centered } = props;
 
   if (type === 'link') {
     return (
-      <Link href={props.href} className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-[unset]'}`}>
+      <Link
+        href={props.href}
+        className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-fit'} ${centered ? 'block mx-auto' : ''}`}
+      >
         <DefaultButton {...props} />
       </Link>
     );
   }
 
   return (
-    <button onClick={props.onClick}>
+    <button onClick={props.onClick} className={`${centered ? 'block mx-auto' : ''}`}>
       <DefaultButton {...props} />
     </button>
   );

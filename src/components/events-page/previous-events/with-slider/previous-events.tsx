@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { VideoCard } from './video-card';
 import Image from 'next/image';
-import { SampleNextArrow, SamplePrevArrow } from '../../home-page/events/featured-events/custom-slider-arrows';
+import { SampleNextArrow, SamplePrevArrow } from '../../../home-page/events/featured-events/custom-slider-arrows';
 import Slider, { Settings } from 'react-slick';
 
 const settings: Settings = {
@@ -157,7 +157,7 @@ const VideoCardSmall: FC<VideoCardSmallProps> = ({ src, forSlider }) => {
   return (
     <div
       className={`
-        bg-white rounded-[20px] p-2 
+        bg-white rounded-[20px] p-2
         ${forSlider ? 'mr-5' : 'min-w-[343px] '}
     `}
     >
