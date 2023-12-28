@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { Heading } from '../../heading/heading';
 
 export const Attendees: FC = () => {
   return (
     <section className="px-10 pt-[100px] pb-[120px] bg-bg-secondary bg-meet-section-bg rounded-[40px]">
-      <h2 className="text-heading font-ptserif font-bold text-center text-[44px] leading-[56px]">Attendees</h2>
+      <Heading title="Attendees" />
       <div className="flex justify-center gap-5 mt-10">
         {attendees.map((attendee, i) => (
           <AttendeeCard key={i} {...attendee} />

@@ -8,9 +8,9 @@ const Book: FC = () => {
       <div className="overflow-hidden lg:overflow-visible relative grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] justify-items-center gap-8 lg:gap-0 h-[555px] lg:h-[unset] max-w-[1130px] lg:px-14 mx-auto lg:mt-[100px] lg:mb-[88px] rounded-[40px] lg:rounded-[20px] bg-section-bg bg-book-section-bg">
         <div className="flex flex-col justify-start lg:justify-center items-start px-4 lg:px-0 gap-8 lg:gap-10 pt-12 lg:py-20">
           <div className="flex flex-col justify-center items-start gap-3">
-            <h2 className="text-heading text-center lg:text-left text-[32px] leading-10 lg:text-[40px] lg:leading-[48px] font-ptserif font-bold  w-full">
+            <h3 className="text-heading text-center lg:text-left text-[32px] leading-10 lg:text-[40px] lg:leading-[48px] font-ptserif font-bold  w-full">
               Sankeertan Sudha
-            </h2>
+            </h3>
             <p className="text-primary text-center lg:text-left text-base font-satoshi-regular font-normal leading-6">
               In this companion book to Sankeertan Madhuri, there are over 100 bhajans to inspire contemplation and
               devotion.

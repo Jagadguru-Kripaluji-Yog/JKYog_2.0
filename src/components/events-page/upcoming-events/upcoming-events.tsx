@@ -6,6 +6,7 @@ import { EventCard } from './event-card';
 import { Button } from '@/src/components/button/button';
 import { FilterSelect } from './filter-select';
 import { ComposedTabs, ComposedTabsProps } from '../../tabs/composed-tabs';
+import { Heading } from '../../heading/heading';
 
 const props: ComponentProps<typeof EventCard> = {
   image: '/images/events-page/event-card.png',
@@ -52,9 +53,7 @@ export const UpcomingEvents: FC = () => {
         <div className="lg:hidden w-full">
           <FilterSelect />
         </div>
-        <h2 className="text-center lg:text-left text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] mb-6 lg:mb-0">
-          The Upcoming Events
-        </h2>
+        <Heading title="The Upcoming Events" classes="mb-6 lg:mb-0 lg:text-left" />
         <CountrySelect />
       </div>
       <ComposedTabs data={tabData} limit={6} />

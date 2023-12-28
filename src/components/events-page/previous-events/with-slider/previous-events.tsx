@@ -5,6 +5,7 @@ import { VideoCard } from './video-card';
 import Image from 'next/image';
 import { SampleNextArrow, SamplePrevArrow } from '../../../home-page/events/featured-events/custom-slider-arrows';
 import Slider, { Settings } from 'react-slick';
+import { Heading } from '@/src/components/heading/heading';
 
 export const settings: Settings = {
   slidesToShow: 5,
@@ -121,9 +122,7 @@ export const PreviousEvents: FC = () => {
   return (
     <section className="py-8 lg:pt-[100px] lg:pb-[172px] bg-bg-secondary bg-meet-section-bg rounded-t-[40px]">
       <div className="max-w-[1440px] mx-auto px-4 lg:px-10">
-        <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] mb-4">
-          Previous Events
-        </h2>
+        <Heading title="Previous Events" classes="mb-4" />
         <p className="text-primary text-base text-center font-satoshi-regular max-w-[670px] mx-auto mb-10">
           Exploring the Chronicles of Past Events with Swami Mukundananda: From Enriching Parikrama Journeys to Profound
           Lectures, Heartfelt Testimonials, and Dynamic Shivir Activities, All Captured in Short Video Glimpses. Delve

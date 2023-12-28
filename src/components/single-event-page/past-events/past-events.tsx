@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { VideoCard } from '../../events-page/previous-events/default/video-card';
 import { VideoCardSmall } from '../../events-page/previous-events/default/previous-events';
 import { Button } from '../../button/button';
+import { Heading } from '../../heading/heading';
 
 const mockVideos = [
   {
@@ -35,9 +36,7 @@ const mockVideosSmall = [
 export const PastEvents: FC = () => {
   return (
     <section className="max-w-[1440px] mx-auto pt-14 px-10 pb-[120px]">
-      <h2 className="text-heading text-[44px] leading-[56px] font-ptserif font-bold text-center mb-4">
-        Past Events Glimpses
-      </h2>
+      <Heading title="Past Events Glimpses" classes=" mb-4" />
       <p className="text-primary text-base font-satoshi-regular text-center max-w-[670px] mx-auto mb-10">
         Swamiji’s lectures cover the teachings of the Vedas, Upanishads, Shreemad Bhagwatam, Puranas, Bhagavad Geeta,
         Ramayan, & other Eastern scriptures and Western philosophies. Like the true Disciple of a true Master, Swamiji

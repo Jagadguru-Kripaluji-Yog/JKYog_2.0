@@ -2,8 +2,9 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Badge } from '../../badge/badge';
 import Link from 'next/link';
+import { Heading } from '../../heading/heading';
 
-export const Heading: FC = () => {
+export const EventTitle: FC = () => {
   return (
     <section className="flex flex-col items-start px-10 pt-[60px] max-w-[1440px] mx-auto px-10">
       <div className="flex gap-10 mb-10">
@@ -18,9 +19,7 @@ export const Heading: FC = () => {
             <Badge variant="primary" text="8 December" />
             <Badge variant="secondary" text="Program" />
           </div>
-          <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px]">
-            Patan 1-2 Dec
-          </h2>
+          <Heading title="Patan 1-2 Dec" />
           <span className="text-primary text-base font-satoshi-regular mt-2">
             Friday, December 8 - Sunday, December 10, 2023
           </span>

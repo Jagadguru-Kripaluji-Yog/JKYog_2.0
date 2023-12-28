@@ -1,5 +1,6 @@
 import { ComponentProps, FC } from 'react';
 import { EventCard } from '../../events-page/upcoming-events/event-card';
+import { Heading } from '../../heading/heading';
 
 const event: ComponentProps<typeof EventCard> = {
   image: '/images/events-page/event-card.png',
@@ -18,9 +19,7 @@ const events = [event, event, event];
 export const MightBeInterested: FC = () => {
   return (
     <section className="max-w-[1440px] mx-auto px-10 py-[100px]">
-      <h2 className="text-heading text-[44px] leading-[56px] font-ptserif font-bold text-center mb-10">
-        You might be interested
-      </h2>
+      <Heading title="You might be interested" classes="mb-10" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
         {events.map((card, i) => (
           <EventCard key={i} {...card} />

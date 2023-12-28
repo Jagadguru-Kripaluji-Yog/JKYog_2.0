@@ -15,9 +15,9 @@ const Stack: FC = () => {
         />
         <div className="h-full flex flex-col justify-between items-start gap-10 px-2 lg:px-0 py-3">
           <div className="flex flex-col justify-center items-start gap-3">
-            <h2 className="text-heading text-2xl lg:text-[32px] font-ptserif font-bold lg:leading-10">
+            <h3 className="text-heading text-2xl lg:text-[32px] font-ptserif font-bold lg:leading-10">
               Welcome to Bhagavad Gita
-            </h2>
+            </h3>
             <p className="text-primary  text-lg font-satoshi-regular leading-6">
               Bhagavad Gita is one of the most revered scriptures! Grasp the wisdom embedded in this precious jewel.
               Watch verse by verse shloka and translation followed by full commentary written by Swami Mukundananda.
@@ -30,9 +30,9 @@ const Stack: FC = () => {
       </div>
 
       <div className="relative flex flex-col-reverse lg:flex-col justify-between items-start gap-3 p-2 lg:pl-6 lg:pr-3 lg:pt-6 lg:pb-3 rounded-[20px] border-[1.25px] border-solid border-border-primary">
-        <h2 className="text-heading text-2xl lg:text-[32px] font-ptserif font-bold lg:leading-10 pb-2 lg:pb-0 px-2 lg:px-0">
+        <h3 className="text-heading text-2xl lg:text-[32px] font-ptserif font-bold lg:leading-10 pb-2 lg:pb-0 px-2 lg:px-0">
           Welcome to A Daily Sadhana
-        </h2>
+        </h3>
         <div className="flex items-start">
           <Image
             src="/vid2.jpeg"

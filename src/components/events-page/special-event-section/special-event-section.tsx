@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { CardInfoBlock } from '../upcoming-events/event-card';
 import { Button } from '@/src/components/button/button';
 import { Arrow } from '../../arrow/arrow';
+import { Heading } from '../../heading/heading';
 
 const tags = [
   { text: '1 December', variant: 'primary' },
@@ -13,9 +14,7 @@ const tags = [
 export const SpecialEventSection: FC = () => {
   return (
     <section className="relative flex items-center justify-center bg-bg-green w-full flex-col gap-6 lg:gap-10 py-8 lg:pt-[100px] lg:pb-[120px] px-4 lg:px-10 rounded-[40px] bg-meet-section-bg">
-      <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] lg:mb-10">
-        Special Event
-      </h2>
+      <Heading title="Special Event" classes="lg:mb-10" />
       <div className="grid grid-cols-1 xl:grid-cols-[662px_682px] bg-white p-2 rounded-[20px]">
         <div className="relative flex rounded-2xl">
           <Image src="/images/events-page/special.png" alt="special" width={662} height={384} />

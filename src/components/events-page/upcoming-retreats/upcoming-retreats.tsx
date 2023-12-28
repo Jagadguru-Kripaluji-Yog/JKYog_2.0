@@ -1,5 +1,6 @@
 import { ComponentProps, FC } from 'react';
 import { EventCard } from '../upcoming-events/event-card';
+import { Heading } from '../../heading/heading';
 
 const retreats: ComponentProps<typeof EventCard> = {
   image: '/images/events-page/event-card.png',
@@ -18,9 +19,7 @@ const cards = [retreats, retreats, retreats];
 export const UpcomingRetreats: FC = () => {
   return (
     <section className="max-w-[1440px] mx-auto px-4 lg:px-10 pt-[72px] lg:pt-[120px] mb-20">
-      <h2 className="text-center text-heading text-[32px] lg:text-[44px] font-ptserif font-bold leading-10 lg:leading-[56px] mb-10">
-        Upcoming Retreats
-      </h2>
+      <Heading title="Upcoming Retreats" classes="mb-10" />
       <div className="flex flex-nowrap md:grid md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 overflow-auto no-scrollbar -mr-4 pr-4">
         {cards.map((card, i) => (
           <EventCard key={i} {...card} />

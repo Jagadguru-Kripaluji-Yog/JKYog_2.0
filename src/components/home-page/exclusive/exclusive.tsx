@@ -22,9 +22,9 @@ export const Exclusive: FC = () => {
     <section className="flex flex-col items-center gap-10 w-full pt-8 lg:pt-[100px] bg-section-bg rounded-t-[40px] bg-meet-section-bg">
       <div className="flex flex-col items-center gap-10 px-4">
         <div className="flex flex-col justify-start gap-3 items-center">
-          <h2 className="text-center text-heading text-[32px] leading-10 lg:text-[44px] lg:leading-[56px] font-bold font-ptserif">
+          <h3 className="text-center text-heading text-[32px] leading-10 lg:text-[44px] lg:leading-[56px] font-bold font-ptserif">
             Swami <br className="lg:hidden" /> Mukundananda <br className="lg:hidden" /> Exclusive
-          </h2>
+          </h3>
           <p className="max-w-[810px] text-center text-stone-600 text-lg font-satoshi-regular leading-normal">
             Swami Mukundananda Exclusive (SMex) is a community to provide knowledge, practical tools and tips addressing
             entire landscape of your life under 5 key themes.

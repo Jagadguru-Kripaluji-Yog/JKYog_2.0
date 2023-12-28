@@ -4,6 +4,7 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { SampleNextArrow, SamplePrevArrow } from '../../home-page/events/featured-events/custom-slider-arrows';
 import { QuoteIcon } from '../../home-page/subscription/quote';
+import { Heading } from '../../heading/heading';
 
 const settings: Settings = {
   slidesToShow: 3,
@@ -19,7 +20,7 @@ const test = [1, 2, 3, 4, 5];
 export const Testimonials: FC = () => {
   return (
     <section className="max-w-[1440px] mx-auto px-10 pt-[120px] pb-[156px]">
-      <h2 className="text-heading text-center text-[44px] leading-[56px] font-ptserif font-bold mb-10">Testimonials</h2>
+      <Heading title="Testimonials" classes="mb-10" />
       <Slider {...settings}>
         {test.map((t) => (
           <TestimonialCard key={t} />
