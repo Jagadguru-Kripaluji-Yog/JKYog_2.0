@@ -1,0 +1,58 @@
+name: 'Chromatic'
+
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - develop
+    # paths:
+    #   - '**.tsx?'
+
+jobs:
+  chromatic-publish:
+    outputs:
+      buildUrl: ${{steps.output.outputs.buildUrl}}
+      storybookUrl: ${{steps.output.outputs.storybookUrl}}
+      componentCount: ${{steps.output.outputs.componentCount}}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.12.1
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing on storybook changes
+          autoAcceptChanges: 'main' # 👈 Option to accept all changes on main
+          skip: '@(renovate/**|dependabot/**)' # 👈 Option to skip Chromatic for certain branches
+          exitOnceUploaded: true
+
+      - name: Store chromatic output
+        id: output
+        run: |
+          echo "buildUrl=${{steps.chromatic.outputs.buildUrl}}" >> $GITHUB_OUTPUT
+          echo "storybookUrl=${{steps.chromatic.outputs.storybookUrl}}" >> $GITHUB_OUTPUT
+          echo "componentCount=${{steps.chromatic.outputs.componentCount}}" >> $GITHUB_OUTPUT
+
+  create-comment:
+    runs-on: ubuntu-latest
+    needs: chromatic-publish
+    steps:
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.number }}
+          body: "| Results |  |\n| --- | --- |\n| Build Results | ${{needs.chromatic-publish.outputs.buildUrl}} |\n| Storybook Preview | ${{needs.chromatic-publish.outputs.storybookUrl}} |\n| Component Count | ${{needs.chromatic-publish.outputs.componentCount}} |"
