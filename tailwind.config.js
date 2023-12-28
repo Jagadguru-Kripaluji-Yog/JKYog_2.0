@@ -41,6 +41,9 @@ module.exports = {
         'events-section-bg': '#FBE5C44D',
         'modal-bg': '#FFFBF2',
       },
+      boxShadow: {
+        'light': '0px 8px 16px -3px rgba(41, 25, 0, 0.04), 0px 0px 0px 1px rgba(41, 25, 0, 0.05)',
+      },
     },
   },
   plugins: [],

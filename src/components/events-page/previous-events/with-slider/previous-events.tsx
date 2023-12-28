@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { SampleNextArrow, SamplePrevArrow } from '../../../home-page/events/featured-events/custom-slider-arrows';
 import Slider, { Settings } from 'react-slick';
 
-const settings: Settings = {
+export const settings: Settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   infinite: true,

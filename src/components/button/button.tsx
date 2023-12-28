@@ -11,6 +11,7 @@ type CommonButtonProps<T> = {
   size?: keyof typeof sizes;
   classes?: string;
   centered?: boolean;
+  full?: boolean;
 };
 
 type LinkButtonProps = {
@@ -39,9 +40,10 @@ const sizes = {
   default: 'px-8 py-3.5 w-full lg:w-[unset]',
 };
 
-const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size = 'default', classes = '' }) => (
+const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size = 'default', classes = '', full }) => (
   <div
     className={`${sizes[size]} 
+                ${full ? '!w-full' : 'w-full lg:w-fit'}
                 rounded-[100px]
                 justify-center items-center inline-flex
                 cursor-pointer z-10
@@ -54,13 +56,17 @@ const DefaultButton: FC<ButtonProps<ButtonType>> = ({ text, variant, color, size
 );
 
 export const Button: FC<ButtonProps<ButtonType>> = (props) => {
-  const { type, size = 'default', centered } = props;
+  const { type, size = 'default', centered, full } = props;
 
   if (type === 'link') {
     return (
       <Link
         href={props.href}
-        className={`z-10 ${size === 'small' ? '' : ' w-full lg:w-fit'} ${centered ? 'block mx-auto' : ''}`}
+        className={`z-10 
+        ${full ? 'w-full' : 'w-full lg:w-fit'}
+        ${size === 'small' ? 'w-[unset]' : ''} 
+        ${centered ? 'block mx-auto' : ''} 
+        `}
       >
         <DefaultButton {...props} />
       </Link>
@@ -68,7 +74,7 @@ export const Button: FC<ButtonProps<ButtonType>> = (props) => {
   }
 
   return (
-    <button onClick={props.onClick} className={`${centered ? 'block mx-auto' : ''}`}>
+    <button onClick={props.onClick} className={`${centered ? 'block mx-auto' : ''} ${full ? 'w-full' : ''}`}>
       <DefaultButton {...props} />
     </button>
   );

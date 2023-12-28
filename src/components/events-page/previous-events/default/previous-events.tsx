@@ -64,9 +64,9 @@ type VideoCardSmallProps = {
   src: string;
 };
 
-const VideoCardSmall: FC<VideoCardSmallProps> = ({ src }) => {
+export const VideoCardSmall: FC<VideoCardSmallProps> = ({ src }) => {
   return (
-    <div className="bg-white rounded-[20px] p-2 min-w-[343px]">
+    <div className="bg-white rounded-[20px] p-2 min-w-[343px] border border-border-primary">
       <Image src={src} alt="" width={424} height={424} className="rounded-2xl" />
     </div>
   );

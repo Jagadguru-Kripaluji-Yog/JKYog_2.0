@@ -16,7 +16,7 @@ export const Badge: FC<BadgeProps> = ({ src, text, variant = 'secondary' }) => {
   return (
     <div
       className={`
-        flex items-center gap-1 px-2 py-1.5 rounded-3xl
+        flex items-center gap-1 px-2 py-1.5 rounded-3xl w-fit
         ${variants[variant]}
     `}
     >

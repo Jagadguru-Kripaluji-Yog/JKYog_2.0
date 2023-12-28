@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.slick-slide {
-  //   width: 100%;
-}
-
 // fonts
 
 @font-face {
@@ -76,3 +72,14 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+// .testimonials > .slick-list > .slick-track > div > div {
+//   &:hover {
+//     > div {
+//       background: rgba(251, 229, 196, 0.12);
+//       > img {
+//         filter: brightness(0) invert(1);
+//       }
+//     }
+//   }
+// }
