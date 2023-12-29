@@ -18,9 +18,9 @@ const events = [event, event, event];
 
 export const MightBeInterested: FC = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-10 py-[100px]">
-      <Heading title="You might be interested" classes="mb-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+    <section className="max-w-[1440px] mx-auto px-4 lg:px-10 py-20 lg:py-[100px]">
+      <Heading title="You might be interested" classes="mb-6 lg:mb-10" />
+      <div className="flex gap-3 lg:gap-5 overflow-auto no-scrollbar -mr-4 pr-4">
         {events.map((card, i) => (
           <EventCard key={i} {...card} />
         ))}

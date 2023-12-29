@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const Description: FC = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-8 lg:gap-10">
       <div>
         <h3 className="font-ptserif text-[32px] font-bold leading-10 mb-3">
           Join Us at Swamiji&apos;s Exclusive Event in Patan!
@@ -96,7 +96,7 @@ const ListItemNumered: FC<ListItemNumered> = ({ number, children }) => {
 
 const Guidelines: FC = () => {
   return (
-    <div className="p-12 bg-bg-secondary rounded-[20px]">
+    <div className="p-6 lg:p-12 bg-bg-secondary rounded-[20px]">
       <h4 className="text-heading text-2xl font-ptserif font-bold italic mb-3">COVID-19 Guidelines</h4>
       <p className="text-primary text-lg leading-6 font-satoshi-regular">
         Please make sure to verify any{' '}

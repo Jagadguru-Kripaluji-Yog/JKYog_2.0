@@ -35,7 +35,7 @@ export const Accordion: FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3 lg:gap-4">
       {questions.map(({ id, answer, question }) => {
         return (
           <AccordionItem
@@ -60,14 +60,8 @@ type AccordionItemProps = {
 
 const AccordionItem: FC<AccordionItemProps> = ({ question, answer, active, onClick }) => {
   return (
-    <div
-      className={`
-              px-8 py-6 bg-white rounded-2xl cursor-pointer overflow-hidden
-              ${active ? 'h-fit' : 'h-16'}
-      `}
-      onClick={onClick}
-    >
-      <div className="flex justify-between items-center">
+    <div className="p-5 lg:px-8 lg:py-6 bg-white rounded-2xl cursor-pointer group " onClick={onClick}>
+      <div className="grid grid-cols-[1fr_24px] items-center">
         <h6 className="text-heading text-xl leading-6 font-ptserif font-bold">{question}</h6>
         <Image
           src="/icons/caret-black.svg"
@@ -79,8 +73,8 @@ const AccordionItem: FC<AccordionItemProps> = ({ question, answer, active, onCli
       </div>
       <p
         className={`
-              ${active ? 'opacity-100' : 'opacity-100'}
-              text-primary text-base font-satoshi-regular mt-3 max-w-[761px]
+              ${active ? 'max-h-fit mt-3' : 'max-h-0'}
+              text-primary text-base font-satoshi-regular max-w-[761px] overflow-hidden
               `}
       >
         {answer}

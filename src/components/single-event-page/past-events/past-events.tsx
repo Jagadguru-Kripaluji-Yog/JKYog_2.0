@@ -35,7 +35,7 @@ const mockVideosSmall = [
 
 export const PastEvents: FC = () => {
   return (
-    <section className="max-w-[1440px] mx-auto pt-14 px-10 pb-[120px]">
+    <section className="max-w-[1440px] mx-auto pt-10 lg:pt-14 px-4 lg:px-10 pb-20 lg:pb-[120px]">
       <Heading title="Past Events Glimpses" classes=" mb-4" />
       <p className="text-primary text-base font-satoshi-regular text-center max-w-[670px] mx-auto mb-10">
         Swamiji’s lectures cover the teachings of the Vedas, Upanishads, Shreemad Bhagwatam, Puranas, Bhagavad Geeta,
@@ -48,7 +48,7 @@ export const PastEvents: FC = () => {
           <VideoCard key={i} {...video} />
         ))}
       </div>
-      <div className="flex flex-nowrap lg:flex-row gap-3 lg:gap-5 mb-10 overflow-auto no-scrollbar -mr-5 pr-5">
+      <div className="flex flex-nowrap lg:flex-row gap-3 lg:gap-5 mb-10 overflow-auto no-scrollbar -mr-3 pr-3">
         {mockVideosSmall.map((video, i) => (
           <VideoCardSmall key={i} {...video} />
         ))}

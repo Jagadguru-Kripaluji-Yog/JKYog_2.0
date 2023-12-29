@@ -6,8 +6,8 @@ import { Heading } from '../../heading/heading';
 
 export const EventTitle: FC = () => {
   return (
-    <section className="flex flex-col items-start px-10 pt-[60px] max-w-[1440px] mx-auto px-10">
-      <div className="flex gap-10 mb-10">
+    <section className="flex flex-col items-start px-4 lg:px-10 pt-8 lg:pt-[60px] max-w-[1440px] mx-auto px-10">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 mb-3 lg:mb-10">
         <Link href="/events">
           <div className="flex items-center gap-1 hover:opacity-80">
             <Image src="/icons/caret-black.svg" alt="" width={24} height={24} className="rotate-90" />
@@ -25,9 +25,20 @@ export const EventTitle: FC = () => {
           </span>
         </div>
       </div>
-      <div>
-        <Image src="/images/events-page/single-event-banner.png" alt="" width={1360} height={460} />
-      </div>
+      <Image
+        src="/images/events-page/single-event-banner.png"
+        alt=""
+        width={1360}
+        height={460}
+        className="hidden sm:block"
+      />
+      <Image
+        src="/images/events-page/single-event-banner-mobile.png"
+        alt=""
+        width={430}
+        height={320}
+        className="sm:hidden"
+      />
     </section>
   );
 };

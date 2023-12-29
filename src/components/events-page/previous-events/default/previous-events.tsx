@@ -48,7 +48,7 @@ export const PreviousEvents: FC = () => {
             <VideoCard key={i} {...video} />
           ))}
         </div>
-        <div className="flex flex-nowrap lg:flex-row gap-3 lg:gap-5 mb-10 overflow-auto no-scrollbar -mr-5 pr-5">
+        <div className="flex flex-nowrap lg:flex-row gap-3 lg:gap-5 mb-10 overflow-auto no-scrollbar -mr-3 pr-3 ">
           {mockVideosSmall.map((video, i) => (
             <VideoCardSmall key={i} {...video} />
           ))}
