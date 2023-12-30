@@ -8,7 +8,6 @@ on:
       - develop
 
 jobs:
-
   changes:
     runs-on: ubuntu-latest
     # Required permissions
@@ -66,10 +65,11 @@ jobs:
           echo "componentCount=${{steps.chromatic.outputs.componentCount}}" >> $GITHUB_OUTPUT
 
   create-comment:
-    needs: changes
+    needs:
+      - changes
+      - chromatic-publish
     if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     runs-on: ubuntu-latest
-    needs: chromatic-publish
     steps:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v3
