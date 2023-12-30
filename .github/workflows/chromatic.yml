@@ -8,26 +8,26 @@ on:
       - develop
 
 jobs:
-  changes:
-    runs-on: ubuntu-latest
-    # Required permissions
-    permissions:
-      pull-requests: read
-    # Set job outputs to values from filter step
-    outputs:
-      sourceFiles: ${{ steps.filter.outputs.typescript }}
-    steps:
-      # For pull requests it's not necessary to checkout the code
-      - uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          filters: |
-            typescript:
-              - '**.tsx?'
+  # changes:
+  #   runs-on: ubuntu-latest
+  #   # Required permissions
+  #   permissions:
+  #     pull-requests: read
+  #   # Set job outputs to values from filter step
+  #   outputs:
+  #     sourceFiles: ${{ steps.filter.outputs.typescript }}
+  #   steps:
+  #     # For pull requests it's not necessary to checkout the code
+  #     - uses: dorny/paths-filter@v2
+  #       id: filter
+  #       with:
+  #         filters: |
+  #           typescript:
+  #             - '**.tsx?'
 
   chromatic-publish:
     needs: changes
-    if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
+    # if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     outputs:
       buildUrl: ${{steps.output.outputs.buildUrl}}
       storybookUrl: ${{steps.output.outputs.storybookUrl}}
@@ -66,9 +66,9 @@ jobs:
 
   create-comment:
     needs:
-      - changes
+      # - changes
       - chromatic-publish
-    if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
+    # if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Create comment
