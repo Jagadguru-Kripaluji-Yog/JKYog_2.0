@@ -31,7 +31,7 @@ export const Outlined = {
 export const ButtonType = {
   args: {
     type: 'button',
-    text: 'I am a button!',
+    text: 'I am a button yay!',
     variant: 'outlined',
     color: 'primary',
   },
