@@ -8,45 +8,22 @@ on:
       - develop
 
 jobs:
-  # changes:
-  #   runs-on: ubuntu-latest
-  #   # Required permissions
-  #   permissions:
-  #     pull-requests: read
-  #   # Set job outputs to values from filter step
-  #   outputs:
-  #     sourceFiles: ${{ steps.filter.outputs.typescript }}
-  #   steps:
-  #     # For pull requests it's not necessary to checkout the code
-  #     - uses: dorny/paths-filter@v2
-  #       id: filter
-  #       with:
-  #         filters: |
-  #           typescript:
-  #             - '**.tsx?'
-
   chromatic-publish:
-    # needs: changes
-    # if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     outputs:
       buildUrl: ${{steps.output.outputs.buildUrl}}
       storybookUrl: ${{steps.output.outputs.storybookUrl}}
       componentCount: ${{steps.output.outputs.componentCount}}
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - uses: pnpm/action-setup@v2
         with:
           version: 8.12.1
-
       - name: Install dependencies
         run: pnpm install
-
       - name: Publish to Chromatic
         id: chromatic
         uses: chromaui/action@latest
@@ -56,7 +33,6 @@ jobs:
           autoAcceptChanges: 'main' # 👈 Option to accept all changes on main
           skip: '@(renovate/**|dependabot/**)' # 👈 Option to skip Chromatic for certain branches
           exitOnceUploaded: true
-
       - name: Store chromatic output
         id: output
         run: |
@@ -66,9 +42,7 @@ jobs:
 
   create-comment:
     needs:
-      # - changes
       - chromatic-publish
-    # if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Create comment
