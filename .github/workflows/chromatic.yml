@@ -24,7 +24,7 @@ jobs:
         with:
           filters: |
             typescript:
-              - '**.tsx?'
+              - '*.tsx?'
 
   chromatic-publish:
     needs: changes
