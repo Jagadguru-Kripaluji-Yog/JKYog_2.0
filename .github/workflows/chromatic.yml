@@ -8,7 +8,26 @@ on:
       - develop
 
 jobs:
+
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      sourceFiles: ${{ steps.filter.outputs.typescript }}
+    steps:
+      # For pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            typescript:
+              - '**.tsx?'
+
   chromatic-publish:
+    needs: changes
     outputs:
       buildUrl: ${{steps.output.outputs.buildUrl}}
       storybookUrl: ${{steps.output.outputs.storybookUrl}}
@@ -31,7 +50,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing on storybook changes
           autoAcceptChanges: 'main' # 👈 Option to accept all changes on main
-          skip: '@(renovate/**|dependabot/**)' # 👈 Option to skip Chromatic for certain branches
+          skip: ${{ needs.changes.outputs.sourceFiles == 'false' }}
           exitOnceUploaded: true
       - name: Store chromatic output
         id: output
