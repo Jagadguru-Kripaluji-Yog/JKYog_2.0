@@ -62,6 +62,8 @@ jobs:
   create-comment:
     needs:
       - chromatic-publish
+      - changes
+    if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Find Comment
