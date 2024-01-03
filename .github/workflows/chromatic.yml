@@ -1,0 +1,82 @@
+name: 'Chromatic'
+
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      sourceFiles: ${{ steps.filter.outputs.typescript }}
+    steps:
+      # For pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            typescript:
+              - '**/*.ts(x)?'
+
+  chromatic-publish:
+    needs: changes
+    outputs:
+      buildUrl: ${{steps.output.outputs.buildUrl}}
+      storybookUrl: ${{steps.output.outputs.storybookUrl}}
+      componentCount: ${{steps.output.outputs.componentCount}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.12.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Publish to Chromatic
+        id: chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing on storybook changes
+          autoAcceptChanges: 'main' # 👈 Option to accept all changes on main
+          skip: ${{ needs.changes.outputs.sourceFiles == 'false' }}
+          exitOnceUploaded: true
+      - name: Store chromatic output
+        id: output
+        run: |
+          echo "buildUrl=${{steps.chromatic.outputs.buildUrl}}" >> $GITHUB_OUTPUT
+          echo "storybookUrl=${{steps.chromatic.outputs.storybookUrl}}" >> $GITHUB_OUTPUT
+          echo "componentCount=${{steps.chromatic.outputs.componentCount}}" >> $GITHUB_OUTPUT
+
+  create-comment:
+    needs:
+      - chromatic-publish
+      - changes
+    if: ${{ needs.changes.outputs.sourceFiles == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find Comment
+        uses: peter-evans/find-comment@v2
+        id: find-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Chromatic URL
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.number }}
+          edit-mode: replace
+          body: "| Results |  |\n| --- | --- |\n| Chromatic URL | ${{needs.chromatic-publish.outputs.buildUrl}} |\n| Storybook Preview | ${{needs.chromatic-publish.outputs.storybookUrl}} |\n| Component Count | ${{needs.chromatic-publish.outputs.componentCount}} |"
