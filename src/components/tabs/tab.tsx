@@ -3,19 +3,23 @@
 import { FC, useContext } from 'react';
 import { ComponentWithChildren, TabsContext } from './tabs';
 import { TabContext } from './tab-list';
+import { ComposedTabsProps } from './composed-tabs';
 
 interface TabProps extends ComponentWithChildren {
   isDisabled?: boolean;
+  small?: ComposedTabsProps['small'];
 }
 
-export const Tab: FC<TabProps> = ({ children, isDisabled, ...rest }) => {
+export const Tab: FC<TabProps> = ({ children, isDisabled, small, ...rest }) => {
   const index = useContext(TabContext);
   const { activeIndex, setActiveIndex } = useContext(TabsContext);
   const isActive = index === activeIndex;
   return (
     <li
       className={`block cursor-pointer 
-        font-satoshi-regular text-stone-600 text-base lg:text-xl hover:text-white
+        font-satoshi-regular text-primary 
+        ${small ? 'text-base' : 'text-base lg:text-xl'}  
+        hover:text-white
         px-4 lg:px-6 py-2.5
         rounded-[29px]
         w-fit whitespace-nowrap

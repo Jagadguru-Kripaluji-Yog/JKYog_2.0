@@ -14,6 +14,7 @@ const ptSerif = PT_Serif({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '700'],
+  style: ['normal', 'italic'],
   variable: '--font-ptserif',
 });
 

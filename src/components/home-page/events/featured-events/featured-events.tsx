@@ -6,14 +6,15 @@ import { FeaturedEventCard } from './featured-event-card';
 import { getFeaturedEvents } from '@/src/api/get-featured-events';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 import { SampleNextArrow, SamplePrevArrow } from './custom-slider-arrows';
+import { Heading } from '@/src/components/heading/heading';
 
 const settings: Settings = {
   slidesToShow: 2.9,
   slidesToScroll: 1,
   infinite: false,
   draggable: true,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
+  nextArrow: <SampleNextArrow position="-top-24 right-10" />,
+  prevArrow: <SamplePrevArrow position="-top-24 right-[108px]" />,
   responsive: [
     {
       breakpoint: 4000,
@@ -58,9 +59,7 @@ const FeaturedEvents: FC = () => {
 
   return (
     <div className="relative flex flex-col items-center pl-4 lg:pl-10 gap-10 w-full">
-      <h2 className="w-full text-center lg:text-left text-[32px] lg:text-[44px] font-bold leading-10 lg:leading-[56px] font-ptserif">
-        Featured Events
-      </h2>
+      <Heading title="Featured Events" classes="w-full lg:text-left" />
       <div className="w-full">
         {data.length ? (
           <Slider {...settings}>

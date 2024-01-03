@@ -13,9 +13,8 @@ const arrowDirections = {
 
 export const Arrow: FC<ArrowProps> = ({ direction }) => {
   return (
-    <div className="w-fit h-fit flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-border-primary mobile:hidden cursor-pointer hover:bg-gray-50">
+    <div className="w-fit h-fit hidden lg:flex justify-center items-center gap-1.5 p-2.5 rounded-[100px] border-[1.25px] border-solid border-border-primary cursor-pointer hover:bg-gray-50">
       <Image src={arrowDirections[direction]} alt="arrow" width={24} height={24} />
     </div>
   );
 };
-

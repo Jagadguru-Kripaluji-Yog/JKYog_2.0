@@ -5,9 +5,9 @@ const Form: FC = () => {
   return (
     <div className="flex flex-col justify-center items-center lg:items-start xl:pr-[116px] gap-8 flex-[1_0_0] self-stretch ">
       <div className="flex flex-col justify-center items-center gap-6 self-stretch">
-        <h2 className="text-center lg:text-left text-heading text-[24px] lg:text-[32px] font-bold font-ptserif leading-8 lg:leading-10">
+        <h3 className="text-center lg:text-left text-heading text-[24px] lg:text-[32px] font-bold font-ptserif leading-8 lg:leading-10">
           Receive Swamiji’s quote every day in your inbox
-        </h2>
+        </h3>
         <div className="flex flex-col items-center gap-4 self-stretch">
           <input
             type="text"

@@ -3,10 +3,8 @@ import Image from 'next/image';
 
 const Quote: FC = () => {
   return (
-    <div className="order-first lg:order-1 flex flex-col justify-center items-center gap-6 lg:gap-10 px-8 py-10 rounded-[20px] border-[#F0EBE1] bg-modal-bg">
-      <div className="flex justify-center items-center w-[72px] h-[72px] gap-2.5 p-2.5 rounded-[100px] bg-orange-100">
-        <Image src="/icons/quotes.svg" alt="quotes" width={48} height={48} />
-      </div>
+    <div className="order-first lg:order-1 flex flex-col justify-center items-center gap-6 lg:gap-10 px-8 py-10 rounded-[20px] border-border-primary bg-bg-light">
+      <QuoteIcon />
       <p className="text-stone-600 text-center text-xl not-italic font-normal leading-8 mobile:text-[18px]">
         &ldquo;If you carry yesterday with you, your today <br className="hidden lg:block" /> becomes very{' '}
         <br className="hidden lg:block" /> heavy - you can neither float nor fly.&rdquo;
@@ -17,5 +15,17 @@ const Quote: FC = () => {
     </div>
   );
 };
+
+export const QuoteIcon: FC = () => (
+  <div className="flex justify-center items-center w-[72px] h-[72px] gap-2.5 p-2.5 rounded-[100px] bg-orange-100 group-hover:bg-[#FBE5C41F]">
+    <Image
+      src="/icons/quotes.svg"
+      alt="quotes"
+      width={48}
+      height={48}
+      className="group-hover:invert-[1] group-hover:brightness-[0]"
+    />
+  </div>
+);
 
 export default Quote;

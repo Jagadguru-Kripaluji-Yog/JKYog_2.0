@@ -9,10 +9,10 @@ const yoga = [
 ];
 
 const events = [
-  { name: 'Programs', url: '/' },
-  { name: 'Upcoming Events', url: '/' },
-  { name: 'JKYog Center Events', url: '/' },
-  { name: 'JKYog Retreats', url: '/' },
+  { name: 'Programs', url: '/events' },
+  { name: 'Upcoming Events', url: '/events' },
+  { name: 'JKYog Center Events', url: '/events' },
+  { name: 'JKYog Retreats', url: '/events' },
 ];
 
 const resources = [

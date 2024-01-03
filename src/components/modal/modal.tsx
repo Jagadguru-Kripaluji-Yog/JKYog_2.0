@@ -42,7 +42,7 @@ export const Modal: FC = () => {
 const SignInView: FC<{ supabase: SupabaseClient }> = ({ supabase }) => (
   <>
     <div className="flex flex-col justify-start items-center gap-3 ">
-      <h2 className="text-center text-heading text-[40px] font-bold font-ptserif leading-[48px]">Sign In</h2>
+      <h3 className="text-center text-heading text-[40px] font-bold font-ptserif leading-[48px]">Sign In</h3>
       <span className="text-primary text-lg font-satoshi-regular leading-normal">
         Create an account to keep track of JKYog Online classes and events.
       </span>

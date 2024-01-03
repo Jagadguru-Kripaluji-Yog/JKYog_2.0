@@ -5,12 +5,16 @@ import { ComponentWithChildren } from './tabs';
 
 export const TabContext = createContext<number>(0);
 
-export const TabList: FC<ComponentWithChildren> = ({ children }) => {
+export const TabList: FC<ComponentWithChildren & { centered?: boolean }> = ({ children, centered = true }) => {
   const wrappedChildren = Children.map(children, (child, index) => (
     <TabContext.Provider value={index}>{child}</TabContext.Provider>
   ));
   return (
-    <ul className="grid grid-cols-[162px_221px_322px_125px] lg:flex lg:justify-center gap-4 lg:mb-8 overflow-auto no-scrollbar">
+    <ul
+      className={`flex flex-nowrap lg:flex-wrap lg:justify-start items-center gap-4 mb-6 lg:mb-8 pr-4 lg:pr-0 -mr-4 ${
+        centered ? 'lg:mx-auto' : ''
+      } overflow-auto lg:overflow-visible no-scrollbar`}
+    >
       {wrappedChildren}
     </ul>
   );

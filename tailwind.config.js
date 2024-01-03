@@ -23,6 +23,8 @@ module.exports = {
         'meet-section-bg': 'url(/images/meet-section-bg.png)',
         'book-section-bg': 'url(/images/book-section-bg.png)',
         'bg-flowers-mobile': 'url(/images/bg-flowers-mobile.png)',
+        'events-banner': 'url(/images/events-page/events-banner.png)',
+        'events-banner-mobile': 'url(/images/events-page/events-banner-mobile.png)',
       },
       colors: {
         'primary': '#645743',
@@ -38,6 +40,9 @@ module.exports = {
         'light-text': '#3A2D27B2',
         'events-section-bg': '#FBE5C44D',
         'modal-bg': '#FFFBF2',
+      },
+      boxShadow: {
+        'light': '0px 8px 16px -3px rgba(41, 25, 0, 0.04), 0px 0px 0px 1px rgba(41, 25, 0, 0.05)',
       },
     },
   },
