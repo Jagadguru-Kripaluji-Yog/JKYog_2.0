@@ -3,7 +3,7 @@
 import React, { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { FeaturedEventCard } from './featured-event-card';
-import { getFeaturedEvents } from '@/src/api/get-featured-events';
+import { getFeaturedEvents } from '@/src/api/featured-events';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 import { SampleNextArrow, SamplePrevArrow } from './custom-slider-arrows';
 

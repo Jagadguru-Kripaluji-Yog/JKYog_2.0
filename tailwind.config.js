@@ -41,6 +41,11 @@ module.exports = {
         'events-section-bg': '#FBE5C44D',
         'modal-bg': '#FFFBF2',
       },
+      invert: {
+        25: '.25',
+        50: '.5',
+        75: '.75',
+      },
     },
   },
   plugins: [],

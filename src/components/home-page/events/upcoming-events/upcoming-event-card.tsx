@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { UpcommingEventData } from './types';
+import { UpcomingEventData } from '@/src/types/upcoming-events';
 import { formatDate } from '@/src/utils/format-date';
 import { Arrow } from '@/src/components/arrow/arrow';
 
-export const UpcommingEventCard: FC<UpcommingEventData['attributes']> = ({ image, tags, heading, place, time }) => {
+export const UpcomingEventCard: FC<UpcomingEventData['attributes']> = ({ image, tags, heading, place, time }) => {
   return (
     <div className="grid xl:grid-cols-[680px_325px_44px] justify-between items-center gap-1 xl:gap-5 w-full px-2 xl:px-4 py-3">
       <div className="flex gap-5">
