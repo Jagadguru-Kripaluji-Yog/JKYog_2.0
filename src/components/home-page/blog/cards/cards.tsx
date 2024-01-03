@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { CardSmall } from './card-small';
 import { CardLarge } from './card-large';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
-import { getBlogs } from '@/src/api/get-blogs';
+import { getBlogs } from '@/src/api/blogs';
 
 const Cards: FC = () => {
   const { data, isLoading } = useFetchData(getBlogs);

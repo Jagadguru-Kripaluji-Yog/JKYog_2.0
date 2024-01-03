@@ -2,6 +2,7 @@ export { ArrowRight } from './arrowRight';
 export { Meet } from './meet';
 export { Location } from './location';
 export { Calendar } from './calendar';
+export { CalendarInverted } from './calendar-inverted';
 export { Play } from './play';
 export { Facebook } from './social/facebook';
 export { Instagram } from './social/instagram';

@@ -1,14 +1,14 @@
 'use client';
 
 import React, { Fragment } from 'react';
-import { getUpcommingEvents } from '@/src/api/get-upcomming-events';
-import { UpcommingEventCard } from './upcomming-event-card';
+import { getUpcomingEvents } from '@/src/api/upcoming-events';
+import { UpcomingEventCard } from './upcoming-event-card';
 import { Button } from '@/src/components/button/button';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
 import { Heading } from '@/src/components/heading/heading';
 
-const UpcommingEvents = () => {
-  const { data, isLoading } = useFetchData(getUpcommingEvents);
+const UpcomingEvents = () => {
+  const { data, isLoading } = useFetchData(getUpcomingEvents);
 
   return (
     <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-10 px-4 lg:px-10 w-full">
@@ -18,7 +18,7 @@ const UpcommingEvents = () => {
           {data.map(({ attributes }, index) => {
             return (
               <Fragment key={index}>
-                <UpcommingEventCard {...attributes} />
+                <UpcomingEventCard {...attributes} />
                 {index < data.length - 1 && <div className="w-full h-px bg-border-primary xl:mt-3.5"></div>}
               </Fragment>
             );
@@ -30,4 +30,4 @@ const UpcommingEvents = () => {
   );
 };
 
-export default UpcommingEvents;
+export default UpcomingEvents;

@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, Fragment } from 'react';
-import { getMeetPlaces } from '@/src/api/get-meet-places';
+import { getMeetPlaces } from '@/src/api/meet-places';
 import { GetMeetPlacesData } from '@/src/types/meet-places';
 import { Arrow } from '@/src/components/arrow/arrow';
 import { formatDate } from '@/src/utils/format-date';
