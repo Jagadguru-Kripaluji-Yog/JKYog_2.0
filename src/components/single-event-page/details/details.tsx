@@ -7,21 +7,6 @@ import { Button } from '../../button/button';
 import { FacebookIcon, LinkedInIcon, TwitterIcon, WhatAppIcon } from '../../icons';
 import Link from 'next/link';
 
-const isBottom = () => {
-  const details = document.getElementById('details');
-  const footer = document.getElementsByTagName('footer')[0];
-
-  const rect1 = details!.getBoundingClientRect();
-  const rect2 = footer.getBoundingClientRect();
-
-  return !(
-    rect1.top > rect2.bottom ||
-    rect1.right < rect2.left ||
-    rect1.bottom < rect2.top ||
-    rect1.left > rect2.right
-  );
-};
-
 export const Details: FC = () => {
   const [expanded, setExpanded] = useState(false);
 
