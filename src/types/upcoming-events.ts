@@ -1,11 +1,11 @@
 import { MetaInfo } from '@/src/types/common';
 
-export type UpcommingEventsResponse = {
-  data: UpcommingEventData[];
+export type UpcomingEventsResponse = {
+  data: UpcomingEventData[];
   meta: MetaInfo;
 };
 
-export type UpcommingEventData = {
+export type UpcomingEventData = {
   id: number;
   attributes: {
     tags: string;

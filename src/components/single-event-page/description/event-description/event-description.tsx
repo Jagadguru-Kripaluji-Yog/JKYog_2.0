@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Play } from '../../../icons';
+import { GooglePlayIcon } from '../../../icons';
 import { WhatToExpect } from './what-to-expect';
 import { Guidelines } from './guidelines';
 
@@ -40,7 +40,7 @@ export const EventDescription: FC = () => {
       <div className="relative">
         <Image src="/images/events-page/video1.png" alt="" width={670} height={400} className="" />
         <button className="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-orange-400">
-          <Play />
+          <GooglePlayIcon />
         </button>
       </div>
       <WhatToExpect />

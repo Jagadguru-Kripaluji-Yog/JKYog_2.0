@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-interface SampleArrowProps {
+export interface SampleArrowProps {
   position: string;
   onClick?: () => void;
   className?: string;

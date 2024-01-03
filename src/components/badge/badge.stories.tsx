@@ -1,5 +1,6 @@
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Badge, BadgeProps } from './badge';
+import { CalendarIcon } from '../icons';
 
 const Story: Meta<BadgeProps> = {
   component: Badge,
@@ -11,14 +12,14 @@ const Story: Meta<BadgeProps> = {
 };
 export default Story;
 
-export const Primary = {
+export const Icon: StoryObj<BadgeProps> = {
   args: {
-    src: '/icons/calendar.svg',
+    iconStart: CalendarIcon,
     text: 'November 9, 2023',
   },
 };
 
-export const NoIcon = {
+export const NoIcon: StoryObj<BadgeProps> = {
   args: {
     text: 'November 9, 2023',
   },

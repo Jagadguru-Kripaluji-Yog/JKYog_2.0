@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { FeaturedEventCard } from '../../home-page/events/featured-events/featured-event-card';
 import { useFetchData } from '@/src/hooks/use-fetch-data';
-import { getFeaturedEvents } from '@/src/api/get-featured-events';
+import { getFeaturedEvents } from '@/src/api/featured-events';
 import { Button } from '@/src/components/button/button';
 import { Heading } from '../../heading/heading';
 

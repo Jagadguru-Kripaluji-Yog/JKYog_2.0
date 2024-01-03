@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { getMeetPosters } from '@/src/api/get-meet-posters';
+import { getMeetPosters } from '@/src/api/meet-posters';
 import { formatDate } from '@/src/utils/format-date';
 import { Arrow } from '@/src/components/arrow/arrow';
 import { Badge } from '@/src/components/badge/badge';
