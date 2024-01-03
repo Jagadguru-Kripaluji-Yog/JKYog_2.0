@@ -31,7 +31,7 @@ const variants = {
     primary: 'bg-button-primary hover:bg-orange-400 text-white',
   },
   outlined: {
-    primary: 'border hover:bg-gray-50 text-neutral-900',
+    primary: 'border bg-white hover:bg-gray-50 text-neutral-900',
   },
 };
 

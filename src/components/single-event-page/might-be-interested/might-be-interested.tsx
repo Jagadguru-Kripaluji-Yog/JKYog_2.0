@@ -12,6 +12,7 @@ const event: ComponentProps<typeof EventCard> = {
     { text: '25 December', variant: 'primary' },
     { text: 'Program', variant: 'secondary' },
   ],
+  link: '/events/1',
 };
 
 const events = [event, event, event];

@@ -10,6 +10,7 @@ import { FilterSelect } from '../events-page/upcoming-events/filter-select';
 export interface ComposedTabsProps {
   data: { label: string; content: ReactNode; disabled?: boolean }[];
   limit?: number;
+  small?: boolean;
 }
 
 const getExtraTabs = (tabs: ComposedTabsProps['data'], limit: number): number => {
@@ -29,7 +30,7 @@ const getSliced = (tabs: ComposedTabsProps['data'], extraTabs: number): Composed
   return tabs.slice(0, slicedTo);
 };
 
-export const ComposedTabs: FC<ComposedTabsProps> = ({ data, limit = 0 }) => {
+export const ComposedTabs: FC<ComposedTabsProps> = ({ data, limit = 0, small }) => {
   const [extraTabs, setExtraTabs] = useState(getExtraTabs(data, limit));
   return (
     <Tabs>
@@ -43,7 +44,7 @@ export const ComposedTabs: FC<ComposedTabsProps> = ({ data, limit = 0 }) => {
       ) : (
         <TabList>
           {getSliced(data, extraTabs).map((tab, i) => (
-            <Tab isDisabled={tab.disabled} key={`tw-tab-${i}`}>
+            <Tab isDisabled={tab.disabled} small={small} key={`tw-tab-${i}`}>
               {tab.label}
             </Tab>
           ))}

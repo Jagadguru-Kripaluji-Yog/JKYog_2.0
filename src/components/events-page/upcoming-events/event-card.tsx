@@ -4,6 +4,7 @@ import { formatDate } from '@/src/utils/format-date';
 import Image from 'next/image';
 import { FC } from 'react';
 import { Arrow } from '../../arrow/arrow';
+import Link from 'next/link';
 
 type EventCardProps = {
   image: string;
@@ -12,9 +13,10 @@ type EventCardProps = {
   date: string;
   time: string;
   tags: { text: string; variant: 'primary' | 'secondary' }[];
+  link: string;
 };
 
-export const EventCard: FC<EventCardProps> = ({ image, heading, place, date, time, tags }) => {
+export const EventCard: FC<EventCardProps> = ({ image, heading, place, date, time, tags, link = '/' }) => {
   return (
     <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white min-w-[343px]">
       <div className="relative bg-cover bg-no-repeat rounded-2xl overflow-hidden">
@@ -40,7 +42,9 @@ export const EventCard: FC<EventCardProps> = ({ image, heading, place, date, tim
         </div>
         <div className="flex justify-between w-full mt-6">
           <Button type="link" href="/" variant="outlined" color="primary" text="Register" classes="h-12" />
-          <Arrow direction="topLeft" />
+          <Link href={link}>
+            <Arrow direction="topLeft" />
+          </Link>
         </div>
       </div>
     </div>

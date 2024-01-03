@@ -7,11 +7,27 @@ import { Button } from '../../button/button';
 import { FacebookIcon, LinkedInIcon, TwitterIcon, WhatAppIcon } from '../../icons';
 import Link from 'next/link';
 
+const isBottom = () => {
+  const details = document.getElementById('details');
+  const footer = document.getElementsByTagName('footer')[0];
+
+  const rect1 = details!.getBoundingClientRect();
+  const rect2 = footer.getBoundingClientRect();
+
+  return !(
+    rect1.top > rect2.bottom ||
+    rect1.right < rect2.left ||
+    rect1.bottom < rect2.top ||
+    rect1.left > rect2.right
+  );
+};
+
 export const Details: FC = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div
+      id="details"
       className={`
             ${expanded ? 'translate-y-0' : 'translate-y-[77%]'} lg:translate-y-0  fixed bottom-0 
             bg-white -mx-4 lg:mx-[unset] w-full z-40 lg:static order-first lg:order-none 

@@ -18,6 +18,7 @@ const props: ComponentProps<typeof EventCard> = {
     { text: '25 December', variant: 'primary' },
     { text: 'Program', variant: 'secondary' },
   ],
+  link: '/events/1',
 };
 
 const cards = [props, props, props, props, props];
