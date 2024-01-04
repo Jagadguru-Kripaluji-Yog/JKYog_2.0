@@ -1,8 +1,13 @@
+import { SVGIconProps } from '@/src/types/icons';
 import * as icons from '.';
+import { Meta } from '@storybook/react';
 export default {
   title: 'Icons',
   subcomponents: icons,
-};
+  args: {
+    primary: true,
+  },
+} as Meta<SVGIconProps>;
 export { ArrowRight } from './arrowRight';
 export { Meet } from './meet';
 export { Location } from './location';
