@@ -1,9 +1,9 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, SVGProps } from 'react';
 import Image from 'next/image';
 
 export interface BadgeProps {
   src?: string;
-  iconStart?: ReactNode;
+  iconStart?: (props: SVGProps<SVGSVGElement>) => ReactNode;
   text: string;
   variant?: keyof typeof variants;
 }
@@ -13,7 +13,7 @@ const variants = {
   secondary: 'text-button-primary bg-bg-light',
 };
 
-export const Badge: FC<BadgeProps> = ({ iconStart, src, text, variant = 'secondary' }) => {
+export const Badge: FC<BadgeProps> = ({ iconStart: IconStart, src, text, variant = 'secondary' }) => {
   return (
     <div
       className={`
@@ -21,17 +21,8 @@ export const Badge: FC<BadgeProps> = ({ iconStart, src, text, variant = 'seconda
         ${variants[variant]}
     `}
     >
-      {src && (
-        <Image
-          className={variant === 'primary' ? 'invert-75' : 'invert-0'}
-          src={src}
-          alt="badge-icon"
-          width={16}
-          height={16}
-          color="white"
-        />
-      )}
-      {iconStart}
+      {src && <Image src={src} alt="badge-icon" width={16} height={16} color="white" />}
+      {IconStart && <IconStart fill={variant === 'primary' ? 'white' : undefined} />}
       <span className="text-center text-xs capitalize font-ptserif font-bold leading-4">{text}</span>
     </div>
   );
