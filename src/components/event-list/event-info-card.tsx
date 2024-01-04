@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import Image from 'next/image';
 import { formatDate } from '@/src/utils/format-date';
 import { Arrow } from '@/src/components/arrow/arrow';
@@ -10,16 +10,7 @@ export const EventInfoCard: FC<EventInfo> = ({ imageSrc, tags, heading, place, t
       <div className="flex gap-5">
         {imageSrc && <Image src={imageSrc} alt="" width={80} height={80} className="hidden xl:block rounded-[14px]" />}
         <div className="flex flex-col justify-center items-start gap-2 xl:gap-0 pt-1 xl:pt-0">
-          <div className="flex gap-x-3">
-            {tags?.map((tag) => (
-              <div
-                key={tag}
-                className="px-2 py-1 rounded-3xl bg-badge-dark font-bold font-ptserif text-xs text-button-primary"
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
+          <div className="flex gap-x-3">{tags?.map((tag, index) => <div key={index}>{tag}</div>)}</div>
 
           <h4 className="max-w-[511px] text-heading text-[20px] md:text-[32px] font-ptserif font-bold leading-6 md:leading-10 mobile:leading-5">
             {heading}

@@ -9,6 +9,7 @@ export const AppleIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>
       height="18"
       viewBox="0 0 18 18"
       fill="none"
+      {...props}
     >
       <path
         fillRule="evenodd"

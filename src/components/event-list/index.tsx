@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react';
+import { FC, Fragment, ReactNode } from 'react';
 import { EventInfoCard } from './event-info-card';
 
 export interface EventInfo {
@@ -6,7 +6,7 @@ export interface EventInfo {
   place: string;
   time: string;
   imageSrc?: string;
-  tags?: string[];
+  tags?: ReactNode[];
 }
 
 export interface EventListProps {
