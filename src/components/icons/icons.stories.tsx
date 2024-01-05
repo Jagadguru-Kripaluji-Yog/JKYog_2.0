@@ -5,14 +5,20 @@ export default {
   title: 'Icons',
   subcomponents: icons,
   args: {
-    primary: true,
+    variant: 'default',
+    width: 30,
+    height: 30,
+  },
+  argTypes: {
+    variant: { options: ['primary', 'secondary', 'primary-dark', 'default'], control: { type: 'radio' } },
   },
 } as Meta<SVGIconProps>;
-export { ArrowRight } from './arrowRight';
-export { Meet } from './meet';
-export { Location } from './location';
-export { Calendar } from './calendar';
-export { Play } from './play';
+export { ArrowRight } from '.';
+export { ArrowDown } from '.';
+export { Meet } from '.';
+export { Location } from '.';
+export { Calendar } from '.';
+export { Play } from '.';
 export { Facebook } from './social/facebook';
 export { Instagram } from './social/instagram';
 export { Linkdin } from './social/linkdin';
@@ -20,7 +26,6 @@ export { Pintrest } from './social/pintrest';
 export { X } from './social/x';
 export { Youtube } from './social/youtube';
 export { GoogleIcon } from './google';
-export { Apple } from './social/apple';
 export { CloseIcon } from './close';
 export { FacebookIcon } from './facebook';
 export { InstaIcon } from './insta';
@@ -33,4 +38,4 @@ export { ThinArrowRight } from './thinArrowRight';
 export { PracticalTool } from './practicalTool';
 export { LiveConnect } from './liveConnect';
 export { Mentor } from './mentor';
-export { AppleIcon } from './apple';
+export { Apple } from './apple';

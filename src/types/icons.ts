@@ -1,3 +1,3 @@
 export interface SVGIconProps extends React.SVGProps<SVGSVGElement> {
-  primary?: boolean;
+  variant?: 'primary' | 'secondary' | 'primary-dark' | 'default';
 }

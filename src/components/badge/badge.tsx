@@ -1,9 +1,10 @@
 import { FC, ReactNode, SVGProps } from 'react';
 import Image from 'next/image';
+import { SVGIconProps } from '@/src/types/icons';
 
 export interface BadgeProps {
   src?: string;
-  iconStart?: (props: SVGProps<SVGSVGElement>) => ReactNode;
+  iconStart?: (props: SVGIconProps) => ReactNode;
   text: string;
   variant?: keyof typeof variants;
 }
@@ -22,7 +23,7 @@ export const Badge: FC<BadgeProps> = ({ iconStart: IconStart, src, text, variant
     `}
     >
       {src && <Image src={src} alt="badge-icon" width={16} height={16} color="white" />}
-      {IconStart && <IconStart fill={variant === 'primary' ? 'white' : undefined} />}
+      {IconStart && <IconStart variant={variant === 'primary' ? 'secondary' : 'primary'} />}
       <span className="text-center text-xs capitalize font-ptserif font-bold leading-4">{text}</span>
     </div>
   );
