@@ -1,4 +1,4 @@
-export { ArrowRight } from './arrowRight';
+export { ArrowRight } from './arrow-right';
 export { ArrowDown } from './arrow-down';
 export { Meet } from './meet';
 export { Location } from './location';

@@ -6,11 +6,14 @@ export default {
   subcomponents: icons,
   args: {
     variant: 'default',
-    width: 30,
-    height: 30,
+    width: 100,
+    height: 100,
   },
   argTypes: {
-    variant: { options: ['primary', 'secondary', 'primary-dark', 'default'], control: { type: 'radio' } },
+    variant: {
+      options: ['primary', 'secondary', 'primary-dark', 'light-brown', 'default'],
+      control: { type: 'radio' },
+    },
   },
 } as Meta<SVGIconProps>;
 export { ArrowRight } from '.';

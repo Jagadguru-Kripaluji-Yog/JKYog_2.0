@@ -40,6 +40,7 @@ module.exports = {
         'light-text': '#3A2D27B2',
         'events-section-bg': '#FBE5C44D',
         'modal-bg': '#FFFBF2',
+        'light-brown': '#B7A68C',
       },
       boxShadow: {
         'light': '0px 8px 16px -3px rgba(41, 25, 0, 0.04), 0px 0px 0px 1px rgba(41, 25, 0, 0.05)',
