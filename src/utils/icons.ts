@@ -11,18 +11,18 @@ export function getPathFill(variant: SVGIconProps['variant'], defaultColor?: str
     case 'light-brown':
       return colors['light-brown'];
     case 'secondary':
-      return 'white';
+      return colors['bg-light'];
     default:
       return defaultColor || colors['heading'];
   }
 }
 
-export function getInvertedPathFill(variant: SVGIconProps['variant']) {
+export function getInvertedPathFill(variant: SVGIconProps['variant'], defaultColor?: string) {
   const colors = theme().colors;
   switch (variant) {
     case 'secondary':
       return colors['button-primary'];
     default:
-      return 'white';
+      return defaultColor || colors['bg-light'];
   }
 }
