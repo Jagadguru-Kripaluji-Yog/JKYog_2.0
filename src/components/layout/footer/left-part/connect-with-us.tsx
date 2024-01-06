@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import {
   FacebookIcon,
-  InstaIcon,
+  InstagramIcon,
   LinkedInIcon,
   LiveConnect,
   Mentor,
@@ -37,7 +37,7 @@ const socialLinks = [
     link: '/',
   },
   {
-    icon: <InstaIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
+    icon: <InstagramIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
     link: '/',
   },
   {

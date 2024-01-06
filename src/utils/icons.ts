@@ -1,7 +1,7 @@
 import { SVGIconProps } from '@/src/types/icons';
 import { theme } from '@/src/utils/tailwind';
 
-export function getPathFill(variant: SVGIconProps['variant']) {
+export function getPathFill(variant: SVGIconProps['variant'], defaultColor?: string) {
   const colors = theme().colors;
   switch (variant) {
     case 'primary':
@@ -13,6 +13,16 @@ export function getPathFill(variant: SVGIconProps['variant']) {
     case 'secondary':
       return 'white';
     default:
-      return 'black';
+      return defaultColor || colors['heading'];
+  }
+}
+
+export function getInvertedPathFill(variant: SVGIconProps['variant']) {
+  const colors = theme().colors;
+  switch (variant) {
+    case 'secondary':
+      return colors['button-primary'];
+    default:
+      return 'white';
   }
 }

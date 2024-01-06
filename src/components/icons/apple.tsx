@@ -2,7 +2,7 @@ import { SVGIconProps } from '@/src/types/icons';
 import { getPathFill } from '@/src/utils/icons';
 import { FC } from 'react';
 
-export const Apple: FC<SVGIconProps> = ({ className, width = 18, height = 18, variant = 'default', ...props }) => {
+export const AppleIcon: FC<SVGIconProps> = ({ width = 18, height = 18, variant = 'default', ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width={width} height={height} fill="none" {...props}>
       <path

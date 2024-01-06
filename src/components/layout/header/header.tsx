@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { linkGroups } from '../footer/constants';
 import Link from 'next/link';
 import { Button } from '@/src/components/button/button';
-import { ArrowDown } from '../../icons/arrow-down';
+import { ArrowDownIcon } from '../../icons/arrow-down';
 import { Burger } from './burger-menu';
 import { useAuthStore } from '@/src/zustand/auth-store';
 import { useModalStore } from '@/src/zustand/modal-store';
@@ -77,7 +77,7 @@ const NavListItem: FC<NavListItemProps> = ({ title, links }) => (
   <li className="group relative flex items-center gap-2 px-2 xl:px-4 py-1.5 xl:py-3 font-satoshi-medium text-base text-primary cursor-pointer">
     <span>{title}</span>
     <div className="group-hover:rotate-180 transition">
-      <ArrowDown />
+      <ArrowDownIcon />
     </div>
     <ul className="flex-col absolute bottom-0 translate-y-[100%] bg-heading rounded hidden group-hover:flex transition min-w-[130px] w-max">
       {links.map((link) => (

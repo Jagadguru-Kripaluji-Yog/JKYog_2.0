@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { EventList } from '.';
 import { Badge } from '../badge/badge';
-import { Calendar } from '../icons';
+import { CalendarIcon } from '../icons';
 
 export default {
   title: 'EventList',
@@ -13,8 +13,8 @@ export default {
         time: '2023-07-04',
         place: 'Dallas, TX',
         tags: [
-          <Badge text="Private event" key="private-event" iconStart={Calendar} />,
-          <Badge text="Public event" key="public-event" iconStart={Calendar} />,
+          <Badge text="Private event" key="private-event" iconStart={CalendarIcon} />,
+          <Badge text="Public event" key="public-event" iconStart={CalendarIcon} />,
         ],
       },
       {

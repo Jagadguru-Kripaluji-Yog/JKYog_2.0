@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { Play } from '@/src/components/icons';
+import { GooglePlayIcon } from '@/src/components/icons';
 
 const Stack: FC = () => {
   return (
@@ -24,7 +24,7 @@ const Stack: FC = () => {
             </p>
           </div>
           <button className="absolute lg:static top-[10%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-button-primary/[.8]">
-            <Play />
+            <GooglePlayIcon />
           </button>
         </div>
       </div>
@@ -43,7 +43,7 @@ const Stack: FC = () => {
           />
           <div className="h-full flex items-end lg:pl-5 pr-0 pt-0 pb-3">
             <button className="absolute lg:static top-[28%] left-[50%] -translate-x-2/4 lg:translate-x-0 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-button-primary/[.8]">
-              <Play />
+              <GooglePlayIcon />
             </button>
           </div>
         </div>

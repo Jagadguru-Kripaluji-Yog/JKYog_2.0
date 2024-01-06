@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Play } from '../../../icons/play';
+import { GooglePlayIcon } from '../../../icons/play';
 import { Arrow } from '../../../arrow/arrow';
 
 export const VideoCard: FC = () => {
@@ -15,7 +15,7 @@ export const VideoCard: FC = () => {
           className="rounded-2xl h-[240px] lg:h-[400px] object-cover"
         />
         <button className="absolute top-[50%] left-[48.5%] -translate-x-2/4 -translate-y-2/4 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-orange-400">
-          <Play />
+          <GooglePlayIcon />
         </button>
       </div>
       <div className="flex flex-col justify-between items-start pt-3 p-2 lg:p-3 lg:pl-0 h-full">
