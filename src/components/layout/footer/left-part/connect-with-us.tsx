@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     icon: (
-      <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-button-primary hover:bg-button-primary/[.8]  rounded-full p-2" />
+      <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-white rounded-full p-2" />
     ),
     link: '/',
   },

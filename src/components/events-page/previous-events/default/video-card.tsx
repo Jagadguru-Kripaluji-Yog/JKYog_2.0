@@ -13,8 +13,8 @@ export const VideoCard: FC<{
     <div className="flex flex-col items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white h-full min-w-[320px]">
       <div className="relative bg-cover bg-no-repeat rounded-2xl overflow-hidden">
         <Image src={src} alt="event" width={654} height={340} className="object-cover lg:object-fill" />
-        <button className="absolute top-[50%] left-[48.5%] -translate-x-2/4 -translate-y-2/4 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-button-primary hover:bg-orange-400">
-          <GooglePlayIcon />
+        <button className="absolute top-[50%] left-[48.5%] -translate-x-2/4 -translate-y-2/4 flex justify-center items-center gap-1.5 p-[18px] rounded-[100px] bg-white hover:bg-slate-100">
+          <GooglePlayIcon variant='primary' />
         </button>
       </div>
       <div className="flex items-center gap-2.5 self-stretch p-2 pt-3 lg:p-4 flex-1">
