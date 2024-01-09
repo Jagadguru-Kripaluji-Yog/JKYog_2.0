@@ -1,9 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { EventCard } from '.';
+import { EventCard, EventCardProps } from '.';
+import { Button } from '../button/button';
 
 export default {
   title: 'EventCard',
   component: EventCard,
+  args: {
+    variant: 'basic',
+  },
 } as Meta<typeof EventCard>;
 
 export const StackedImageCard: StoryObj<typeof EventCard> = {
@@ -16,9 +20,14 @@ export const StackedImageCard: StoryObj<typeof EventCard> = {
       src: 'https://jipl-strapi-aws-s3-images-bucket.s3.amazonaws.com/Rectangle_1819_22fe786406.png',
       alt: 'img',
     },
+    callToActions: [
+      <Button text="Register" key="Register" variant="contained" type="link" href="/" color="primary" />,
+      <Button text="View details" key="View details" variant="outlined" type="link" href="/" color="primary" />,
+    ],
+    link: '/',
   },
   render: (args) => (
-    <div className="w-96 h-[500px]">
+    <div className={`w-[500px] h-[624px]`}>
       <EventCard {...args} />
     </div>
   ),
@@ -36,7 +45,7 @@ export const LandscapeImageCard: StoryObj<typeof EventCard> = {
     },
   },
   render: (args) => (
-    <div className="w-180 h-96">
+    <div className="w-[900px] h-96">
       <EventCard {...args} />
     </div>
   ),
