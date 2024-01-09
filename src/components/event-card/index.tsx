@@ -48,7 +48,7 @@ export const EventCard: FC<EventCardProps> = ({
     <div
       className={cn(
         containerClass,
-        'items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white mr-3 lg:mr-5 h-full min-w-[320px]',
+        'items-start p-2 border rounded-[20px] border-solid border-border-primary bg-white mr-3 lg:mr-5 h-full min-w-[343px]',
       )}
     >
       <div className={cn(imageClass, 'relative bg-cover bg-no-repeat rounded-2xl overflow-hidden')}>
@@ -74,7 +74,7 @@ export const EventCard: FC<EventCardProps> = ({
                   ))}
                 </div>
                 {link && (
-                  <div className="ml-auto">
+                  <div className="ml-auto relative">
                     <Link href={link}>
                       <Arrow direction="topLeft" />
                     </Link>
