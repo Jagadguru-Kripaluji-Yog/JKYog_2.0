@@ -1,14 +1,11 @@
 import { FC } from 'react';
 import {
   FacebookIcon,
-  InstaIcon,
+  InstagramIcon,
   LinkedInIcon,
-  LiveConnect,
-  Mentor,
   PintrestIcon,
-  PracticalTool,
   TwitterIcon,
-  WhatAppIcon,
+  WhatsAppIcon,
   YoutubeIcon,
 } from '../../../icons';
 import Link from 'next/link';
@@ -24,12 +21,12 @@ const socialLinks = [
   },
   {
     icon: (
-      <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-button-primary hover:bg-button-primary/[.8]  rounded-full p-2" />
+      <TwitterIcon className="h-12 w-12 lg:h-8 lg:w-8 bg-white rounded-full p-2" />
     ),
     link: '/',
   },
   {
-    icon: <WhatAppIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
+    icon: <WhatsAppIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
     link: '/',
   },
   {
@@ -37,7 +34,7 @@ const socialLinks = [
     link: '/',
   },
   {
-    icon: <InstaIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
+    icon: <InstagramIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
     link: '/',
   },
   {

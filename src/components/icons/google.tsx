@@ -1,36 +1,31 @@
-import { cn } from '@/src/utils/tailwind';
+import { SVGIconProps } from '@/src/types/icons';
+import { getPathFill } from '@/src/utils/icons';
+import { FC } from 'react';
 
-export const GoogleIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
+export const GoogleIcon: FC<SVGIconProps> = ({ width = 14, height = 14, variant, ...props }) => {
   return (
-    <svg
-      className={cn('h-5 w-5', className)}
-      xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 14 14" fill="none" {...props}>
       <g clipPath="url(#clip0_3143_27021)">
         <path
           d="M13.8336 7.13102C13.8336 6.55744 13.7871 6.13889 13.6864 5.70483H7.13672V8.29366H10.9812C10.9037 8.93702 10.4852 9.9059 9.55503 10.557L9.54199 10.6436L11.6129 12.2479L11.7563 12.2622C13.074 11.0453 13.8336 9.2548 13.8336 7.13102Z"
-          fill="#4285F4"
+          fill={getPathFill(variant, '#4285F4')}
         />
         <path
           d="M7.13617 13.952C9.01965 13.952 10.6008 13.3319 11.7558 12.2622L9.55448 10.557C8.96541 10.9678 8.17479 11.2546 7.13617 11.2546C5.29143 11.2546 3.72572 10.0377 3.16759 8.35571L3.08579 8.36266L0.932457 10.0291L0.904297 10.1074C2.05144 12.3862 4.40777 13.952 7.13617 13.952Z"
-          fill="#34A853"
+          fill={getPathFill(variant, '#34A853')}
         />
         <path
           d="M3.16754 8.35563C3.02027 7.92158 2.93504 7.45648 2.93504 6.97594C2.93504 6.49534 3.02027 6.0303 3.15979 5.59624L3.15589 5.5038L0.975576 3.81055L0.90424 3.84448C0.431446 4.79012 0.160156 5.85204 0.160156 6.97594C0.160156 8.09984 0.431446 9.1617 0.90424 10.1073L3.16754 8.35563Z"
-          fill="#FBBC05"
+          fill={getPathFill(variant, '#FBBC05')}
         />
         <path
           d="M7.13617 2.69735C8.44607 2.69735 9.32968 3.26318 9.83352 3.73602L11.8023 1.81375C10.5932 0.689847 9.01965 0 7.13617 0C4.40777 0 2.05144 1.5657 0.904297 3.8445L3.15985 5.59626C3.72572 3.91428 5.29143 2.69735 7.13617 2.69735Z"
-          fill="#EB4335"
+          fill={getPathFill(variant, '#EB4335')}
         />
       </g>
       <defs>
         <clipPath id="clip0_3143_27021">
-          <rect width="14" height="14" fill="white" />
+          <rect width="14" height="14" />
         </clipPath>
       </defs>
     </svg>

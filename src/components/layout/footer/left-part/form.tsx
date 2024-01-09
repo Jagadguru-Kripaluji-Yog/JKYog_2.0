@@ -26,7 +26,7 @@ export const Form: FC = () => {
                            after:absolute after:left-[4px] after:top-[4px] after:h-4 after:w-4 after:rounded-full
                            peer-checked:after:bg-orange-400"
         >
-          Join me to WhatsApp group
+          Add me to WhatsApp group
         </label>
       </div>
     </form>

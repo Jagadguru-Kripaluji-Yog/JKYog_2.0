@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import { Badge } from '../../badge/badge';
 import Image from 'next/image';
 import { Button } from '../../button/button';
-import { FacebookIcon, LinkedInIcon, TwitterIcon, WhatAppIcon } from '../../icons';
+import { FacebookIcon, LinkedInIcon, TwitterIcon, WhatsAppIcon } from '../../icons';
 import Link from 'next/link';
 
 export const Details: FC = () => {
@@ -112,7 +112,7 @@ const socials = [
     link: '/',
   },
   {
-    icon: <WhatAppIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
+    icon: <WhatsAppIcon className="h-12 w-12 lg:h-8 lg:w-8" />,
     link: '/',
   },
   {
